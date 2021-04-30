@@ -1,10 +1,7 @@
 import os
 try:
-  from LEGENDX import id, ID, devs, rd, wt
-except:
-  os.system("pip install LEGENDX==0.0.21")
-  from LEGENDX import id, ID, devs
-finally:
+  from Assist import id, ID, devs, rd, wt
+
   print ("DaisyX X IS STARTING WITH TELETHON") 
 from DaisyX.functions.DaisyX import xbot
 from DaisyX import bot, CMD_HELP
@@ -22,7 +19,7 @@ from DaisyX.utils import load_module, load_pro
 from DaisyX import LOAD_PLUG, BOTLOG_CHATID
 from pathlib import Path
 import asyncio
-TOKEN = os.environ.get("TG_BOT_TOKEN", None)
+TOKEN = os.environ.get("TG_BOT_TOKEN_BF_HER", None)
 import telethon.utils
 EXTRA_PLUGS = os.environ.get("EXTRA_PLUGS", False)
 async def add_bot(bot_token):
@@ -30,7 +27,6 @@ async def add_bot(bot_token):
     bot.me = await bot.get_me() 
     bot.uid = telethon.utils.get_peer_id(bot.me)
 ONLINE_ALERT = os.environ.get("ONLINE_ALERT")
-os.system("pip install LEGENDX==0.0.21")
 if len(argv) not in (1, 3, 4):
     bot.disconnect()
 else:
