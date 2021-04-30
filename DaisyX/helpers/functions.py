@@ -1,7 +1,7 @@
 # Making it easy....
 # thanks to @ranger_op for idea
 # codes by @mrconfused 
-# ULTRA-X
+# Daisy-X
 
 import shlex
 import os
