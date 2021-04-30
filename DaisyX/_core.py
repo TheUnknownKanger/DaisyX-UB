@@ -3,14 +3,14 @@ import os
 from datetime import datetime
 from pathlib import Path
 
-from ULTRA import ALIVE_NAME
-from ULTRA import bot 
-from ULTRA.utils import admin_cmd, load_module, remove_plugin, sudo_cmd
-from ULTRA.utils import edit_or_reply as eor
+from DaisyX import ALIVE_NAME
+from DaisyX import bot 
+from DaisyX.utils import admin_cmd, load_module, remove_plugin, sudo_cmd
+from DaisyX.utils import edit_or_reply as eor
 
 DELETE_TIMEOUT = 3
-thumb_image_path = "./Resources/UltraX.jpg"
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "ULTRA X"
+thumb_image_path = "./Resources/DaisyX.jpg"
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "DAISY X"
 
 
 @bot.on(admin_cmd(pattern=r"send (?P<shortname>\w+)", outgoing=True))
@@ -22,7 +22,7 @@ async def send(event):
     message_id = event.message.id
     thumb = thumb_image_path
     input_str = event.pattern_match.group(1)
-    the_plugin_file = "./ULTRA/plugins/{}.py".format(input_str)
+    the_plugin_file = "./DaisyX/modules/{}.py".format(input_str)
     if os.path.exists(the_plugin_file):
         start = datetime.now()
         pro = await event.client.send_file(
@@ -37,7 +37,7 @@ async def send(event):
         time_taken_in_ms = (end - start).seconds
         await eor(
             pro,
-            f"**==> Pʟᴜɢɪɴ ɴᴀᴍᴇ:** `{input_str}`\n**==> Uᴘʟᴏᴀᴅᴇᴅ ɪɴ:** `{time_taken_in_ms} Sᴇᴄᴏɴᴅs`.\n**==> Uᴘʟᴏᴀᴅᴇᴅ ʙʏ:** `{DEFAULTUSER}`\n",
+            f"**==> Pʟᴜɢɪɴ ɴᴀᴍᴇ:** `{input_str}`\n**==> Pʟᴜɢɪɴ ɪɴ:** `{time_taken_in_ms} Sᴇᴄᴏɴᴅs`.\n**==> Uᴘʟᴏᴀᴅᴇᴅ ʙʏ:** `{DEFAULTUSER}`\n",
         )
         await asyncio.sleep(DELETE_TIMEOUT)
         await event.edit("sᴇɴᴛ !!!") #only italic if loaded markdown else it doesn't look grp
@@ -55,7 +55,7 @@ async def install(event):
             downloaded_file_name = (
                 await event.client.download_media(  # pylint:disable=E0602
                     await event.get_reply_message(),
-                    "ULTRA/plugins/",  # pylint:disable=E0602
+                    "DaisyX/modules/",  # pylint:disable=E0602
                 )
             )
             if "(" not in downloaded_file_name:
@@ -72,7 +72,7 @@ async def install(event):
                 os.remove(downloaded_file_name)
                 await eor(
                     event,
-                    "Error!\nPlugin cannot be installed!\n Or may have been pre-installed.",
+                    "Error!\nModule cannot be installed!\n Or may have been pre-installed.",
                 )
         except Exception as e:  # pylint:disable=C0103,W0703
             await eor(event, str(e))
@@ -89,10 +89,10 @@ async def unload(event):
     shortname = event.pattern_match["shortname"]
     try:
         remove_plugin(shortname)
-        qwe = await eor(event, f"UltraX Has Successfully unloaded {shortname}")
+        qwe = await eor(event, f"DaisyX Has Successfully unloaded {shortname}")
     except Exception as e:
         await qwe.edit(
-            "UltraX has Successfully unloaded {shortname}\n{}".format(shortname, str(e))
+            "DaisyX has Successfully unloaded {shortname}\n{}".format(shortname, str(e))
         )
 
 
@@ -111,5 +111,5 @@ async def load(event):
         qwe = await eor(event, f"Successfully loaded {shortname}")
     except Exception as e:
         await qwe.edit(
-            f"ULTRA X could not load {shortname} because of the following error.\n{str(e)}"
+            f"Daisy X could not load {shortname} because of the following error.\n{str(e)}"
         )
