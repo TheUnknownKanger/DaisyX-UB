@@ -1,4 +1,4 @@
-from ULTRAX import xbot, devs as DEVS
+from DaisyX.functions.DaisyX import xbot, devs as DEVS
 
 from telethon.errors import BadRequestError
 from telethon.tl.functions.channels import EditAdminRequest, EditBannedRequest
