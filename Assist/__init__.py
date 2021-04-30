@@ -45,7 +45,7 @@ except:
   pass
 API_ID = os.environ.get("APP_ID", None)
 API_HASH = os.environ.get("API_HASH", None)
-token = os.environ.get("BOT_TOKEN", None)
+token = os.environ.get("TG_BOT_TOKEN_BF_HER", None)
 STRING_SESSION = os.environ.get("STRING_SESSION")
 try:
   session_name = str(STRING_SESSION)
@@ -59,7 +59,7 @@ ALIVE_NAME = os.environ.get("ALIVE_NAME")
 BOT = str(botnickname) if botnickname else "ᴅᴀɪsʏ χ"
 NAME = str(ALIVE_NAME) if ALIVE_NAME else "ᴅᴀᴜsʏ χ"
 PHOTO = os.environ.get("ALIVE_PHOTTO", None)
-ULTRAX = "[DAISY X](https://t.me/DAISYXOT)"
+DAISYX = "[DAISY X](https://t.me/DAISYXOT)"
 VERSION = "0.0.1"
 ALIVE_USERNAME = os.environ.get("ALIVE_USERNAME", None)
 ALIVE_BOT_USERNAME = os.environ.get("ALIVE_BOT_USERNAME", None)
