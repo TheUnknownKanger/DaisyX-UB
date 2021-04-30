@@ -27,10 +27,10 @@ else:
   MSG = MESSAGE
 botnickname = os.environ.get("BOT_NICK_NAME")
 ALIVE_NAME = os.environ.get("ALIVE_NAME")
-BOT = str(botnickname) if botnickname else "υℓтяα χ"
-NAME = str(ALIVE_NAME) if ALIVE_NAME else "υℓтяα χ"
+BOT = str(botnickname) if botnickname else "Ðαιѕу χ"
+NAME = str(ALIVE_NAME) if ALIVE_NAME else "ᴅᴀɪsʏ χ"
 PHOTO = os.environ.get("ALIVE_PHOTTO", None)
-DaisyX = "[LEGEND X](https://t.me/DaisyXOT)"
+DaisyX = "[Daisy X](https://t.me/DaisyXOT)"
 VERSION = "0.0.1"
 ALIVE_USERNAME = os.environ.get("ALIVE_USERNAME", None)
 ALIVE_BOT_USERNAME = os.environ.get("ALIVE_BOT_USERNAME", None)
