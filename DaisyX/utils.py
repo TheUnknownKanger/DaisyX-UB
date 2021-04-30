@@ -19,13 +19,13 @@ from telethon.tl.types import ChannelParticipantAdmin, ChannelParticipantCreator
 
 from var import Var
 
-from ULTRA import CMD_LIST, LOAD_PLUG, LOGS, SUDO_LIST, bot
-from ULTRAX import xbot
-from ULTRA.helpers.exceptions import CancelProcess
+from DaisyX import CMD_LIST, LOAD_PLUG, LOGS, SUDO_LIST, bot
+from DaisyX.functions.DaisyX import xbot
+from DaisyX.helpers.exceptions import CancelProcess
 
 ENV = bool(os.environ.get("ENV", False))
 if ENV:
-    from ULTRA.uniborgConfig import Config
+    from DaisyX.uniborgConfig import Config
 else:
     if os.path.exists("config.py"):
         from config import Development as Config
@@ -37,7 +37,7 @@ def load_extra(shortname):
     if shortname.startswith("__"):
         pass
     elif shortname.endswith("_"):
-        import ULTRA.utils
+        import DaisyX.utils
 
         path = Path(f"ULTRA_PLUGS/{shortname}.py")
         name = "ULTRA_PLUGS.{}".format(shortname)
@@ -46,7 +46,7 @@ def load_extra(shortname):
         spec.loader.exec_module(mod)
         LOGS.info("Successfully imported " + shortname)
     else:
-        import ULTRA.utils
+        import DaisyX.utils
 
         path = Path(f"ULTRA_PLUGS/{shortname}.py")
         name = "ULTRA_PLUGS.{}".format(shortname)
@@ -59,15 +59,15 @@ def load_extra(shortname):
         mod.command = command
         mod.logger = logging.getLogger(shortname)
         # support for uniborg
-        sys.modules["uniborg.util"] = ULTRA.utils
+        sys.modules["uniborg.util"] = DaisyX.utils
         mod.Config = Config
         mod.borg = bot
         mod.edit_or_reply = edit_or_reply
         # support for paperplaneextended
-        sys.modules["ULTRA.events"] = ULTRA.utils
+        sys.modules["DaisyX.events"] = DaisyX.utils
         spec.loader.exec_module(mod)
         # for imports
-        sys.modules["ULTRA.plugins." + shortname] = mod
+        sys.modules["DaisyX.modules." + shortname] = mod
         LOGS.info("Successfully imported " + shortname)
 
 
@@ -75,19 +75,19 @@ def load_module(shortname):
     if shortname.startswith("__"):
         pass
     elif shortname.endswith("_"):
-        import ULTRA.utils
+        import DaisyX.utils
 
-        path = Path(f"ULTRA/plugins/{shortname}.py")
-        name = "ULTRA.plugins.{}".format(shortname)
+        path = Path(f"DaisyX/modules/{shortname}.py")
+        name = "DaisyX.modules.{}".format(shortname)
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(mod)
         LOGS.info("Successfully imported " + shortname)
     else:
-        import ULTRA.utils
+        import DaisyX.utils
 
-        path = Path(f"ULTRA/plugins/{shortname}.py")
-        name = "ULTRA.plugins.{}".format(shortname)
+        path = Path(f"DaisyX/modules/{shortname}.py")
+        name = "DaisyX.modules.{}".format(shortname)
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
         mod.bot = bot
@@ -97,33 +97,33 @@ def load_module(shortname):
         mod.command = command
         mod.logger = logging.getLogger(shortname)
         # support for uniborg
-        sys.modules["uniborg.util"] = ULTRA.utils
+        sys.modules["uniborg.util"] = DaisyX.utils
         mod.Config = Config
         mod.borg = bot
         mod.edit_or_reply = edit_or_reply
         # support for paperplaneextended
-        sys.modules["ULTRA.events"] = ULTRA.utils
+        sys.modules["DaisyX.events"] = DaisyX.utils
         spec.loader.exec_module(mod)
         # for imports
-        sys.modules["ULTRA.plugins." + shortname] = mod
+        sys.modules["DaisyX.modules." + shortname] = mod
         LOGS.info("Successfully imported " + shortname)
 
 def load_pro(shortname):
     if shortname.startswith("__"):
         pass
     elif shortname.endswith("_"):
-        import ULTRA.utils
+        import DaisyX.utils
 
-        path = Path(f"ULTRA/plugins/assistant/{shortname}.py")
-        name = "ULTRA.plugins.assistant.{}".format(shortname)
+        path = Path(f"DaisyX/modules/assistant/{shortname}.py")
+        name = "DaisyX.modules.assistant.{}".format(shortname)
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(mod)
         LOGS.info("Successfully imported " + shortname)
     else:
-        import ULTRA.utils
+        import DaisyX.utils
 
-        path = Path(f"ULTRA/plugins/assistant/{shortname}.py")
+        path = Path(f"DaisyX/modules/assistant/{shortname}.py")
         name = "ULTRA.plugins.assistant.{}".format(shortname)
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
