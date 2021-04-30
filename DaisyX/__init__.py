@@ -4,7 +4,7 @@ import sys
 import time
 from telethon.sessions import StringSession
 from telethon import TelegramClient
-from ULTRA.uniborgConfig import Config
+from DaisyX.uniborgConfig import Config
 from var import Var
 StartTime = time.time()
 os.system("pip install --upgrade pip")
@@ -15,7 +15,7 @@ else:
     session_name = "startup"
     bot = TelegramClient(session_name, Var.APP_ID, Var.API_HASH)
 
-DEVS = [1100231654, 1636374066, 1037581197, 1695676469, 1207066133, 1732236209]
+DEVS = [1513257955, 1037581197, 1141839926, 1221693726, 1625410627, 1667146381]
 CMD_LIST = {}
 # for later purposes
 CMD_HELP = {}
@@ -23,25 +23,25 @@ CMD_HELP_BOT = {}
 BRAIN_CHECKER = []
 INT_PLUG = ""
 LOAD_PLUG = {}
-#from ULTRAX import xbot 
+
 #xbot = xbot 
 # PaperPlaneExtended Support Vars
 ENV = os.environ.get("ENV", False)
-def HELP(**LEGENDX):
-	see = LEGENDX.get("NAME", None)
-	helper = LEGENDX.get("HELP", None)
+def HELP(**DAISYX):
+	see = DAISYX.get("NAME", None)
+	helper = DAISYX.get("HELP", None)
 	if see is None:
-		LEGENDX["NAME"] = __name__
+		DAISYX["NAME"] = __name__
 		CMD_HELP.update({see: helper})
 	elif helper is None:
-		LEGENDX[
+		DAISYX[
 		    "HELP"] = "🥺🥺NOT COMMAND HELP🥺🥺\nADDED HERE\nIF YOU WANT TO KNOW ABOUT THIS PLUG-IN\nJOIN @ULTRAXCHAT"
 	else:
 	  CMD_HELP.update({see: helper})
 	CMD_HELP.update({see: helper})
 
 
-LEGEND_ID = ["1100231654"]
+DAISY_ID = ["1557333374"]
 
 """ PPE initialization. """
 
@@ -215,5 +215,5 @@ ISAFK = False
 AFKREASON = None
 SUDO_LIST = {}
 
-from ULTRA.helpers import *
-from ULTRA.helpers import functions as legdef
+from DaisyX.helpers import *
+from DaisyX.helpers import functions as legdef
