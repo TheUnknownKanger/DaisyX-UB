@@ -5,11 +5,11 @@ except:
   os.system("pip install LEGENDX==0.0.21")
   from LEGENDX import id, ID, devs
 finally:
-  print ("ULTRA X IS STARTING WITH TELETHON") 
-from ULTRAX import xbot
-from ULTRA import bot, CMD_HELP
+  print ("DaisyX X IS STARTING WITH TELETHON") 
+from DaisyX.functions.DaisyX import xbot
+from DaisyX import bot, CMD_HELP
 from sys import argv
-os.system("pip install telethon==1.19.0")
+os.system("pip install telethon==1.20")
 import sys
 import os
 os.system("pip install google_trans_new")
@@ -18,8 +18,8 @@ from telethon.errors.rpcerrorlist import PhoneNumberInvalidError
 import os
 from telethon import TelegramClient, Button
 from var import Var
-from ULTRA.utils import load_module, load_pro
-from ULTRA import LOAD_PLUG, BOTLOG_CHATID
+from DaisyX.utils import load_module, load_pro
+from DaisyX import LOAD_PLUG, BOTLOG_CHATID
 from pathlib import Path
 import asyncio
 TOKEN = os.environ.get("TG_BOT_TOKEN", None)
@@ -54,7 +54,7 @@ import glob
 
 
 
-path = 'ULTRA/plugins/assistant/*.py'
+path = 'DaisyX/modules/assistant/*.py'
 files = glob.glob(path)
 for name in files:
     with open(name) as f:
@@ -64,8 +64,8 @@ for name in files:
 
 
 if  EXTRA_PLUGS == True:
-    os.system("git clone https://github.com/ULTRA-OP/ULTRA_PLUGS.git ./ULTRA/plugins/")
-    path = "ULTRA/plugins/*.py"
+    os.system("git clone https://github.com/TeamDaisyX/DaisyX-Extra.git ./DaisyX/modules/")
+    path = "DaisyX/modules/*.py"
     files = glob.glob(path)
     for name in files:
         with open(name) as a:
@@ -79,7 +79,7 @@ if  EXTRA_PLUGS == True:
                 pass
 
 else:
-  path = 'ULTRA/plugins/*.py'
+  path = 'DaisyX/modules/*.py'
   files = glob.glob(path)
   for name in files:
       with open(name) as f:
@@ -88,9 +88,9 @@ else:
           load_module(shortname.replace(".py", ""))
 
 
-import ULTRA._core
+import DaisyX._core
 import os
-print("UltraX is Up and Awake! ©️ TeamUltraX 2021")
+print("DaisyX is Up and Awake! ©️ TeamDaisyX 2021")
 async def legend():
   pro = await xbot.get_me()
   legend = await bot.get_me()
@@ -99,14 +99,14 @@ async def legend():
 
 `☟︎︎︎ ☟︎︎︎ ☟︎︎︎ ☟︎︎︎ ☟︎︎︎ ☟︎︎︎ ☟︎︎︎ ☟︎︎︎ ☟︎︎︎ ☟︎︎︎ ☟︎︎︎ ☟︎︎︎ ☟︎︎︎ ☟︎︎︎ ☟︎︎︎`
 
-**Dɪɴɢ Dᴏɴɢ...** `.\./.\` **Tɪɴɢ Tᴏɴɢ...** `./.\./` **UʟᴛʀᴀX Hᴀs Bᴇᴇɴ Dᴇᴘʟᴏʏᴇᴅ !!**
+**Dɪɴɢ Dᴏɴɢ...** `.\./.\` **Tɪɴɢ Tᴏɴɢ...** `./.\./` **ᴅᴀɪsʏX Hᴀs Bᴇᴇɴ Dᴇᴘʟᴏʏᴇᴅ !!**
 
 **Pɪɴɢ Pᴏɴɢ...**
 
 **➥ Mᴀsᴛᴇʀ** `➪` **@{legend.username}**
 **➥ Assɪsᴛᴀɴᴛ** `➪` **@{pro.username}**
-**➥ Sᴜᴘᴘᴏʀᴛ** `➪` **@UltraXchaT**
-**➥ Cʜᴀɴɴᴇʟ** `➪` **@UltraX_SupporT**
+**➥ Sᴜᴘᴘᴏʀᴛ** `➪` **@DaisySupport_Official**
+**➥ Cʜᴀɴɴᴇʟ** `➪` **@DaisyXUpdates**
 
 **Cʜᴇᴄᴋ ᴍᴏɪ Pɪɴɢ ᴛɪᴍᴇ ʙʏ** `.ping` **[Fᴏʀ UsᴇʀBᴏᴛ] or** `/ping` **[Fᴏʀ Assɪsᴛᴀɴᴛ]**
 """
