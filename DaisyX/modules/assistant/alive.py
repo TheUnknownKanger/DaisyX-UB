@@ -1,28 +1,27 @@
-# COPYRIGHT (C) 2021-2022 BY LEGENDX22
-# modify by madboy482 and alain_champion
+# COPYRIGHT (C) 2021-2022 BY Daisy X
+# modify by madboy482 and alain_champion and LegendX22
 
-from ULTRA import bot
-from ULTRAX import xbot, ID
+from DaisyX import bot
+from DaisyX.functions.DaisyX import xbot, ID, PHOTO, BOT, VERSION
 import heroku3
 from telethon import events
-from ULTRA import StartTime
+from DaisyX import StartTime
 import time
 import datetime
 from . import *
 from telethon import events, Button, custom
 import re, os
-from ULTRAX import PHOTO, xbot, BOT, VERSION
-from ULTRA import bot
+from DaisyX import bot
 @xbot.on(events.NewMessage(pattern=("/alive")))
 async def awake(event):
-  LEGENDX = f"Hᴇʟʟᴏ !! Tʜɪs ɪs **{BOT}**\n\n"
-  LEGENDX += "**Aʟʟ sʏsᴛᴇᴍs ᴡᴏʀᴋɪɴɢ ᴘʀᴏᴘᴇʀʟʏ...**\n\n"
-  LEGENDX += f"**{BOT} Vᴇʀsɪᴏɴ** : `{VERSION}`\n\n"
-  LEGENDX += f"**Usᴇʀ** : @{bot.me.username}\n\n"
-  LEGENDX += "**Fᴜʟʟʏ ᴜᴘᴅᴀᴛᴇᴅ ʙᴏᴛ...**\n\n"
-  LEGENDX += "**Tᴇʟᴇᴛʜᴏɴ** : `1.20`\n\n"
-  LEGENDX += "~~ **Tʜᴀɴᴋs ғᴏʀ ᴄʜᴇᴄᴋɪɴɢ ᴍᴇ** !!"
-  BUTTON = [[Button.url("Mᴀsᴛᴇʀ", f"https://t.me/{bot.me.username}"), Button.url(f"{BOT} Rᴇᴘᴏ", "https://github.com/ULTRA-OP/ULTRA-X")]]
+  DaisyX = f"Hᴇʟʟᴏ !! Tʜɪs ɪs **{BOT}**\n\n"
+  DaisyX += "**Aʟʟ sʏsᴛᴇᴍs ᴡᴏʀᴋɪɴɢ ᴘʀᴏᴘᴇʀʟʏ...**\n\n"
+  DaisyX += f"**{BOT} Vᴇʀsɪᴏɴ** : `{VERSION}`\n\n"
+  DaisyX += f"**Usᴇʀ** : @{bot.me.username}\n\n"
+  DaisyX += "**Fᴜʟʟʏ ᴜᴘᴅᴀᴛᴇᴅ ʙᴏᴛ...**\n\n"
+  DaisyX += "**Tᴇʟᴇᴛʜᴏɴ** : `1.20`\n\n"
+  DaisyX += "~~ **Tʜᴀɴᴋs ғᴏʀ ᴄʜᴇᴄᴋɪɴɢ ᴍᴇ** !!"
+  DaisyX = [[Button.url("Mᴀsᴛᴇʀ", f"https://t.me/{bot.me.username}"), Button.url(f"{BOT} Rᴇᴘᴏ", "https://github.com/ULTRA-OP/ULTRA-X")]]
   BUTTON += [[custom.Button.inline("Rᴇᴘᴏsɪᴛᴏʀɪᴇs »»", data="LEGENDX")]]
   await xbot.send_file(event.chat_id, PHOTO, caption=LEGENDX,  buttons=BUTTON)
 
