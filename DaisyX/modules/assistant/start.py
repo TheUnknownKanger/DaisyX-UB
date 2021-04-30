@@ -2,22 +2,21 @@ import asyncio
 import io
 import os
 import re
-from ULTRAX import PHOTO, ID as id
+from DaisyX.functions.DaisyX import PHOTO, ID as id, xbot, devs as DEVS
 from telethon import Button, custom, events, functions
 import telethon
 from telethon.tl.functions.users import GetFullUserRequest
 from telethon.utils import pack_bot_file_id
-from ULTRA.uniborgConfig import Config
-from ULTRAX import xbot, devs as DEVS
-from ULTRA import bot
-from ULTRA.plugins.sql_helper.blacklist_ass import (
+from DaisyX.uniborgConfig import Config
+from DaisyX import bot
+from DaisyX.modules.sql_helper.blacklist_ass import (
     add_nibba_in_db,
     is_he_added,
     removenibba,
 )
 
-from ULTRA.plugins.sql_helper.bot_users_sql import add_me_in_db, his_userid
-from ULTRA.plugins.sql_helper.idadder_sql import (
+from DaisyX.modules.sql_helper.bot_users_sql import add_me_in_db, his_userid
+from DaisyX.modules.sql_helper.idadder_sql import (
     add_usersid_in_db,
     already_added,
     get_all_users,
@@ -37,7 +36,7 @@ async def start(event):
     hmmwow = devlop.first_name
     vent = event.chat_id
     mypic = PHOTO
-    starttext = f"Hello, **{firstname}**!!\nNice To Meet You 🤗 !!\nI guess, that you know me, Uhh you don't, np..\nWell I'm **{bot_id}**.\n\n**A Pᴏᴡᴇʀғᴜʟ Assɪᴛᴀɴᴛ Oғ** [{hmmwow}](tg://user?id={boy})\n\n                           **Pᴏᴡᴇʀᴇᴅ Bʏ** [UʟᴛʀᴀX](t.me/UltraXOT)\n\n**Yᴏᴜ Cᴀɴ Cʜᴀᴛ Wɪᴛʜ Mʏ Mᴀsᴛᴇʀ Tʜʀᴏᴜɢʜ Tʜɪs Bᴏᴛ.**\n**Iғ Yᴏᴜ Wᴀɴᴛ Yᴏᴜʀ Oᴡɴ Assɪᴛᴀɴᴛ Yᴏᴜ Cᴀɴ Dᴇᴘʟᴏʏ Fʀᴏᴍ Bᴜᴛᴛᴏɴ Bᴇʟᴏᴡ.**"
+    starttext = f"Hello, **{firstname}**!!\nNice To Meet You 🤗 !!\nI guess, that you know me, Uhh you don't, np..\nWell I'm **{bot_id}**.\n\n**A Pᴏᴡᴇʀғᴜʟ Assɪᴛᴀɴᴛ Oғ** [{hmmwow}](tg://user?id={boy})\n\n                           **Pᴏᴡᴇʀᴇᴅ Bʏ** [ᴅᴀɪsʏX](t.me/DaisyXOT)\n\n**Yᴏᴜ Cᴀɴ Cʜᴀᴛ Wɪᴛʜ Mʏ Mᴀsᴛᴇʀ Tʜʀᴏᴜɢʜ Tʜɪs Bᴏᴛ.**\n**Iғ Yᴏᴜ Wᴀɴᴛ Yᴏᴜʀ Oᴡɴ Assɪᴛᴀɴᴛ Yᴏᴜ Cᴀɴ Dᴇᴘʟᴏʏ Fʀᴏᴍ Bᴜᴛᴛᴏɴ Bᴇʟᴏᴡ.**"
     if event.sender_id == boy:
         await xbot.send_message(
             event.chat_id,
@@ -63,8 +62,8 @@ async def start(event):
             caption=starttext,
             link_preview=False,
             buttons=[
-                [custom.Button.url("Dᴇᴘʟᴏʏ Yᴏᴜʀ Oᴡɴ UʟᴛʀᴀX", "http://GitHub.com/ULTRA-OP/ULTRA-X")],
-                [Button.url("Sᴜᴘᴘᴏʀᴛ", "t.me/UltraXchaT")],
+                [custom.Button.url("Dᴇᴘʟᴏʏ Yᴏᴜʀ Oᴡɴ ᴅᴀɪsʏX", "http://GitHub.com/TeamDaisyX/DaisyX-UB")],
+                [Button.url("Sᴜᴘᴘᴏʀᴛ", "t.me/DaisySupport_Official")],
             ],
         )
         if os.path.exists(mypic):
