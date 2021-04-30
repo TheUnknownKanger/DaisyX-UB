@@ -1,21 +1,21 @@
 import os
 try:
-  from LEGENDX import xbot
+  from Assist import xbot
 except:
   pass
 try:
-  from ULTRAX import xbot
+  from DaisyX.functions.DaisyX import xbot
 except:
   pass
 try:
-  from ULTRA import bot
+  from DaisyX import bot
 except:
   pass
 try:
   from Var import var
 except:
   pass
-from LEGENDX import ID, id, devs
+from Assist import ID, id, devs
 import re, os
 from telethon import Button, events, custom
 try:
@@ -41,7 +41,7 @@ async def heroku(event):
     pro += [[Button.inline("••• Aᴅᴅ Sᴜᴅᴏ •••", data="addsudo")]]
     await xbot.send_message(event.chat_id, "**Hᴇʟʟᴏ Mᴀsᴛᴇʀ, Wʜᴀᴛ Dᴏ Yᴏᴜ Wᴀɴɴᴀ Sᴇᴛ Tᴏᴅᴀʏ ?**", buttons=pro)
   else:
-    await event.reply("**Hey kid go away and don't use my bot deploy your own bot** 😕 !!\n\nFᴏʀ Aɴʏ Hᴇʟᴘ Asᴋ Iɴ @UltraXChat !")
+    await event.reply("**Hey kid go away and don't use my bot deploy your own bot** 😕 !!\n\nFᴏʀ Aɴʏ Hᴇʟᴘ Asᴋ Iɴ @DaisySupport_Official !")
 
 
 @xbot.on(events.callbackquery.CallbackQuery(data=re.compile(b'ass_back')))
@@ -55,7 +55,7 @@ async def heroku(event):
     pro += [[Button.inline("••• Aᴅᴅ Sᴜᴅᴏ •••", data="addsudo")]]
     await event.edit("**Hᴇʟʟᴏ Mᴀsᴛᴇʀ, Wʜᴀᴛ Dᴏ Yᴏᴜ Wᴀɴɴᴀ Sᴇᴛ Tᴏᴅᴀʏ ?**", buttons=pro)
   else:
-    await event.answer("**Hey kid, go away and don't use my bot deploy your own bot** 😕 !!\n\nFᴏʀ Aɴʏ Hᴇʟᴘ Asᴋ Iɴ @UltraXChat !", alert=True)
+    await event.answer("**Hey kid, go away and don't use my bot deploy your own bot** 😕 !!\n\nFᴏʀ Aɴʏ Hᴇʟᴘ Asᴋ Iɴ @DaisySupport_Official !", alert=True)
 @xbot.on(events.callbackquery.CallbackQuery(data=re.compile(b'setnick')))
 async def heroku(event):
   Pro = bot.me.id
