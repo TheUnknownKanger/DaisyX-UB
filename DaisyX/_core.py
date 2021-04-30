@@ -37,7 +37,7 @@ async def send(event):
         time_taken_in_ms = (end - start).seconds
         await eor(
             pro,
-            f"**==> Pʟᴜɢɪɴ ɴᴀᴍᴇ:** `{input_str}`\n**==> Pʟᴜɢɪɴ ɪɴ:** `{time_taken_in_ms} Sᴇᴄᴏɴᴅs`.\n**==> Uᴘʟᴏᴀᴅᴇᴅ ʙʏ:** `{DEFAULTUSER}`\n",
+            f"**==> Pʟᴜɢɪɴ ɴᴀᴍᴇ:** `{input_str}`\n**==> Uᴘʟᴏᴀᴅᴇᴅ ɪɴ:** `{time_taken_in_ms} Sᴇᴄᴏɴᴅs`.\n**==> Uᴘʟᴏᴀᴅᴇᴅ ʙʏ:** `{DEFAULTUSER}`\n",
         )
         await asyncio.sleep(DELETE_TIMEOUT)
         await event.edit("sᴇɴᴛ !!!") #only italic if loaded markdown else it doesn't look grp
