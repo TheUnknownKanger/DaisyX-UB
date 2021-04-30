@@ -17,11 +17,11 @@ while True:
    session = client.session.save()
    client.send_message(
        "me",
-       f"Here Is Your String Session For Using UltraX Userbot\n(**Tap to copy it**)👇 \n\n `{session}` \n\n And Visit @UltraXOT For Any Help !"
+       f"Here Is Your String Session For Using DaisyX Userbot\n(**Tap to copy it**)👇 \n\n `{session}` \n\n And Visit @DaisyXOT For Any Help !"
    )
 
    print(
-       "Thanks for Choosing ULTRA X Have A Good Time....Note That When You Terminate the Old Session ComeBack And Genrate A New String Session Old One Wont Work"
+       "Thanks for Choosing DAISY X Have A Good Time....Note That When You Terminate the Old Session ComeBack And Genrate A New String Session Old One Wont Work"
    )
  except Exception as e:
   print(str(e))
