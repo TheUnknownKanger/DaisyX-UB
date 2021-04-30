@@ -9,7 +9,7 @@ from os import getcwd
 from os.path import basename, join
 from textwrap import wrap
 from typing import Optional, Tuple
-from ULTRA.events import get_readable_time
+from DaisyX.events import get_readable_time
 
 try:
     from colour import Color as asciiColor
