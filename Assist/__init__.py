@@ -1,8 +1,4 @@
-# COPYRIGHT (C) 2021 BY LEGENDX22
-"""
-"""
-# MADE BY LEGENDX22 🔥
-# MY IDEA H YRR DONT KANG THIS PLEASE
+
 import asyncio
 import os
 import asyncio
@@ -44,7 +40,7 @@ from telethon import TelegramClient
 from telethon.tl.functions.account import DeleteAccountRequest as pro
 from telethon.sessions import StringSession
 try:
-  from ULTRA import bot as hmm
+  from DaisyX import bot as hmm
 except:
   pass
 API_ID = os.environ.get("APP_ID", None)
@@ -60,30 +56,30 @@ except:
 import time
 botnickname = os.environ.get("BOT_NICK_NAME")
 ALIVE_NAME = os.environ.get("ALIVE_NAME")
-BOT = str(botnickname) if botnickname else "υℓтяα χ"
-NAME = str(ALIVE_NAME) if ALIVE_NAME else "υℓтяα χ"
+BOT = str(botnickname) if botnickname else "ᴅᴀɪsʏ χ"
+NAME = str(ALIVE_NAME) if ALIVE_NAME else "ᴅᴀᴜsʏ χ"
 PHOTO = os.environ.get("ALIVE_PHOTTO", None)
-ULTRAX = "[ULTRA X](https://t.me/ULTRAXOT)"
+ULTRAX = "[DAISY X](https://t.me/DAISYXOT)"
 VERSION = "0.0.1"
 ALIVE_USERNAME = os.environ.get("ALIVE_USERNAME", None)
 ALIVE_BOT_USERNAME = os.environ.get("ALIVE_BOT_USERNAME", None)
 devs = [1100231654, 1636374066, 1037581197, 1695676469, 1207066133, 1078841825, 1667146381]
-ID = 1667146381
-id = 1667146381
-REPO = "[υℓтяα χ вσт](https://github.com/ULTRA-OP/ULTRA-X)"
+ID = 1513257955
+id = 1513257955
+REPO = "[ᴅᴀɪsʏ χ вσт](https://github.com/TeamDaisyX/DaisyX-UB)"
 
 MASTER = NAME
-GROUP = "[SUPPORT GROUP](https://t.me/UltraXChat)"
+GROUP = "[SUPPORT GROUP](https://t.me/DaisySupport_Official)"
 def LEGEND(pro, x):
   return print(pro, x)
   
-# made by LEGENDX22 AND PROBOYX
+
 
 from telethon.tl.functions.channels import JoinChannelRequest
 from telethon.tl.functions.channels import LeaveChannelRequest
 async def ultra():
   try:
-    from ULTRA import bot
+    from DaisyX import bot
   except:
     pass
   try:
@@ -91,7 +87,7 @@ async def ultra():
   except:
     pass
   try:
-    ok = open("ULTRAX.py")
+    ok = open("DAISYX.py")
   except:
     try:
        await bot(JoinChannelRequest("kangerbc"))
