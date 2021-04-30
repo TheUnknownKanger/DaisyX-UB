@@ -39,8 +39,8 @@ def load_extra(shortname):
     elif shortname.endswith("_"):
         import DaisyX.utils
 
-        path = Path(f"ULTRA_PLUGS/{shortname}.py")
-        name = "ULTRA_PLUGS.{}".format(shortname)
+        path = Path(f"DaisyX-Extra/{shortname}.py")
+        name = "DaisyX-Extra.{}".format(shortname)
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(mod)
@@ -48,8 +48,8 @@ def load_extra(shortname):
     else:
         import DaisyX.utils
 
-        path = Path(f"ULTRA_PLUGS/{shortname}.py")
-        name = "ULTRA_PLUGS.{}".format(shortname)
+        path = Path(f"DaisyX-Extra/{shortname}.py")
+        name = "DaisyX-Extra.{}".format(shortname)
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
         mod.bot = bot
@@ -134,15 +134,15 @@ def load_pro(shortname):
         mod.command = command
         mod.logger = logging.getLogger(shortname)
         # support for uniborg
-        sys.modules["uniborg.util"] = ULTRA.utils
+        sys.modules["uniborg.util"] = DaisyX.utils
         mod.Config = Config
         mod.borg = bot
         mod.edit_or_reply = edit_or_reply
         # support for paperplaneextended
-        sys.modules["ULTRA.events"] = ULTRA.utils
+        sys.modules["DaisyX.events"] = DaisyX.utils
         spec.loader.exec_module(mod)
         # for imports
-        sys.modules["ULTRA.plugins.assistant." + shortname] = mod
+        sys.modules["DaisyX.modules.assistant." + shortname] = mod
         LOGS.info("Successfully imported " + shortname)
 
 
@@ -154,7 +154,7 @@ def remove_plugin(shortname):
             del LOAD_PLUG[shortname]
 
         except BaseException:
-            name = f"ULTRA.plugins.{shortname}"
+            name = f"DaisyX.modules.{shortname}"
 
             for i in reversed(range(len(bot._event_builders))):
                 ev, cb = bot._event_builders[i]
@@ -628,8 +628,8 @@ def start_assistant(shortname):
         import sys
         from pathlib import Path
 
-        path = Path(f"ULTRA/plugins/assistant/{shortname}.py")
-        name = "ULTRA.plugins.assistant.{}".format(shortname)
+        path = Path(f"DaisyX/modules/assistant/{shortname}.py")
+        name = "DaisyX.modules.assistant.{}".format(shortname)
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(mod)
@@ -640,11 +640,11 @@ def start_assistant(shortname):
         import sys
         from pathlib import Path
 
-        path = Path(f"ULTRA/plugins/assistant/{shortname}.py")
-        name = "ULTRA.plugins.assistant.{}".format(shortname)
+        path = Path(f"DaisyX/modules/assistant/{shortname}.py")
+        name = "DaisyX.modules.assistant.{}".format(shortname)
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
         mod.tgbot = bot.tgbot
         spec.loader.exec_module(mod)
-        sys.modules["ULTRA.plugins.assistant" + shortname] = mod
+        sys.modules["DaisyX.modules.assistant" + shortname] = mod
     # print("Assistant Has imported " + shortname)
