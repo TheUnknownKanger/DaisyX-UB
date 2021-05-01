@@ -1,5 +1,5 @@
 # by uniborg...Thanks @spechide 
-# Now will be used in LEGENDBOT too....
+# Now will be used in DaisyX too....
 """Syntax: .afk REASON"""
 import asyncio
 import datetime
@@ -8,8 +8,8 @@ from datetime import datetime
 from telethon import events
 from telethon.tl import functions, types
 
-from ULTRA import CMD_HELP
-from ULTRA.utils import admin_cmd
+from DaisyX import CMD_HELP
+from DaisyX.utils import admin_cmd
 
 global USER_AFK  # pylint:disable=E0602
 global afk_time  # pylint:disable=E0602
