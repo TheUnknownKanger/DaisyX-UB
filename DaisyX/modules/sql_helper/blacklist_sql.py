@@ -2,7 +2,7 @@ import threading
 
 from sqlalchemy import func, distinct, Column, String, UnicodeText
 
-from ULTRA.plugins.sql_helper import SESSION, BASE
+from DaisyX.modules.sql_helper import SESSION, BASE
 
 
 class BlackListFilters(BASE):
