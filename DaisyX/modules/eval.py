@@ -10,7 +10,7 @@ import traceback
 import asyncio
 import sys
 import io
-from ULTRA import CMD_HELP, eor
+from DaisyX import CMD_HELP, eor
 from uniborg.util import admin_cmd, sudo_cmd
 
 
