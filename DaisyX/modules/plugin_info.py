@@ -5,8 +5,8 @@
 #
 """ Userbot plugin_info command """
 
-from ULTRA import CMD_HELP
-from ULTRA.utils import admin_cmd
+from DaisyX import CMD_HELP
+from DaisyX.utils import admin_cmd
 
 @borg.on(admin_cmd(outgoing=True, pattern="plinfo(?: |$)(.*)"))
 async def info(event):
