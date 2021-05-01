@@ -1,23 +1,16 @@
-""" 
-FOR ALL DEVS I EDITED IT 
-(C) @ROHTIHADITYA
-(C) @PROBOYX
-(C) @ROSELOVERX SCAMMER NOT IN TEAMULTRA OR TEAMLEGEND
-(C) @LEGENDX22
-(C) @NubBoy_007
-"""
+
 from telethon.tl.functions.contacts import BlockRequest, UnblockRequest
-from ULTRA import CMD_HELP
-from ULTRA.utils import admin_cmd, sudo_cmd
+from DaisyX import CMD_HELP
+from DaisyX.utils import admin_cmd, sudo_cmd
 import html
-from ULTRAX import POST
+from Assist.DAISYX import POST, devs
 from telethon import events
 from telethon.tl.functions.photos import GetUserPhotosRequest
 from telethon.tl.functions.users import GetFullUserRequest
 from telethon.tl.types import MessageEntityMentionName
 from telethon.utils import get_input_location
 from telethon.events import ChatAction
-from ULTRAX import devs
+
 async def get_full_user(event):  
     args = event.pattern_match.group(1).split(':', 1)
     extra = None
@@ -198,7 +191,7 @@ async def handler(rkG):
    client = borg
    if rkG.user_joined or rkG.user_added:      
        try:       	
-         from ULTRA.modules.sql_helper.gmute_sql import is_gmuted
+         from DaisyX.modules.sql_helper.gmute_sql import is_gmuted
          guser = await rkG.get_user()      
          gmuted = is_gmuted(guser.id)             
        except:      
