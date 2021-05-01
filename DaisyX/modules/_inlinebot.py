@@ -8,13 +8,13 @@ import sys
 
 from telethon import Button, custom, events, functions, version
 
-from ULTRA import CMD_LIST
-from ULTRA import ALIVE_NAME
-from ULTRAX import PHOTO
-from ULTRA.utils import admin_cmd, sudo_cmd
+from DaisyX import CMD_LIST
+from DaisyX import ALIVE_NAME
+from Assist import PHOTO
+from DaisyX.utils import admin_cmd, sudo_cmd
 from platform import uname
 
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "υℓтяα χ"
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "ᴅᴀɪsʏ χ"
 
 
 #@command(pattern="^.help ?(.*)")
@@ -57,7 +57,7 @@ async def cmd_list(event):
 
                         allow_cache=False,
 
-                        caption="¢σммαη∂ѕ ιη υℓтяα χ вσт",
+                        caption="¢σммαη∂ѕ ιη ᴅᴀɪsʏ χ вσт",
 
                         reply_to=reply_to_id
 
@@ -89,7 +89,7 @@ async def cmd_list(event):
 
         else:
 
-            help_string = f""" υℓтяα χ вσт Hᴇʟᴘ ᴘʀᴏᴠɪᴅᴇᴅ ʙʏ тєαм υℓтяα χ\n
+            help_string = f""" ᴅᴀɪsʏ χ вσт Hᴇʟᴘ ᴘʀᴏᴠɪᴅᴇᴅ ʙʏ тєαм ᴅᴀɪsʏ χ\n
 
 Dᴏ `.help` PLUGIN_NAME ғᴏʀ ᴄᴏᴍᴍᴀɴᴅs, ɪғ ɪɴ ᴄᴀsᴇ Pᴏᴘ-Uᴘ ᴅᴏᴇsɴ'ᴛ ᴀᴘᴘᴇᴀʀ."""
 
@@ -115,7 +115,7 @@ Dᴏ `.help` PLUGIN_NAME ғᴏʀ ᴄᴏᴍᴍᴀɴᴅs, ɪғ ɪɴ ᴄᴀsᴇ P�
 
             
 
-@borg.on(admin_cmd(pattern="legend"))  # pylint:disable=E0602
+@borg.on(admin_cmd(pattern="daisy"))  # pylint:disable=E0602
 
 async def _(event):
 
@@ -145,7 +145,7 @@ async def _(event):
 
     logger.info(result)  # pylint:disable=E0602
 
-    await event.edit("тєℓєтнση  вαѕє∂ υѕєявσт ρσωєяє∂ ву υℓтяα χ вσт")
+    await event.edit("тєℓєтнση  вαѕє∂ υѕєявσт ρσωєяє∂ ву ᴅᴀɪsʏ χ вσт")
 
 
 
@@ -167,7 +167,7 @@ async def _(event):
 
         help_string = CMD_LIST[plugin_name].doc
 
-        unload_string = f"Usᴇ `.unload` {plugin_name} ᴛᴏ ʀᴇᴍᴏᴠᴇ ᴛʜɪs Pʟᴜɢɪɴ.\n           Â© υℓтяα χ"
+        unload_string = f"Usᴇ `.unload` {plugin_name} ᴛᴏ ʀᴇᴍᴏᴠᴇ ᴛʜɪs Pʟᴜɢɪɴ.\n           Â© ᴅᴀɪsʏ χ"
 
         
 
