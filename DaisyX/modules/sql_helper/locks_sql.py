@@ -1,5 +1,5 @@
 from sqlalchemy import Boolean, Column, String
-from DaisyX.plugins.sql_helper import SESSION, BASE
+from DaisyX.modules.sql_helper import SESSION, BASE
 
 
 class Locks(BASE):
