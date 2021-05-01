@@ -13,6 +13,7 @@ auth_url = r["auth_url"]
 
 
 @borg.on(admin_cmd("t(m|t) ?(.*)"))
+@borg.on(sudo_cmd("t(m|t) ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
