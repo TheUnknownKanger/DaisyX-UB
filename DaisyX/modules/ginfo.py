@@ -3,9 +3,9 @@
 """
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 
-from ULTRA import CMD_HELP
-from ULTRA.utils import admin_cmd
-from ULTRAX import MASTER
+from DaisyX import CMD_HELP
+from DaisyX.utils import admin_cmd
+from Assist.DAISYX import MASTER
 LEGEND = MASTER
 PROBOY = "@tgscanrobot"
 # MADE BY LEGENDX22 🔥🔥
