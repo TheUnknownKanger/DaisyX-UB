@@ -1,10 +1,10 @@
 import asyncio
 from datetime import datetime
-from ULTRA.legend import BOT
+from DaisyX.legend import BOT
 from .. import ALIVE_NAME, CMD_HELP
 from ..utils import admin_cmd, edit_or_reply, sudo_cmd
 
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "UltraX"
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "DaisyX"
 
 from heroku_config import Var as Config
 
