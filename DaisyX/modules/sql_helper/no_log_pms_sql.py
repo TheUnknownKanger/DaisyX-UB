@@ -1,5 +1,5 @@
 from sqlalchemy import Column, String, Numeric
-from ULTRA.plugins.sql_helper import SESSION, BASE
+from DaisyX.plugins.sql_helper import SESSION, BASE
 
 
 class NOLogPMs(BASE):
