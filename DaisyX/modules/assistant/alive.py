@@ -21,7 +21,7 @@ async def awake(event):
   DaisyX += "**Fᴜʟʟʏ ᴜᴘᴅᴀᴛᴇᴅ ʙᴏᴛ...**\n\n"
   DaisyX += "**Tᴇʟᴇᴛʜᴏɴ** : `1.20`\n\n"
   DaisyX += "~~ **Tʜᴀɴᴋs ғᴏʀ ᴄʜᴇᴄᴋɪɴɢ ᴍᴇ** !!"
-  BUTTON = [[Button.url("Mᴀsᴛᴇʀ", f"https://t.me/{bot.me.username}"), Button.url(f"{BOT} Rᴇᴘᴏ", "https://github.com/TeamDaisyX/DaisyX-UB")]]
+  BUTTON = [[Button.url("Mᴀsᴛᴇʀ", f"https://t.me/{bot.me.username}"), Button.url(f"{BOT} Rᴇᴘᴏ", "https://github.com/TeamDaisyX/Daisy-X-UB")]]
   BUTTON += [[custom.Button.inline("Rᴇᴘᴏsɪᴛᴏʀɪᴇs »»", data="DaisyX")]]
   await xbot.send_file(event.chat_id, PHOTO, caption=DaisyX,  buttons=BUTTON)
 
@@ -32,7 +32,7 @@ async def awake(event):
 async def callback_query_handler(event):
 # inline by LEGENDX22 and PROBOY22 🔥 #Ported Here By Devil 🔥
   SkemX = [[Button.url("Rᴇᴘᴏ ᴅᴀɪsʏX", "https://github.com/TeamDaisyX/DaisyX-UB")]]
-  SkemX +=[[Button.url("Dᴇᴘʟᴏʏ ᴅᴀɪsʏX", "https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2FTeamDaisyX%2FDaisyPack&template=https%3A%2F%2Fgithub.com%2FTeamDaisyX%2FDaisyPack")]]
+  SkemX +=[[Button.url("Dᴇᴘʟᴏʏ ᴅᴀɪsʏX", "https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2FTeamDaisyX%2FDaisy-X-UB&template=https%3A%2F%2Fgithub.com%2FTeamDaisyX%2FDaisy-X-UB")]]
   SkemX +=[[Button.url("Tᴜᴛᴏʀɪᴀʟ", "https://youtu.be/rGCSSFPsS4Q"), Button.url("Sᴛʀɪɴɢ Sᴇssɪᴏɴ", "https://replit.com/@legendx22/ULTRA-X#main.py")]]
   SkemX +=[[Button.url("Aᴘɪ Iᴅ & Aᴘɪ Hᴀsʜ", "https://t.me/DaisyXScrapperBot"), Button.url("Rᴇᴅɪs", "https://redislabs.com")]]
   SkemX +=[[Button.url("Sᴜᴘᴘᴏʀᴛ Cʜᴀɴɴᴇʟ", "https://t.me/DaisyXOT"), Button.url("Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ", "https://t.me/DaisySupport_Official")]]
@@ -57,7 +57,7 @@ async def callback_query_handler(event):
 
 @xbot.on(events.NewMessage(pattern=("/repo")))
 async def repo(event):
-  await xbot.send_message(event.chat, "**Hᴇʀᴇ Is Tʜᴇ Rᴇᴘᴏ Fᴏʀ ᴅαιѕу χ Usᴇʀʙᴏᴛ** \n\nFᴏʀ Aɴʏ Hᴇʟᴘ :- @DaisyXOT", buttons=[[Button.url("⚜️ Rᴇᴘᴏ ⚜️", "https://github.com/TeamDaisyX/DaisyX-UB"), Button.url("🔰 Dᴇᴘʟᴏʏ 🔰", "https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2FTeamDaisyX%2FDaisyPack&template=https%3A%2F%2Fgithub.com%2FTeamDaisyX%2FDaisyPack")]])
+  await xbot.send_message(event.chat, "**Hᴇʀᴇ Is Tʜᴇ Rᴇᴘᴏ Fᴏʀ ᴅαιѕу χ Usᴇʀʙᴏᴛ** \n\nFᴏʀ Aɴʏ Hᴇʟᴘ :- @DaisyXOT", buttons=[[Button.url("⚜️ Rᴇᴘᴏ ⚜️", "https://github.com/TeamDaisyX/Daisy-X-UB"), Button.url("🔰 Dᴇᴘʟᴏʏ 🔰", "https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2FTeamDaisyX%2FDaisy-X-UB&template=https%3A%2F%2Fgithub.com%2FTeamDaisyX%2FDaisy-X-UB")]])
 
 
 def get_readable_time(seconds: int) -> str:
