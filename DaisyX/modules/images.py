@@ -3,16 +3,16 @@ Syntax: `.img <Name>` or `.img (replied message)`
 \n Upgraded and Google Image Error Fixed
 """
 
-from ULTRA.google_imgs import googleimagesdownload
+from DaisyX.google_imgs import googleimagesdownload
 import os
 import shutil
 from re import findall
-from ULTRA.utils import admin_cmd
+from DaisyX.utils import admin_cmd
 
 
 @borg.on(admin_cmd(pattern="img ?(.*)"))
 async def img_sampler(event):
-    await event.edit("`Processing...`")
+    await event.edit("`ᴅᴀɪsʏ x ɪs ᴘʀᴏᴄᴇssɪɴɢ ᴛᴏ ғᴜɴᴅ ᴛʜᴇ ɪᴍᴀɢᴇs`")
     reply = await event.get_reply_message()
     if event.pattern_match.group(1):
         query = event.pattern_match.group(1)
