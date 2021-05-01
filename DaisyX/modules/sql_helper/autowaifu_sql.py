@@ -1,5 +1,5 @@
 try:
-    from ULTRA.plugins.sql_helper import BASE, SESSION
+    from DaisyX.modules.sql_helper import BASE, SESSION
 except ImportError:
     raise AttributeError
 
