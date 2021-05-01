@@ -9,7 +9,7 @@ import requests
 from bs4 import BeautifulSoup
 from datetime import datetime
 from google_images_download import google_images_download
-from ULTRA.utils import admin_cmd
+from DaisyX.utils import admin_cmd
 
 
 def progress(current, total):
