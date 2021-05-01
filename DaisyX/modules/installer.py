@@ -1,17 +1,17 @@
 # maded by shivam
-# ported by LEGENDX22
-from ULTRA import bot, CMD_HELP, CMD_LIST
+# ported by Devil
+from DaisyX import bot, CMD_HELP, CMD_LIST
 from telethon import events
-from ULTRA.utils import remove_plugin, load_module, register
+from DaisyX.utils import remove_plugin, load_module, register
 from telethon import functions, types
 from telethon.tl.types import InputMessagesFilterDocument
 from pathlib import Path
-from ULTRA import LOAD_PLUG
+from DaisyX import LOAD_PLUG
 from datetime import datetime
 DELETE_TIMEOUT = 5
 import sys, asyncio, traceback, os, importlib
-import ULTRA.utils
-from ULTRA import CMD_HELP
+import DaisyX.utils
+from DaisyX import CMD_HELP
 
 
 
@@ -26,7 +26,7 @@ async def install(event):
         try:
             downloaded_file_name = await event.client.download_media(  # pylint:disable=E0602
                 await event.get_reply_message(),
-                "./ULTRA/plugins/"  # pylint:disable=E0602
+                "./DaisyX/modules/"  # pylint:disable=E0602
             )
             if "(" not in downloaded_file_name:
                 path1 = Path(downloaded_file_name)
