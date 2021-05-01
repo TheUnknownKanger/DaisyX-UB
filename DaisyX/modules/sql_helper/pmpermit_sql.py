@@ -1,6 +1,6 @@
 from sqlalchemy import Column, String
 
-from DaisyX.plugins.sql_helper import BASE, SESSION
+from DaisyX.modules.sql_helper import BASE, SESSION
 
 
 class PMPermit(BASE):
