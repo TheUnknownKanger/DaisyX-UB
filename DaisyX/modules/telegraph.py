@@ -4,8 +4,8 @@ import os
 from PIL import Image
 from datetime import datetime
 from telegraph import Telegraph, upload_file, exceptions
-from ULTRA.utils import admin_cmd
-from ULTRA import CMD_HELP
+from DaisyX.utils import admin_cmd, sudo_cmd
+from DaisyX import CMD_HELP
 
 telegraph = Telegraph()
 r = telegraph.create_account(short_name=Config.TELEGRAPH_SHORT_NAME)
