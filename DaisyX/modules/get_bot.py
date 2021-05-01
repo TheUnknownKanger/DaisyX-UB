@@ -2,8 +2,8 @@
 Syntax: .get_bot"""
 from telethon import events
 from telethon.tl.types import ChannelParticipantAdmin, ChannelParticipantsBots
-from ULTRA import CMD_HELP
-from ULTRA.utils import admin_cmd
+from DaisyX import CMD_HELP
+from DaisyX.utils import admin_cmd
 
 
 @borg.on(admin_cmd("get_bot ?(.*)"))
