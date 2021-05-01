@@ -1,16 +1,13 @@
-# make by LEGENDX22 🔥🔥
-# MAKE BY LEGEND X
-#make for ULTRA X
-# KANG KRNA H TO CREDITS DEDENA 
-'''
+# (c) Copyright 2021-2022 DaisyX
+# Made by Legend22X
+
 from datetime import datetime
 from random import randint
 from asyncio import sleep
 from os import execl
-import sys
 import os
-from ULTRA import bot as javes
-from ULTRA.utils import admin_cmd
+from DaisyX import bot as javes
+from DaisyX.utils import admin_cmd
 import io
 import heroku3
 import asyncio
@@ -19,22 +16,18 @@ from asyncio.subprocess import PIPE as asyncPIPE
 
 import sys
 import json
-from ULTRA import BOTLOG, BOTLOG_CHATID, CMD_HELP, bot
+from DaisyX import BOTLOG, BOTLOG_CHATID, CMD_HELP, bot
 from speedtest import Speedtest
 from telethon import functions
 from os import remove, execle, path, makedirs, getenv, environ
 from shutil import rmtree
-import asyncio
-import json
 from asyncio import sleep
 from telethon.errors import rpcbaseerrors
 
-import os
 import subprocess
 import time
 import math
 
-import asyncio
 
 import sys
 try:
@@ -42,23 +35,19 @@ try:
    from git.exc import GitCommandError, InvalidGitRepositoryError, NoSuchPathError
 except:
 	pass
-from ULTRA import CMD_HELP, bot
-from ULTRA import CMD_HELP, LOGS
+from DaisyX import CMD_HELP, bot, LOGS
 from asyncio import create_subprocess_shell as asyncrunapp
 from asyncio.subprocess import PIPE as asyncPIPE
 from platform import python_version, uname
 from shutil import which
 from os import remove
 from telethon import version
-from ULTRA import CMD_HELP
+from DaisyX import CMD_HELP
 
-import heroku3
-import asyncio
-import os
 import requests
-import math
 
-from ULTRA import CMD_HELP
+
+
 HEROKU_APP_NAME = os.environ.get("HEROKU_APP_NAME", None)
 HEROKU_API_KEY = os.environ.get("HEROKU_APIKEY", None)
 HEROKU_APPNAME = os.environ.get("HEROKU_APP_NAME", None)
@@ -67,9 +56,9 @@ HEROKU_APIKEY = os.environ.get("HEROKU_APIKEY", None)
 
 
 Heroku = heroku3.from_key(HEROKU_API_KEY)
-GIT_REPO_NAME = "LEGEND-BOT"
+GIT_REPO_NAME = "DaisyX-UB"
 heroku_api = "https://api.heroku.com"
-UPSTREAM_REPO_URL="https://github.com/legendx22/LEGEND-BOT"
+UPSTREAM_REPO_URL="https://github.com/TeamDaisyX/DaisyX-UB"
 
 # ================= CONSTANT =================
 JAVES_NNAME = str(HEROKU_APPNAME)
@@ -286,3 +275,4 @@ from ULTRA.utils import admin_cmd
 async def hehe (event):
   await event.edit("want to update your bot ?\nnow not use update now use \n`.restart` only")
 #maked by LEGENDX22 🔥🔥🔥⚡⚡⚡⚡
+'''
