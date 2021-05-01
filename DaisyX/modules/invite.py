@@ -1,8 +1,4 @@
-#Originally made by @rekcah for @javes05
-#porting to LEGENDBOT by @legendx22...
-#i asked rekcah before porting...not like other kangers....
-#keep credit if u wanna kang...
-#else u are a gay...no doubt in that....
+
 
 #--------------------------------------------------------------------------------------------------------------------------------
 
@@ -10,8 +6,8 @@ import asyncio, time, io, math, os, logging, asyncio, shutil, re, subprocess, js
 from hachoir.metadata import extractMetadata
 from hachoir.parser import createParser
 from base64 import b64decode
-from ULTRA import CMD_HELP
-from ULTRA.utils import admin_cmd, edit_or_reply, sudo_cmd
+from DaisyX import CMD_HELP
+from DaisyX.utils import admin_cmd, edit_or_reply, sudo_cmd
 from telethon.events import NewMessage
 from telethon.tl.custom import Dialog
 from telethon.tl.types import Channel, Chat, User
