@@ -1,7 +1,7 @@
 # pastebin for catuserbot
-from ULTRA.utils import admin_cmd, sudo_cmd
+from DaisyX.utils import admin_cmd, sudo_cmd
 import os
-from ULTRA import CMD_HELP
+from DaisyX import CMD_HELP
 import pygments
 import requests
 from pygments.formatters import ImageFormatter
@@ -17,7 +17,7 @@ def progress(current, total):
             current, total, (current / total) * 100
         )
     )
-from ULTRA.utils import admin_cmd, sudo_cmd
+from DaisyX.utils import admin_cmd, sudo_cmd
 
 @bot.on(admin_cmd(pattern="neko(?: |$)(.*)", outgoing=True))
 @bot.on(sudo_cmd(pattern="neko(?: |$)(.*)", allow_sudo=True))
@@ -73,7 +73,7 @@ async def _(event):
             .get("key")
         )
         url = f"https://nekobin.com/{key}"
-    reply_text = f"**Pasted to Nekobin :** [Neko]({url})\n**Raw url :** [Raw](https://nekobin.com/raw/{key})\n\n**𝑷𝒂𝒔𝒕𝒆𝒅 𝒂𝒏𝒅 𝑼𝒑𝒍𝒐𝒂𝒅𝒆𝒅 𝒕𝒐 𝑵𝒆𝒌𝒐𝑩𝒊𝒏 𝒃𝒚 υℓтяα χ**"
+    reply_text = f"**Pasted to Nekobin :** [Neko]({url})\n**Raw url :** [Raw](https://nekobin.com/raw/{key})\n\n**𝑷𝒂𝒔𝒕𝒆𝒅 𝒂𝒏𝒅 𝑼𝒑𝒍𝒐𝒂𝒅𝒆𝒅 𝒕𝒐 𝑵𝒆𝒌𝒐𝑩𝒊𝒏 𝒃𝒚 ᴅᴀɪsʏ χ**"
     await catevent.edit(reply_text)
 
 @bot.on(admin_cmd(pattern="pcode(?: |$)(.*)"))
