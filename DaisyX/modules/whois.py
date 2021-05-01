@@ -1,6 +1,6 @@
 """Get Telegram User Information
 Syntax: .whois @username/userid"""
-
+# Make Good UI by Alain Champion
 
 
 
