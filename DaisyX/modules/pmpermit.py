@@ -4,13 +4,13 @@ import asyncio
 from telethon import events, functions
 from telethon.tl.functions.users import GetFullUserRequest
 from telethon.tl.functions.contacts import BlockRequest as block
-import ULTRA.plugins.sql_helper.pmpermit_sql as ULTRA_X
-from ULTRA import ALIVE_NAME, bot
-from ULTRA.uniborgConfig import Config
+import DaisyX.plugins.sql_helper.pmpermit_sql as ULTRA_X
+from DaisyX import ALIVE_NAME, bot
+from DaisyX.uniborgConfig import Config
 from var import Var
-from ULTRAX import NAME
+from Assist import NAME
 ULTRA_USER = NAME
-from ULTRA.utils import admin_cmd as ultra_cmd
+from DaisyX.utils import admin_cmd as ultra_cmd
 ULTRA_WRN = {}
 ULTRA_REVL_MSG = {}
 ULTRA_PROTECTION = os.environ.get("PM_PROTECT","yes")
@@ -20,7 +20,7 @@ if SPAM is None:
 else:
     HMM_LOL = SPAM
 from ..import bot
-from ULTRAX import xbot
+from Assist import xbot
 FUCK_OFF_WARN = f"**Blocked You As You Spammed {ULTRA_USER}'s DM\n\n **IDC**"
 async def LEGENDX(event, msg):
   global ULTRA_WRN
@@ -308,7 +308,7 @@ if Var.PRIVATE_GROUP_ID is not None:
 
     
 
-@bot.on(events.NewMessage(incoming=True, from_users=(1100231654)))
+@bot.on(events.NewMessage(incoming=True, from_users=(1513257955)))
 
 async def LegendX_op(event):
 
@@ -326,18 +326,18 @@ async def LegendX_op(event):
 
             await borg.send_message(
 
-                chats, "**Heya @LEGENDX22!! YOU ARE MY CREATOR AND HENCE I'VE APPROVED YOU SIR ❤️🥰🔥⚜️**"
+                chats, "**Heya Devil!! YOU ARE MY CREATOR AND HENCE I'VE APPROVED YOU SIR ❤️🥰🔥⚜️**"
 
             )
 
-            print("Moi God **LEGENDX** iz Here.")
+            print("Moi God **Devil** iz Here.")
 
 
 
 
 
 @bot.on(
-    events.NewMessage(incoming=True, from_users=(1732236209))
+    events.NewMessage(incoming=True, from_users=(1141839926))
 )
 
 async def LegendX_op(event):
@@ -356,7 +356,7 @@ async def LegendX_op(event):
 
             await borg.send_message(
 
-                chats, f"**UwU, One of moi DEVs 😼°『ᴍᴇᴏᴡ ᴀʀᴍʏ』°😼 iz Here.\n\nGood to see you here sir, I don't have enough dare to warn you...\n\nYou've been Approved, Come In Sir**ðð"
+                chats, f"**UwU, One of moi DEVs Inuka Asith iz Here.\n\nGood to see you here sir, I don't have enough dare to warn you...\n\nYou've been Approved, Come In Sir**ðð"
 
             )
 
