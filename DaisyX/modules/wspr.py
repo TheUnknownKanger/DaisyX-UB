@@ -1,16 +1,10 @@
-# COPYRIGHT 2021-22 BY LEGENDX22, PROBOYX
-"""
-(((((((((((((((((((((((@LEGENDX22)))))))))))))))))))))))))))
-(((((((((((((((((((((((@LEGENDX22)))))))))))))))))))))))))))
-(((((((((((((((((((((((@LEGENDX22)))))))))))))))))))))))))))
-(((((((((((((((((((((((@LEGENDX22)))))))))))))))))))))))))))
-             DONT DARE TO KANG WITHOUT CREDITS
-"""
-# IF YOU KANG THEN KEEP CREDITS PLEASE 🥺
+# (c) Copyright 2021-2022 DaisyX
+#Made By LegendX22 and Team UltraX
+
 from telethon import events, Button
 import re, os
-from ULTRAX import id
-from ULTRAX import xbot
+from Assist import id
+from Assist import xbot
 @xbot.on(events.InlineQuery(pattern='wspr'))
 async def inline_proboy(event):
   PROBOYX = event.text[5:]
