@@ -1,5 +1,5 @@
 from sqlalchemy import Column, UnicodeText, LargeBinary, Numeric
-from ULTRA.plugins.sql_helper import SESSION, BASE
+from DaisyX.plugins.sql_helper import SESSION, BASE
 
 
 class Snips(BASE):
