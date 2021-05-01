@@ -8,7 +8,7 @@ from telethon import Button, custom, events, functions
 import math
 import heroku3
 
-from ULTRA import HEROKU_APP_NAME, HEROKU_API_KEY
+from DaisyX import HEROKU_APP_NAME, HEROKU_API_KEY
 
 heroku = heroku3.from_key(HEROKU_API_KEY)
 heroku_api = "https://api.heroku.com"
@@ -32,6 +32,6 @@ async def inline_id_handler(event: events.InlineQuery.Event):
             await event.answer([shivamlog])
             return os.remove('logs.txt')
     if not event.query.user_id == me.id:
-        resultm = builder.article(title="Me iz not your Bot",description="Mind Your Own Bizness",text="Hey!! U Must Use https://github.com/ULTRA-OP/ULTRA-X",buttons=[[Button.switch_inline("Search Again", query="logs", same_peer=True)],], )
+        resultm = builder.article(title="Me iz not your Bot",description="Mind Your Own Bizness",text="Hey!! U Must Use https://github.com/TeamDaisyX/DaisyX-UB",buttons=[[Button.switch_inline("Search Again", query="logs", same_peer=True)],], )
         await event.answer([resultm])
         return
