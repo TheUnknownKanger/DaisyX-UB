@@ -62,7 +62,7 @@ async def start(event):
             caption=starttext,
             link_preview=False,
             buttons=[
-                [custom.Button.url("Dᴇᴘʟᴏʏ Yᴏᴜʀ Oᴡɴ ᴅᴀɪsʏX", "http://GitHub.com/TeamDaisyX/DaisyX-UB")],
+                [custom.Button.url("Dᴇᴘʟᴏʏ Yᴏᴜʀ Oᴡɴ ᴅᴀɪsʏX", "http://GitHub.com/TeamDaisyX/Daisy-X-UB")],
                 [Button.url("Sᴜᴘᴘᴏʀᴛ", "t.me/DaisySupport_Official")],
             ],
         )
