@@ -11,9 +11,9 @@ import asyncio
 import os
 import requests
 import math
-from ULTRA.utils import admin_cmd
-from ULTRA import CMD_HELP
-from ULTRA.uniborgConfig import Config
+from DaisyX.utils import admin_cmd
+from DaisyX import CMD_HELP
+from DaisyX.uniborgConfig import Config
 
 # ================= 
 
