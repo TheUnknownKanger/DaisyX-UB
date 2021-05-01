@@ -1,5 +1,5 @@
 from sqlalchemy import BigInteger, Boolean, Column, String, UnicodeText
-from ULTRA.plugins.sql_helper import SESSION, BASE
+from DaisyX.modules.sql_helper import SESSION, BASE
 
 
 class Welcome(BASE):
