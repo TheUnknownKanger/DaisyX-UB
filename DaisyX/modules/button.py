@@ -1,6 +1,6 @@
 # COPYRIGHT (C) 2021-2022 © Ultra X Bot
-from ULTRA.utils import admin_cmd, sudo_cmd, edit_or_reply as eor
-from ULTRAX import xbot, NAME
+from DaisyX.utils import admin_cmd, sudo_cmd, edit_or_reply as eor
+from Assist import xbot, NAME
 from telethon import Button
 @borg.on(admin_cmd(pattern="button (.*)"))
 @borg.on(sudo_cmd(pattern="button", allow_sudo=True))
@@ -22,7 +22,7 @@ async def Buttons(event):
         await pro.forward_to(event.chat_id)
         await event.delete()
     except:
-        await event.edit("example:\n.button <button name>|<link>\n`.button ULTRAX|https://t.me/ULTRAXOT`\nmake sure your name and link no have Useless spece ",link_preview=False)
+        await event.edit("example:\n.button <button name>|<link>\n`.button ULTRAX|https://t.me/DAISYXOT`\nmake sure your name and link no have Useless spece ",link_preview=False)
 
 from .. import CMD_HELP
-CMD_HELP.update({"button": "example:\n.button <button name>|<link>\n`.button ULTRAX|https://t.me/ULTRAXOT`\nmake sure your name and link no have Useless spece"})
+CMD_HELP.update({"button": "example:\n.button <button name>|<link>\n`.button ULTRAX|https://t.me/DAISYXOT`\nmake sure your name and link no have Useless spece"})
