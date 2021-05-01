@@ -1,10 +1,10 @@
 import asyncio
 # made by LEGENDBOT & UltraX
 from telethon.errors.rpcerrorlist import YouBlockedUserError
-from ULTRA.legend import NAME
-from ULTRA import CMD_HELP
-from ULTRA import bot
-from ULTRA.utils import admin_cmd
+from Assist.DAISYX import NAME
+from DaisyX import CMD_HELP
+from DaisyX import bot
+from DaisyX.utils import admin_cmd
 
 bot = "@MissRose_bot"
 ULTRAX = NAME
@@ -67,7 +67,7 @@ async def _(event):
             await conv.send_message("/fedinfo " + sysarg)
             await asyncio.sleep(2)
             audio = await conv.get_response()
-            await ok.edit(audio.text + "\n\nƒє∂ ιηƒσ єχтяα¢тє∂ ву υℓтяα χ вσт")
+            await ok.edit(audio.text + "\n\nƒє∂ ιηƒσ єχтяα¢тє∂ ву 𝙳𝙰𝙸𝚂𝚈 χ вσт")
         except YouBlockedUserError:
             await ok.edit("**Error**\n `Unblock` **@MissRose_Bot** `and try again!")
 
@@ -84,9 +84,9 @@ async def myfeds(event):
       await pro.click(0)
       await asyncio.sleep(1.5)
       pro = await rose.get_response()
-      await borg.send_file(event.chat_id, pro, caption='**Cʜᴇᴄᴋᴇᴅ ʙʏ UʟᴛʀᴀX ฅ^•ﻌ•^ฅ**')
+      await borg.send_file(event.chat_id, pro, caption='**Cʜᴇᴄᴋᴇᴅ ʙʏ 𝙳𝙰𝙸𝚂𝚈X ฅ^•ﻌ•^ฅ**')
     else:
-      await LEGENDX.edit(pro.text + "\n\n**Cʜᴇᴄᴋᴇᴅ ʙʏ UʟᴛʀᴀX ฅ^•ﻌ•^ฅ**")
+      await LEGENDX.edit(pro.text + "\n\n**Cʜᴇᴄᴋᴇᴅ 𝚋𝚢 𝙳𝙰𝙸𝚂𝚈X ฅ^•ﻌ•^ฅ**")
 CMD_HELP.update(
     {
         "fedstuff": ".fstat <username/userid/reply to user>\nUse - To check the persons fedban stat in @MissRose_Bot.\
