@@ -1,7 +1,7 @@
-from ULTRA.plugins.sql_helper.mute_sql import is_muted, mute, unmute
+from DaisyX.plugins.sql_helper.mute_sql import is_muted, mute, unmute
 import asyncio
-from ULTRA import CMD_HELP
-from ULTRA.utils import admin_cmd, sudo_cmd
+from DaisyX import CMD_HELP
+from DaisyX.utils import admin_cmd, sudo_cmd
 
 #@command(outgoing=True, pattern=r"^.gmute ?(\d+)?")
 @borg.on(admin_cmd(pattern=r"gmute ?(\d+)?"))
@@ -69,4 +69,4 @@ async def watcher(event):
     if is_muted(event.sender_id, "gmute"):
         await event.delete()
 CMD_HELP.update({
-    "gmute":"ye plug-in se aap kisi ke bhi muh me deke chup krwa skte h"})
+    "gmute":"𝚈𝙾𝚄 𝙲𝙰𝙽 𝙼𝚄𝚃𝙴 𝙿𝙴𝚁𝚂𝙸𝙾𝙽 𝙵𝚁𝙾𝙼 𝙰𝙻𝙻 𝙶𝚁𝙾𝚄𝙿 𝚆𝙷𝙴𝚁𝙴 𝚈𝙾𝚄 𝙰𝙳𝙼𝙸𝙽 𝚆𝙸𝚃𝙷 𝙳𝙴𝙻𝙴𝚃𝙴 𝙼𝙴𝚂𝚂𝙰𝙶𝙴 𝚁𝙸𝙶𝙷𝚃 𝚅𝙸𝙰 𝚃𝙷𝙸𝚂 𝙿𝙻𝚄𝙶𝙸𝙽"})
