@@ -6,10 +6,10 @@ import os
 import textwrap
 
 from PIL import Image, ImageDraw, ImageFont
-from var import Var
 
 from DaisyX import CMD_HELP
 from DaisyX.utils import admin_cmd
+from var import Var
 
 # how a lazy guy ports.
 client = borg

@@ -5,11 +5,11 @@ import os
 from telethon import events, functions
 from telethon.tl.functions.contacts import BlockRequest as block
 from telethon.tl.functions.users import GetFullUserRequest
-from var import Var
 
 import DaisyX.plugins.sql_helper.pmpermit_sql as ULTRA_X
 from Assist import NAME
 from DaisyX import bot
+from var import Var
 
 ULTRA_USER = NAME
 from DaisyX.utils import admin_cmd as ultra_cmd
