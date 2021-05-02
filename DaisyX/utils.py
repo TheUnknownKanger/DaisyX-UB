@@ -22,7 +22,7 @@ from var import Var
 
 API_ID = os.environ.get("APP_ID")
 API_HASH = os.environ.get("API_HASH")
-token = os.environ.get("TG_BOT_TOKEN_BF_HER") 
+token = os.environ.get("TG_BOT_TOKEN_BF_HER")
 
 xbot = TelegramClient("daisyx", API_ID, API_HASH).start(bot_token=token)
 
