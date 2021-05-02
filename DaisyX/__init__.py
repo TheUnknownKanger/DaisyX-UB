@@ -8,9 +8,17 @@ from DaisyX.uniborgConfig import Config
 from DaisyX.modules.sql_helper import Var
 StartTime = time.time()
 
-    session_name = str(os.get.environ("STRING_SESSION")
-    bot = TelegramClient(StringSession(session_name), os.environ.get("APP_ID"), os.environ.get("API_HASH")
 
+
+TOKEN = os.enivron.get("TOKEN")
+NAME = TOKEN.split(":")[0]
+
+bot = TelegramClient(
+    NAME, os.environ.get("APP_ID"), os.environ.get("APP_HASH")
+)
+
+# Telethon
+bot.start(bot_token=TOKEN)
 
 DEVS = [1513257955, 1037581197, 1141839926, 1221693726, 1625410627, 1667146381]
 CMD_LIST = {}
