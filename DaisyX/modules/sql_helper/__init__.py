@@ -5,15 +5,8 @@ from sqlalchemy.orm import sessionmaker, scoped_session
 
 
 # the secret configuration specific things
+from Assist.Var import var
 
-ENV = bool(os.environ.get("ENV", False))
-if ENV:
-    from heroku_config import Var as Config
-else:
-    from local_config import Development as Config
-
-
-Var = Config
 
 
 
