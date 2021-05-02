@@ -9,7 +9,7 @@ StartTime = time.time()
 
 
 
-TOKEN = os.enivron.get("TG_BOT_TOKEN_BF_HER")
+TOKEN = os.environ.get("TG_BOT_TOKEN_BF_HER")
 NAME = TOKEN.split(":")[0]
 
 bot = TelegramClient(
