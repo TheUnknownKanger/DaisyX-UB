@@ -5,15 +5,20 @@ Available Commands:
 
 import asyncio
 import os
-import requests
-from bs4 import BeautifulSoup
 from datetime import datetime
+
+import requests
 from google_images_download import google_images_download
+
 from DaisyX.utils import admin_cmd
 
 
 def progress(current, total):
-    logger.info("Downloaded {} of {}\nCompleted {}".format(current, total, (current / total) * 100))
+    logger.info(
+        "Downloaded {} of {}\nCompleted {}".format(
+            current, total, (current / total) * 100
+        )
+    )
 
 
 @borg.on(admin_cmd(pattern="gs (.*)"))
@@ -23,7 +28,9 @@ async def _(event):
     start = datetime.now()
     await event.edit("Processing ...")
     # SHOW_DESCRIPTION = False
-    input_str = event.pattern_match.group(1) # + " -inurl:(htm|html|php|pls|txt) intitle:index.of \"last modified\" (mkv|mp4|avi|epub|pdf|mp3)"
+    input_str = event.pattern_match.group(
+        1
+    )  # + " -inurl:(htm|html|php|pls|txt) intitle:index.of \"last modified\" (mkv|mp4|avi|epub|pdf|mp3)"
     input_url = "https://bots.shrimadhavuk.me/search/?q={}".format(input_str)
     headers = {"USER-AGENT": "UniBorg"}
     response = requests.get(input_url, headers=headers).json()
@@ -31,12 +38,15 @@ async def _(event):
     for result in response["results"]:
         text = result.get("title")
         url = result.get("url")
-        description = result.get("description")
-        image = result.get("image")
+        result.get("description")
+        result.get("image")
         output_str += " 👉🏻  [{}]({}) \n\n".format(text, url)
     end = datetime.now()
     ms = (end - start).seconds
-    await event.edit("searched Google for {} in {} seconds. \n{}".format(input_str, ms, output_str), link_preview=False)
+    await event.edit(
+        "searched Google for {} in {} seconds. \n{}".format(input_str, ms, output_str),
+        link_preview=False,
+    )
     await asyncio.sleep(5)
     await event.edit("Google: {}\n{}".format(input_str, output_str), link_preview=False)
 
@@ -57,7 +67,7 @@ async def _(event):
         "format": "jpg",
         "delay": 1,
         "safe_search": True,
-        "output_directory": Config.TMP_DOWNLOAD_DIRECTORY
+        "output_directory": Config.TMP_DOWNLOAD_DIRECTORY,
     }
     paths = response.download(arguments)
     logger.info(paths)
@@ -70,13 +80,16 @@ async def _(event):
         lst,
         caption=input_str,
         reply_to=event.message.id,
-        progress_callback=progress
+        progress_callback=progress,
     )
     logger.info(lst)
     for each_file in lst:
         os.remove(each_file)
     end = datetime.now()
     ms = (end - start).seconds
-    await event.edit("searched Google for {} in {} seconds.".format(input_str, ms), link_preview=False)
+    await event.edit(
+        "searched Google for {} in {} seconds.".format(input_str, ms),
+        link_preview=False,
+    )
     await asyncio.sleep(5)
     await event.delete()

@@ -8,9 +8,10 @@
 from DaisyX import CMD_HELP
 from DaisyX.utils import admin_cmd
 
+
 @borg.on(admin_cmd(outgoing=True, pattern="plinfo(?: |$)(.*)"))
 async def info(event):
-    """ For .plinfo command,"""
+    """For .plinfo command,"""
     args = event.pattern_match.group(1).lower()
     if args:
         if args in CMD_HELP:
@@ -18,8 +19,10 @@ async def info(event):
         else:
             await event.edit("Please specify a valid plugin name.")
     else:
-        await event.edit("Please specify which plugin do you want help for !!\
-            \nUsage: .pinfo <plugin name>")
+        await event.edit(
+            "Please specify which plugin do you want help for !!\
+            \nUsage: .pinfo <plugin name>"
+        )
         string = ""
         for i in CMD_HELP:
             string += "`" + str(i)

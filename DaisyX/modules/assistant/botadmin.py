@@ -1,22 +1,17 @@
-from DaisyX.functions.DaisyX import xbot, devs as DEVS
-
+from telethon import events
 from telethon.errors import BadRequestError
+from telethon.tl import functions, types
 from telethon.tl.functions.channels import EditAdminRequest, EditBannedRequest
 from telethon.tl.functions.messages import UpdatePinnedMessageRequest
-from telethon.tl.types import (
-    ChatAdminRights,
-    ChatBannedRights,
-    MessageEntityMentionName,
-)
-from telethon import events
-from telethon.tl import functions
-from telethon.tl import types
+from telethon.tl.types import ChatAdminRights, ChatBannedRights
+
+from DaisyX.functions.DaisyX import devs as DEVS
+from DaisyX.functions.DaisyX import xbot
+
 PP_TOO_SMOL = "`The image is too small`"
 PP_ERROR = "`Failure while processing the image`"
 NO_ADMIN = "`I am not an admin nub nibba!`"
-NO_PERM = (
-    "`I don't have sufficient permissions! This is so sed. Pls Promote Me!`"
-)
+NO_PERM = "`I don't have sufficient permissions! This is so sed. Pls Promote Me!`"
 NO_SQL = "`Running on Non-SQL mode!`"
 
 CHAT_PP_CHANGED = "`Chat Picture Changed`"
@@ -52,6 +47,7 @@ UNBAN_RIGHTS = ChatBannedRights(
 
 MUTE_RIGHTS = ChatBannedRights(until_date=None, send_messages=True)
 UNMUTE_RIGHTS = ChatBannedRights(until_date=None, send_messages=False)
+
 
 async def is_register_admin(chat, user):
     if isinstance(chat, (types.InputPeerChannel, types.InputChannel)):
@@ -91,8 +87,6 @@ async def can_ban_users(message):
     )
 
 
-
-
 async def can_pin_msg(message):
     result = await xbot(
         functions.channels.GetParticipantRequest(
@@ -106,9 +100,8 @@ async def can_pin_msg(message):
     )
 
 
-
 async def get_user_from_event(event):
-    """ Get the user from argument or replied message. """
+    """Get the user from argument or replied message."""
     args = event.pattern_match.group(1).split(" ", 1)
     extra = None
     if event.reply_to_msg_id:
@@ -134,6 +127,7 @@ async def get_user_from_event(event):
 
     return user_obj, extra
 
+
 async def get_user_sender_id(user, event):
     if isinstance(user, str):
         user = int(user)
@@ -155,7 +149,7 @@ async def ban(event):
         if not await can_ban_users(message=event):
             return
     user, reason = await get_user_from_event(event)
-    
+
     banned = await xbot.get_permissions(event.chat_id, user)
     pro = user
     fname = pro.first_name
@@ -167,8 +161,8 @@ async def ban(event):
     else:
         return
     if user.id in DEVS:
-     await event.reply("Sorry I Can't Act Against My Devs")
-     return
+        await event.reply("Sorry I Can't Act Against My Devs")
+        return
     try:
         await xbot(EditBannedRequest(event.chat_id, user.id, BANNED_RIGHTS))
     except BadRequestError:
@@ -178,6 +172,7 @@ async def ban(event):
         await event.reply(f"Banned {fname} For \nReason: {reason}")
     else:
         await event.reply(f"Banned {fname} !")
+
 
 @xbot.on(events.NewMessage(pattern="/unban ?(.*)"))
 async def unban(event):
@@ -203,7 +198,7 @@ async def unban(event):
 @xbot.on(events.NewMessage(pattern="/promote ?(.*)"))
 async def promote(event):
     if event.is_group:
-          if not await can_promote_users(message=event):
+        if not await can_promote_users(message=event):
             return
     else:
         return
@@ -239,21 +234,21 @@ async def promote(event):
 @xbot.on(events.NewMessage(pattern="/demote ?(.*)"))
 async def demote(event):
     if event.is_group:
-          if not await can_promote_users(message=event):
+        if not await can_promote_users(message=event):
             return
     else:
         return
     rank = "Admin"
     user = await get_user_from_event(event)
-    
+
     user = user[0]
     if user:
         pass
     else:
         return
     if user.id in DEVS:
-     await event.reply("Sorry I Can't Act Against My Devs")
-     return
+        await event.reply("Sorry I Can't Act Against My Devs")
+        return
 
     newrights = ChatAdminRights(
         add_admins=None,
@@ -277,7 +272,7 @@ async def demote(event):
 async def pin(event):
     msg = str(event.text)
     if not msg == "/pin":
-     return
+        return
     if event.is_group:
         if not await can_pin_msg(message=event):
             return
@@ -301,6 +296,7 @@ async def pin(event):
     await event.reply("Pinned This Message Sucessfully.")
     await get_user_sender_id(event.sender_id, event)
 
+
 @xbot.on(events.NewMessage(pattern="/permapin ?(.*)"))
 async def pin(event):
     if event.is_group:
@@ -309,10 +305,7 @@ async def pin(event):
     else:
         return
     previous_message = await msg.get_reply_message()
-    k = await xbot.send_message(
-            msg.chat_id,
-            previous_message
-          )
+    k = await xbot.send_message(msg.chat_id, previous_message)
     to_pin = k.id
     if not to_pin:
         await event.reply("`Reply to a message to pin it.`")
@@ -345,7 +338,6 @@ async def pin(msg):
         await msg.reply("Failed to unpin.")
 
 
-
 @xbot.on(events.NewMessage(pattern="/kick ?(.*)"))
 async def kick(event):
     if not event.is_group:
@@ -364,8 +356,8 @@ async def kick(event):
         await event.reply("Mention A User")
         return
     if user.id in DEVS:
-     await event.reply("Sorry I Can't Act Against My Devs")
-     return
+        await event.reply("Sorry I Can't Act Against My Devs")
+        return
     try:
         await xbot.kick_participant(event.chat_id, user.id)
     except:
@@ -397,8 +389,8 @@ async def mute(event):
         await event.reply("Mention A User")
         return
     if user.id in DEVS:
-     await event.reply("Sorry I Can't Act Against My Devs")
-     return
+        await event.reply("Sorry I Can't Act Against My Devs")
+        return
     try:
         await xbot(EditBannedRequest(event.chat_id, user.id, MUTE_RIGHTS))
     except:

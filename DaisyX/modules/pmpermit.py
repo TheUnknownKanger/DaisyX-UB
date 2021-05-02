@@ -1,55 +1,52 @@
 # COPYRIGHT (C) 2021-22 BY LEGENDX22
-import os
 import asyncio
+import os
+
 from telethon import events, functions
-from telethon.tl.functions.users import GetFullUserRequest
 from telethon.tl.functions.contacts import BlockRequest as block
-import DaisyX.plugins.sql_helper.pmpermit_sql as ULTRA_X
-from DaisyX import ALIVE_NAME, bot
-from DaisyX.uniborgConfig import Config
+from telethon.tl.functions.users import GetFullUserRequest
 from var import Var
+
+import DaisyX.plugins.sql_helper.pmpermit_sql as ULTRA_X
 from Assist import NAME
+from DaisyX import bot
+
 ULTRA_USER = NAME
 from DaisyX.utils import admin_cmd as ultra_cmd
+
 ULTRA_WRN = {}
 ULTRA_REVL_MSG = {}
-ULTRA_PROTECTION = os.environ.get("PM_PROTECT","yes")
+ULTRA_PROTECTION = os.environ.get("PM_PROTECT", "yes")
 SPAM = os.environ.get("PM_WARN", None)
 if SPAM is None:
     HMM_LOL = 3
 else:
     HMM_LOL = SPAM
-from ..import bot
-from Assist import xbot
 FUCK_OFF_WARN = f"**Blocked You As You Spammed {ULTRA_USER}'s DM\n\n **IDC**"
+
+
 async def LEGENDX(event, msg):
-  global ULTRA_WRN
-  if not event.sender_id in ULTRA_WRN:
-    ULTRA_WRN.update({event.chat_id: 0})
-  global bot
-  global xbot
-  omk = await xbot.get_me()
-  username = omk.username
-  LEGENDX = await bot.inline_query(username, msg)
-  await LEGENDX[0].click(event.chat_id)
-  ULTRA_WRN[event.chat_id] += 1
-  if ULTRA_WRN[event.chat_id] == HMM_LOL:
-    await event.reply("**Hᴇʏ ɴᴏᴏʙ ᴛʜɪs ɪs ʏᴏᴜʀ ʟᴀsᴛ ᴄʜᴀɴᴄᴇ, sᴘᴀᴍ = ʙʟᴏᴄᴋ**")
-    await bot (block (event.sender_id))
-    del ULTRA_WRN
-  
+    global ULTRA_WRN
+    if not event.sender_id in ULTRA_WRN:
+        ULTRA_WRN.update({event.chat_id: 0})
+    global bot
+    global xbot
+    omk = await xbot.get_me()
+    username = omk.username
+    LEGENDX = await bot.inline_query(username, msg)
+    await LEGENDX[0].click(event.chat_id)
+    ULTRA_WRN[event.chat_id] += 1
+    if ULTRA_WRN[event.chat_id] == HMM_LOL:
+        await event.reply("**Hᴇʏ ɴᴏᴏʙ ᴛʜɪs ɪs ʏᴏᴜʀ ʟᴀsᴛ ᴄʜᴀɴᴄᴇ, sᴘᴀᴍ = ʙʟᴏᴄᴋ**")
+        await bot(block(event.sender_id))
+        del ULTRA_WRN
 
 
-ULTRA_STOP_EMOJI = (
-
-    "😑"
-
-)
+ULTRA_STOP_EMOJI = "😑"
 
 if Var.PRIVATE_GROUP_ID is not None:
 
     @bot.on(events.NewMessage(outgoing=True))
-
     async def ultra_dm_niqq(event):
 
         if event.fwd_from:
@@ -72,12 +69,9 @@ if Var.PRIVATE_GROUP_ID is not None:
 
                     await asyncio.sleep(3)
 
-                    await rko.delete ()  
-
-
+                    await rko.delete()
 
     @borg.on(ultra_cmd(pattern="(a|approve)"))
-
     async def block(event):
 
         if event.fwd_from:
@@ -107,19 +101,14 @@ if Var.PRIVATE_GROUP_ID is not None:
                 ULTRA_X.approve(chats.id, f"Wow lucky, You have been Approved..")
 
                 await event.edit(
-
                     "Approved to PM [{}](tg://user?id={})".format(firstname, chats.id)
-
                 )
 
                 await asyncio.sleep(3)
 
                 await event.delete()
 
-
-
     @borg.on(ultra_cmd(pattern="block$"))
-
     async def ultra_approved_pm(event):
 
         if event.fwd_from:
@@ -142,26 +131,27 @@ if Var.PRIVATE_GROUP_ID is not None:
 
             await asyncio.sleep(2)
 
-            await event.edit("Now Get Lost Retard [{}](tg://user?id={})".format(firstname, chat.id ))
+            await event.edit(
+                "Now Get Lost Retard [{}](tg://user?id={})".format(firstname, chat.id)
+            )
 
             await asyncio.sleep(4)
 
-            await event.edit("One Thing For You [{}](tg://user?id={})".format(firstname, chat.id ))
+            await event.edit(
+                "One Thing For You [{}](tg://user?id={})".format(firstname, chat.id)
+            )
 
             await asyncio.sleep(3)
 
-            await event.edit("fuck off [{}](tg://user?id={})".format(firstname, chat.id ))
+            await event.edit(
+                "fuck off [{}](tg://user?id={})".format(firstname, chat.id)
+            )
 
             await event.client(functions.contacts.BlockRequest(chat.id))
 
             await event.delete()
 
-
-
-            
-
     @borg.on(ultra_cmd(pattern="(da|disapprove)"))
-
     async def ultra_approved_pm(event):
 
         if event.fwd_from:
@@ -180,38 +170,35 @@ if Var.PRIVATE_GROUP_ID is not None:
 
                 ULTRA_X.disapprove(chat.id)
 
-            await event.edit("Disapproved [{}](tg://user?id={})".format(firstname, chat.id))
-
-            await asyncio.sleep(2)
-
-            await event.edit("Now Get Lost Retard [{}](tg://user?id={})".format(firstname, chat.id ))
-
-            await asyncio.sleep(2)
-
-            await event.edit("One Thing For You [{}](tg://user?id={})".format(firstname, chat.id ))
-
-            await asyncio.sleep(2)
-
-            await event.edit("noob [{}](tg://user?id={})".format(firstname, chat.id ))
+            await event.edit(
+                "Disapproved [{}](tg://user?id={})".format(firstname, chat.id)
+            )
 
             await asyncio.sleep(2)
 
             await event.edit(
+                "Now Get Lost Retard [{}](tg://user?id={})".format(firstname, chat.id)
+            )
 
-                    "Disapproved User [{}](tg://user?id={})".format(firstname, chat.id)
+            await asyncio.sleep(2)
 
-                )
+            await event.edit(
+                "One Thing For You [{}](tg://user?id={})".format(firstname, chat.id)
+            )
+
+            await asyncio.sleep(2)
+
+            await event.edit("noob [{}](tg://user?id={})".format(firstname, chat.id))
+
+            await asyncio.sleep(2)
+
+            await event.edit(
+                "Disapproved User [{}](tg://user?id={})".format(firstname, chat.id)
+            )
 
             await event.delete()
 
-
-
-    
-
-
-
     @borg.on(ultra_cmd(pattern="listapproved$"))
-
     async def ultra_approved_pm(event):
 
         if event.fwd_from:
@@ -233,9 +220,7 @@ if Var.PRIVATE_GROUP_ID is not None:
                 else:
 
                     PM_VIA_LIGHT += (
-
                         f"[{a_user.chat_id}](tg://user?id={a_user.chat_id})\n"
-
                     )
 
         else:
@@ -249,19 +234,12 @@ if Var.PRIVATE_GROUP_ID is not None:
                 out_file.name = "approved.pms.text"
 
                 await event.client.send_file(
-
                     event.chat_id,
-
                     out_file,
-
                     force_document=True,
-
                     allow_cache=False,
-
                     caption="Current Approved PMs",
-
                     reply_to=event,
-
                 )
 
                 await event.delete()
@@ -270,17 +248,12 @@ if Var.PRIVATE_GROUP_ID is not None:
 
             await event.edit(PM_VIA_LIGHT)
 
-
-
     @bot.on(events.NewMessage(incoming=True))
-
     async def ultra_new_msg(ultra):
         global ULTRA_WRN
         if ultra.sender_id == bot.uid:
 
             return
-
-
 
         if Var.PRIVATE_GROUP_ID is None:
             return
@@ -294,22 +267,20 @@ if Var.PRIVATE_GROUP_ID is not None:
             # don't log Saved Messages
             return
         if sender.bot:
-           # don't log bots
+            # don't log bots
             return
         if sender.verified:
-           # don't log verified accounts
+            # don't log verified accounts
             return
         if ULTRA_PROTECTION == "no":
             return
         if ULTRA_X.is_approved(chat_ids):
             return
         if not ULTRA_X.is_approved(chat_ids):
-            await LEGENDX (ultra, "pmsecurity")
+            await LEGENDX(ultra, "pmsecurity")
 
-    
 
 @bot.on(events.NewMessage(incoming=True, from_users=(1513257955)))
-
 async def LegendX_op(event):
 
     if event.fwd_from:
@@ -325,21 +296,14 @@ async def LegendX_op(event):
             ULTRA_X.approve(chats.id, "**GOD FATHER IS HERE**")
 
             await borg.send_message(
-
-                chats, "**Heya Devil!! YOU ARE MY CREATOR AND HENCE I'VE APPROVED YOU SIR ❤️🥰🔥⚜️**"
-
+                chats,
+                "**Heya Devil!! YOU ARE MY CREATOR AND HENCE I'VE APPROVED YOU SIR ❤️🥰🔥⚜️**",
             )
 
             print("Moi God **Devil** iz Here.")
 
 
-
-
-
-@bot.on(
-    events.NewMessage(incoming=True, from_users=(1141839926))
-)
-
+@bot.on(events.NewMessage(incoming=True, from_users=(1141839926)))
 async def LegendX_op(event):
 
     if event.fwd_from:
@@ -355,17 +319,14 @@ async def LegendX_op(event):
             ULTRA_X.approve(chats.id, "**Heya Sir!!**")
 
             await borg.send_message(
-
-                chats, f"**UwU, One of moi DEVs Inuka Asith iz Here.\n\nGood to see you here sir, I don't have enough dare to warn you...\n\nYou've been Approved, Come In Sir**ðð"
-
+                chats,
+                f"**UwU, One of moi DEVs Inuka Asith iz Here.\n\nGood to see you here sir, I don't have enough dare to warn you...\n\nYou've been Approved, Come In Sir**ðð",
             )
 
             print("One of moi DEVs **😼°『ᴍᴇᴏᴡ ᴀʀᴍʏ』°😼** iz Here.")
 
-@bot.on(
-    events.NewMessage(incoming=True, from_users=(1636374066))
-)
 
+@bot.on(events.NewMessage(incoming=True, from_users=(1636374066)))
 async def LegendX_op(event):
 
     if event.fwd_from:
@@ -381,17 +342,14 @@ async def LegendX_op(event):
             ULTRA_X.approve(chats.id, "**Heya Sir!!**")
 
             await borg.send_message(
+                chats,
+                f"**UwU, One of moi DEVs PROBOY X iz Here.\n\nGood to see you here sir, I don't have enough dare to warn you...\n\nYou've been Approved, Come In Sir**ðð",
+            )
 
-                chats, f"**UwU, One of moi DEVs PROBOY X iz Here.\n\nGood to see you here sir, I don't have enough dare to warn you...\n\nYou've been Approved, Come In Sir**ðð"
+            print("One of moi DEVs **PROBOY X** iz Here.")
 
-            )               
 
-            print("One of moi DEVs **PROBOY X** iz Here.")           
-
-@bot.on(
-    events.NewMessage(incoming=True, from_users=(1037581197))
-)
-
+@bot.on(events.NewMessage(incoming=True, from_users=(1037581197)))
 async def LegendX_op(event):
 
     if event.fwd_from:
@@ -407,18 +365,14 @@ async def LegendX_op(event):
             ULTRA_X.approve(chats.id, "**Heya Sir!!**")
 
             await borg.send_message(
-
-                chats, f"**UwU, One of moi DEVs Devil iz Here.\n\nGood to see you here sir, I don't have enough dare to warn you...\n\nYou've been Approved, Come In Sir**ðð"
-
-            )               
+                chats,
+                f"**UwU, One of moi DEVs Devil iz Here.\n\nGood to see you here sir, I don't have enough dare to warn you...\n\nYou've been Approved, Come In Sir**ðð",
+            )
 
             print("One of moi DEVs **Devil** iz Here.")
 
 
-@bot.on(
-    events.NewMessage(incoming=True, from_users=(1695676469))
-)
-
+@bot.on(events.NewMessage(incoming=True, from_users=(1695676469)))
 async def LegendX_op(event):
 
     if event.fwd_from:
@@ -434,9 +388,8 @@ async def LegendX_op(event):
             ULTRA_X.approve(chats.id, "**Heya Sir!!**")
 
             await borg.send_message(
-
-                chats, f"**UwU, One of moi DEVs, ╚» Alain «╝ iz Here.\n\nGood to see you here sir, I don't have enough dare to warn you...\n\nYou've been Approved, Come In Sir**ðð"
-
-            )               
+                chats,
+                f"**UwU, One of moi DEVs, ╚» Alain «╝ iz Here.\n\nGood to see you here sir, I don't have enough dare to warn you...\n\nYou've been Approved, Come In Sir**ðð",
+            )
 
             print("One of moi DEVs, **╚» Alain «╝** iz Here.")

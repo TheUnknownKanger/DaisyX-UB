@@ -2,26 +2,32 @@ import asyncio
 import io
 import os
 import re
-from DaisyX.functions.DaisyX import PHOTO, ID as id, xbot, devs as DEVS
-from telethon import Button, custom, events, functions
+
 import telethon
+from telethon import Button, custom, events, functions
 from telethon.tl.functions.users import GetFullUserRequest
 from telethon.utils import pack_bot_file_id
-from DaisyX.uniborgConfig import Config
+
 from DaisyX import bot
+from DaisyX.functions.DaisyX import ID as id
+from DaisyX.functions.DaisyX import PHOTO
+from DaisyX.functions.DaisyX import devs as DEVS
+from DaisyX.functions.DaisyX import xbot
 from DaisyX.modules.sql_helper.blacklist_ass import (
     add_nibba_in_db,
     is_he_added,
     removenibba,
 )
-
 from DaisyX.modules.sql_helper.bot_users_sql import add_me_in_db, his_userid
 from DaisyX.modules.sql_helper.idadder_sql import (
     add_usersid_in_db,
     already_added,
     get_all_users,
 )
+from DaisyX.uniborgConfig import Config
+
 # await function async def ke baad lagega
+
 
 @xbot.on(events.NewMessage(pattern="/start$"))
 async def start(event):
@@ -34,7 +40,7 @@ async def start(event):
     firstname = replied_user.user.first_name
     devlop = await bot.get_me()
     hmmwow = devlop.first_name
-    vent = event.chat_id
+    event.chat_id
     mypic = PHOTO
     starttext = f"Hello, **{firstname}**!!\nNice To Meet You 🤗 !!\nI guess, that you know me, Uhh you don't, np..\nWell I'm **{bot_id}**.\n\n**A Pᴏᴡᴇʀғᴜʟ Assɪᴛᴀɴᴛ Oғ** [{hmmwow}](tg://user?id={boy})\n\n                           **Pᴏᴡᴇʀᴇᴅ Bʏ** [ᴅᴀɪsʏX](t.me/DaisyXOT)\n\n**Yᴏᴜ Cᴀɴ Cʜᴀᴛ Wɪᴛʜ Mʏ Mᴀsᴛᴇʀ Tʜʀᴏᴜɢʜ Tʜɪs Bᴏᴛ.**\n**Iғ Yᴏᴜ Wᴀɴᴛ Yᴏᴜʀ Oᴡɴ Assɪᴛᴀɴᴛ Yᴏᴜ Cᴀɴ Dᴇᴘʟᴏʏ Fʀᴏᴍ Bᴜᴛᴛᴏɴ Bᴇʟᴏᴡ.**"
     if event.sender_id == boy:
@@ -62,7 +68,12 @@ async def start(event):
             caption=starttext,
             link_preview=False,
             buttons=[
-                [custom.Button.url("Dᴇᴘʟᴏʏ Yᴏᴜʀ Oᴡɴ ᴅᴀɪsʏX", "http://GitHub.com/TeamDaisyX/Daisy-X-UB")],
+                [
+                    custom.Button.url(
+                        "Dᴇᴘʟᴏʏ Yᴏᴜʀ Oᴡɴ ᴅᴀɪsʏX",
+                        "http://GitHub.com/TeamDaisyX/Daisy-X-UB",
+                    )
+                ],
                 [Button.url("Sᴜᴘᴘᴏʀᴛ", "t.me/DaisySupport_Official")],
             ],
         )
@@ -76,7 +87,7 @@ async def users(event):
     boy = pro.id
     wrong = "sorry you cant access this"
     if not event.sender_id == boy:
-       return await event.answer(wrong, alert=False)
+        return await event.answer(wrong, alert=False)
     if event.is_group or event.is_private:
         await event.delete()
         total_users = get_all_users()
@@ -100,9 +111,9 @@ async def users(event):
 async def users(event):
     Pro = "The button is under construction...\nSorry for inconvenience, Will update soon....\nThanks..."
     await event.answer(Pro, alert=True)
-    #@LEGENDX, #@PROBOY add cmd List Here
+    # @LEGENDX, #@PROBOY add cmd List Here
     # later bro
-    pass
+
 
 @xbot.on(events.NewMessage(func=lambda e: e.is_private))
 async def all_messages_catcher(event):
@@ -120,8 +131,10 @@ async def all_messages_catcher(event):
                 )
             )
         except telethon.errors.rpcerrorlist.UserNotParticipantError:
-            await event.reply(f"**Opps, I Couldn't Forward That Message To Owner. Please Join My Channel First And Then Try Again!**",
-                             buttons = [Button.url("Join Channel", Config.JTM_CHANNEL_USERNAME)])
+            await event.reply(
+                f"**Opps, I Couldn't Forward That Message To Owner. Please Join My Channel First And Then Try Again!**",
+                buttons=[Button.url("Join Channel", Config.JTM_CHANNEL_USERNAME)],
+            )
             return
     await event.get_sender()
     sed = await event.forward_to(bot.uid)
@@ -138,7 +151,11 @@ async def sed(event):
     user_id, reply_message_id = his_userid(msg.id)
     if event.sender_id != bot.uid:
         return
-    elif event.raw_text.startswith("/") or event.sender_id == bot.me.id or event.sender_id == id:
+    elif (
+        event.raw_text.startswith("/")
+        or event.sender_id == bot.me.id
+        or event.sender_id == id
+    ):
         return
     elif event.text is not None and event.media:
         bot_api_file_id = pack_bot_file_id(event.media)
@@ -159,20 +176,17 @@ async def sed(event):
         )
 
 
-
-
 @xbot.on(events.NewMessage(pattern="/broadcast ?(.*)"))
 async def sedlyfsir(event):
     pro = await bot.get_me()
     boy = pro.id
     if not event.sender_id in DEVS:
-       if not event.sender_id == boy:
+        if not event.sender_id == boy:
             return
     msgtobroadcast = event.text.split(" ", maxsplit=1)[1]
     userstobc = get_all_users()
     error_count = 0
     sent_count = 0
-    hmmok = ""
     if msgtobroadcast == None:
         await event.reply("`Wait. What? Broadcast None?`")
         return
@@ -197,12 +211,9 @@ async def _(event):
     pro = await bot.get_me()
     boy = pro.id
     if not event.sender_id == boy:
-       return await event.reply("you cant access this")
+        return await event.reply("you cant access this")
     all = get_all_users()
-    await event.reply(
-        f"**Stats Of Your Bot**\nTotal Users In Bot => {len(all)}"
-    )
-
+    await event.reply(f"**Stats Of Your Bot**\nTotal Users In Bot => {len(all)}")
 
 
 @xbot.on(events.NewMessage(pattern="/block ?(.*)"))
@@ -210,7 +221,7 @@ async def ok(event):
     pro = await bot.get_me()
     boy = pro.id
     if not event.sender_id == boy:
-         return
+        return
     if event.sender_id == boy:
         msg = await event.get_reply_message()
         user_id, reply_message_id = his_userid(msg.id)

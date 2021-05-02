@@ -1,7 +1,7 @@
 """ Get the Bots in any chat*
 Syntax: .get_bot"""
-from telethon import events
 from telethon.tl.types import ChannelParticipantAdmin, ChannelParticipantsBots
+
 from DaisyX import CMD_HELP
 from DaisyX.utils import admin_cmd
 
@@ -26,12 +26,18 @@ async def _(event):
     try:
         async for x in borg.iter_participants(chat, filter=ChannelParticipantsBots):
             if isinstance(x.participant, ChannelParticipantAdmin):
-                mentions += "\n ⚜️ [{}](tg://user?id={}) `{}`".format(x.first_name, x.id, x.id)
+                mentions += "\n ⚜️ [{}](tg://user?id={}) `{}`".format(
+                    x.first_name, x.id, x.id
+                )
             else:
-                mentions += "\n [{}](tg://user?id={}) `{}`".format(x.first_name, x.id, x.id)
+                mentions += "\n [{}](tg://user?id={}) `{}`".format(
+                    x.first_name, x.id, x.id
+                )
     except Exception as e:
         mentions += " " + str(e) + "\n"
     await event.edit(mentions)
+
+
 CMD_HELP.update(
     {
         "get_bot": "**Plugin : **`get_bot`\
@@ -39,4 +45,3 @@ CMD_HELP.update(
     \n**Function : **all bots list use .get_bot"
     }
 )
-

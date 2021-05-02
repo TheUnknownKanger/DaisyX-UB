@@ -1,4 +1,6 @@
 from ..utils import admin_cmd as ultra_cmd
+
+
 @bot.on(ultra_cmd(pattern="gkick"))
 async def kick(kick):
     xxx = await kick.edit("`Gʟᴏʙᴀʟʟʏ ᴋɪᴄᴋɪɴɢ ᴛʜɪs ɴᴏᴏʙ ᴋɪᴅᴅᴏ`")
@@ -13,4 +15,6 @@ async def kick(kick):
                 t += 1
             except:
                 pass
-    await xxx.edit(f"**Gʟᴏʙᴀʟʟʏ Kɪᴄᴋᴇᴅ [{name}](tg://user?id={ohk}) \\ Cʜᴀᴛs Aғғᴇᴄᴛᴇᴅ: {t}**")
+    await xxx.edit(
+        f"**Gʟᴏʙᴀʟʟʏ Kɪᴄᴋᴇᴅ [{name}](tg://user?id={ohk}) \\ Cʜᴀᴛs Aғғᴇᴄᴛᴇᴅ: {t}**"
+    )

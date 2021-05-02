@@ -3,10 +3,10 @@ import os
 from datetime import datetime
 from pathlib import Path
 
-from DaisyX import ALIVE_NAME
-from DaisyX import bot 
-from DaisyX.utils import admin_cmd, load_module, remove_plugin, sudo_cmd
+from DaisyX import ALIVE_NAME, bot
+from DaisyX.utils import admin_cmd
 from DaisyX.utils import edit_or_reply as eor
+from DaisyX.utils import load_module, remove_plugin, sudo_cmd
 
 DELETE_TIMEOUT = 3
 thumb_image_path = "./Resources/DaisyX.jpg"
@@ -18,7 +18,7 @@ DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "DAISY X"
 async def send(event):
     if event.fwd_from:
         return
-    hmm = bot.uid
+    bot.uid
     message_id = event.message.id
     thumb = thumb_image_path
     input_str = event.pattern_match.group(1)
@@ -40,7 +40,9 @@ async def send(event):
             f"**==> Pʟᴜɢɪɴ ɴᴀᴍᴇ:** `{input_str}`\n**==> Uᴘʟᴏᴀᴅᴇᴅ ɪɴ:** `{time_taken_in_ms} Sᴇᴄᴏɴᴅs`.\n**==> Uᴘʟᴏᴀᴅᴇᴅ ʙʏ:** `{DEFAULTUSER}`\n",
         )
         await asyncio.sleep(DELETE_TIMEOUT)
-        await event.edit("sᴇɴᴛ !!!") #only italic if loaded markdown else it doesn't look grp
+        await event.edit(
+            "sᴇɴᴛ !!!"
+        )  # only italic if loaded markdown else it doesn't look grp
     else:
         await eor(event, "𝚂𝙾𝚁𝚁𝚈 : ғɪʟᴇ ɴᴏᴛ ғᴏᴜɴᴅ")
 

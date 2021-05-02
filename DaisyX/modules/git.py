@@ -1,13 +1,9 @@
-from telethon import events
-
 import asyncio
 
-
-
+from telethon import events
 
 
 @borg.on(events.NewMessage(pattern=r"\.(.*)", outgoing=True))
-
 async def _(event):
 
     if event.fwd_from:
@@ -25,10 +21,8 @@ async def _(event):
         await event.edit(input_str)
 
         animation_chars = [
-
             "https://github.com/lucifeermorningstar/deviluserbot",
-
-            "https://github.com/TeamDaisyX/DaisyX-UB"
+            "https://github.com/TeamDaisyX/DaisyX-UB",
         ]
 
         for i in animation_ttl:

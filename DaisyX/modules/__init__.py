@@ -1,6 +1,6 @@
-from DaisyX.helpers import functions as simpdef
 from Assist import *
 from Assist.DAISYX import *
-simpmusic = simpdef.simpmusic 
-simpmusicvideo = simpdef.simpmusicvideo
+from DaisyX.helpers import functions as simpdef
 
+simpmusic = simpdef.simpmusic
+simpmusicvideo = simpdef.simpmusicvideo

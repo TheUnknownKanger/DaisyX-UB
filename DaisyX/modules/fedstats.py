@@ -1,9 +1,10 @@
 import asyncio
+
 # made by LEGENDBOT & UltraX
 from telethon.errors.rpcerrorlist import YouBlockedUserError
+
 from Assist.DAISYX import NAME
-from DaisyX import CMD_HELP
-from DaisyX import bot
+from DaisyX import CMD_HELP, bot
 from DaisyX.utils import admin_cmd
 
 bot = "@MissRose_bot"
@@ -45,13 +46,14 @@ async def _(event):
                         audio,
                         caption=f"**List of feds {user} has been banned in.\n\nƒѕтαт ¢нє¢к ву {DEVIL} 🔥\n\n¢σℓℓє¢тє∂ ву υℓтяα χ вσт.**",
                     )
-                   
+
                 else:
                     await ok.edit(audio.text + "\n\n **Cʜᴇᴄᴋᴇᴅ ʙʏ UʟᴛʀᴀX...**")
-                
-            except YouBlockedUserError:
-                await ok.edit("**Error**\n `Unblock` **@MissRose_Bot** `and try again!`")
 
+            except YouBlockedUserError:
+                await ok.edit(
+                    "**Error**\n `Unblock` **@MissRose_Bot** `and try again!`"
+                )
 
 
 @borg.on(admin_cmd(pattern="fedinfo ?(.*)"))
@@ -74,19 +76,23 @@ async def _(event):
 
 @borg.on(admin_cmd(pattern="myfeds"))
 async def myfeds(event):
-  LEGENDX = await event.edit("`Wᴇɪᴛ ᴍᴀsᴛᴇʀ ᴄʜᴇᴄᴋɪɴɢ ʏᴏᴜʀ ᴀʟʟ ғᴇᴅs...``")
-  async with borg.conversation(bot) as rose:
-    await rose.send_message("/start")
-    await rose.get_response()
-    await rose.send_message("/myfeds")
-    pro = await rose.get_response()
-    if "Looks like" in pro.text:
-      await pro.click(0)
-      await asyncio.sleep(1.5)
-      pro = await rose.get_response()
-      await borg.send_file(event.chat_id, pro, caption='**Cʜᴇᴄᴋᴇᴅ ʙʏ 𝙳𝙰𝙸𝚂𝚈X ฅ^•ﻌ•^ฅ**')
-    else:
-      await LEGENDX.edit(pro.text + "\n\n**Cʜᴇᴄᴋᴇᴅ 𝚋𝚢 𝙳𝙰𝙸𝚂𝚈X ฅ^•ﻌ•^ฅ**")
+    LEGENDX = await event.edit("`Wᴇɪᴛ ᴍᴀsᴛᴇʀ ᴄʜᴇᴄᴋɪɴɢ ʏᴏᴜʀ ᴀʟʟ ғᴇᴅs...``")
+    async with borg.conversation(bot) as rose:
+        await rose.send_message("/start")
+        await rose.get_response()
+        await rose.send_message("/myfeds")
+        pro = await rose.get_response()
+        if "Looks like" in pro.text:
+            await pro.click(0)
+            await asyncio.sleep(1.5)
+            pro = await rose.get_response()
+            await borg.send_file(
+                event.chat_id, pro, caption="**Cʜᴇᴄᴋᴇᴅ ʙʏ 𝙳𝙰𝙸𝚂𝚈X ฅ^•ﻌ•^ฅ**"
+            )
+        else:
+            await LEGENDX.edit(pro.text + "\n\n**Cʜᴇᴄᴋᴇᴅ 𝚋𝚢 𝙳𝙰𝙸𝚂𝚈X ฅ^•ﻌ•^ฅ**")
+
+
 CMD_HELP.update(
     {
         "fedstuff": ".fstat <username/userid/reply to user>\nUse - To check the persons fedban stat in @MissRose_Bot.\

@@ -1,6 +1,5 @@
-from sqlalchemy import Column, UnicodeText, String
-
 from Luna.modules.sql import BASE, SESSION
+from sqlalchemy import Column, String, UnicodeText
 
 
 class NOTES(BASE):

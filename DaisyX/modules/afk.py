@@ -1,4 +1,4 @@
-# by uniborg...Thanks @spechide 
+# by uniborg...Thanks @spechide
 # Now will be used in DaisyX too....
 """Syntax: .afk REASON"""
 import asyncio

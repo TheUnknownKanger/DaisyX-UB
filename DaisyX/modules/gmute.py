@@ -1,9 +1,11 @@
-from DaisyX.plugins.sql_helper.mute_sql import is_muted, mute, unmute
 import asyncio
+
 from DaisyX import CMD_HELP
+from DaisyX.plugins.sql_helper.mute_sql import is_muted, mute, unmute
 from DaisyX.utils import admin_cmd, sudo_cmd
 
-#@command(outgoing=True, pattern=r"^.gmute ?(\d+)?")
+
+# @command(outgoing=True, pattern=r"^.gmute ?(\d+)?")
 @borg.on(admin_cmd(pattern=r"gmute ?(\d+)?"))
 @borg.on(sudo_cmd("gmute ?(.*)", allow_sudo=True))
 async def startgmute(event):
@@ -22,9 +24,11 @@ async def startgmute(event):
     elif private is True:
         userid = event.chat_id
     else:
-        return await event.edit("Please reply to a user or add their into the command to gmute them.")
-    chat_id = event.chat_id
-    chat = await event.get_chat()
+        return await event.edit(
+            "Please reply to a user or add their into the command to gmute them."
+        )
+    event.chat_id
+    await event.get_chat()
     if is_muted(userid, "gmute"):
         return await event.edit("тнιѕ ρєяѕση ιѕ αℓяєα∂у gмυтє∂")
     try:
@@ -34,7 +38,8 @@ async def startgmute(event):
     else:
         await event.edit("тнιѕ ρєяѕση gσт gмυтє∂ ѕυ¢¢єѕѕƒυℓℓу")
 
-#@command(outgoing=True, pattern=r"^.ungmute ?(\d+)?")
+
+# @command(outgoing=True, pattern=r"^.ungmute ?(\d+)?")
 @borg.on(admin_cmd(pattern=r"ungmute ?(\d+)?"))
 @borg.on(sudo_cmd("ungmute ?(.*)", allow_sudo=True))
 async def endgmute(event):
@@ -53,8 +58,10 @@ async def endgmute(event):
     elif private is True:
         userid = event.chat_id
     else:
-        return await event.edit("Please reply to a user or add their into the command to ungmute them.")
-    chat_id = event.chat_id
+        return await event.edit(
+            "Please reply to a user or add their into the command to ungmute them."
+        )
+    event.chat_id
     if not is_muted(userid, "gmute"):
         return await event.edit("тнιѕ ρєяѕση ιѕ ησт gмυтє∂")
     try:
@@ -62,11 +69,19 @@ async def endgmute(event):
     except Exception as e:
         await event.edit("Error occured!\nError is " + str(e))
     else:
-        await event.edit("тнιѕ ρєяѕση gσт υηgмυтє∂ ѕυ¢¢єѕѕƒυℓℓу ησω нє/ѕнє ¢αη ѕρєαк ƒяєєℓу")
-        
+        await event.edit(
+            "тнιѕ ρєяѕση gσт υηgмυтє∂ ѕυ¢¢єѕѕƒυℓℓу ησω нє/ѕнє ¢αη ѕρєαк ƒяєєℓу"
+        )
+
+
 @command(incoming=True)
 async def watcher(event):
     if is_muted(event.sender_id, "gmute"):
         await event.delete()
-CMD_HELP.update({
-    "gmute":"𝚈𝙾𝚄 𝙲𝙰𝙽 𝙼𝚄𝚃𝙴 𝙿𝙴𝚁𝚂𝙸𝙾𝙽 𝙵𝚁𝙾𝙼 𝙰𝙻𝙻 𝙶𝚁𝙾𝚄𝙿 𝚆𝙷𝙴𝚁𝙴 𝚈𝙾𝚄 𝙰𝙳𝙼𝙸𝙽 𝚆𝙸𝚃𝙷 𝙳𝙴𝙻𝙴𝚃𝙴 𝙼𝙴𝚂𝚂𝙰𝙶𝙴 𝚁𝙸𝙶𝙷𝚃 𝚅𝙸𝙰 𝚃𝙷𝙸𝚂 𝙿𝙻𝚄𝙶𝙸𝙽"})
+
+
+CMD_HELP.update(
+    {
+        "gmute": "𝚈𝙾𝚄 𝙲𝙰𝙽 𝙼𝚄𝚃𝙴 𝙿𝙴𝚁𝚂𝙸𝙾𝙽 𝙵𝚁𝙾𝙼 𝙰𝙻𝙻 𝙶𝚁𝙾𝚄𝙿 𝚆𝙷𝙴𝚁𝙴 𝚈𝙾𝚄 𝙰𝙳𝙼𝙸𝙽 𝚆𝙸𝚃𝙷 𝙳𝙴𝙻𝙴𝚃𝙴 𝙼𝙴𝚂𝚂𝙰𝙶𝙴 𝚁𝙸𝙶𝙷𝚃 𝚅𝙸𝙰 𝚃𝙷𝙸𝚂 𝙿𝙻𝚄𝙶𝙸𝙽"
+    }
+)

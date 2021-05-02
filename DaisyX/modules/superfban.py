@@ -2,12 +2,14 @@
 # Made By LegendX22 and Proboy22
 
 import asyncio
+
+from DaisyX import CMD_HELP, bot
 from DaisyX.legend import NAME
-from DaisyX import CMD_HELP
 from DaisyX.utils import admin_cmd, sudo_cmd
 
-from DaisyX import bot
 PRO = NAME
+
+
 @bot.on(admin_cmd("superfban ?(.*)"))
 @bot.on(sudo_cmd("superfban ?(.*)", allow_sudo=True))
 async def _(event):
@@ -18,9 +20,7 @@ async def _(event):
     if event.reply_to_msg_id:
         previous_message = await event.get_reply_message()
         if previous_message.media:
-            downloaded_file_name = await bot.download_media(
-                previous_message, "fedlist"
-            )
+            downloaded_file_name = await bot.download_media(previous_message, "fedlist")
             await asyncio.sleep(6)
             file = open(downloaded_file_name, "r")
             lines = file.readlines()
@@ -51,11 +51,25 @@ async def _(event):
             REASON = " #Superfbanned 🔥 "
     try:
         int(FBAN)
-        if int(FBAN) == 1513257955 or int(FBAN) == 1037581197 or int(FBAN) == 1636374066 or int(FBAN) == 1667146381 or int(FBAN) == 1141839926:     
+        if (
+            int(FBAN) == 1513257955
+            or int(FBAN) == 1037581197
+            or int(FBAN) == 1636374066
+            or int(FBAN) == 1667146381
+            or int(FBAN) == 1141839926
+        ):
             await event.edit("Sorry Kiddo As A Result You Can't Fban Your Father.")
             return
     except BaseException:
-        if FBAN == "@lucifermorningstarbackup" or FBAN == "@luciifeermorningstar" or FBAN == "@LEGENDX22" or FBAN == "@RoseLoverX" or FBAN == "@Alain_Champion" or FBAN == "@PROBOYXOK" or FBAN == "@InukaAsith":
+        if (
+            FBAN == "@lucifermorningstarbackup"
+            or FBAN == "@luciifeermorningstar"
+            or FBAN == "@LEGENDX22"
+            or FBAN == "@RoseLoverX"
+            or FBAN == "@Alain_Champion"
+            or FBAN == "@PROBOYXOK"
+            or FBAN == "@InukaAsith"
+        ):
             await event.edit("Sorry Kiddo As A Result You Can't Fban Your Father.")
             return
     if Config.FBAN_GROUP_ID:
@@ -91,7 +105,9 @@ async def _(event):
                     else:
                         return
                 if len(fedList) == 0:
-                    await event.edit(f"Wᴇɪᴛ Mᴀsᴛᴇʀ I Aᴍ Cʜᴇᴄᴋɪɴɢ Aʟʟ Fᴇᴅs Oғ **{PRO}**\nPʟᴇᴀsᴇ Gɪᴠᴇ Mᴇ Sᴏᴍᴇ Tɪᴍᴇ **({a+1}/3)**...")
+                    await event.edit(
+                        f"Wᴇɪᴛ Mᴀsᴛᴇʀ I Aᴍ Cʜᴇᴄᴋɪɴɢ Aʟʟ Fᴇᴅs Oғ **{PRO}**\nPʟᴇᴀsᴇ Gɪᴠᴇ Mᴇ Sᴏᴍᴇ Tɪᴍᴇ **({a+1}/3)**..."
+                    )
                 else:
                     break
         else:
@@ -115,7 +131,9 @@ async def _(event):
         if len(fedList) == 0:
             await event.edit("Something went wrong.")
             return
-    await event.edit(f"𝙳𝙰𝙸𝚂𝚈X Fʙᴀɴɴɪɴɢ Tʜɪs Kɪᴅ Iɴ **{len(fedList)}** Oɴ Tʜᴇ Oʀᴅᴇʀ Oғ **{PRO}** 🔥.")
+    await event.edit(
+        f"𝙳𝙰𝙸𝚂𝚈X Fʙᴀɴɴɪɴɢ Tʜɪs Kɪᴅ Iɴ **{len(fedList)}** Oɴ Tʜᴇ Oʀᴅᴇʀ Oғ **{PRO}** 🔥."
+    )
     try:
         await bot.send_message(chat, f"/start")
     except BaseException:
@@ -142,7 +160,7 @@ async def _(event):
 
 
 # By @HeisenbergTheDanger, @its_xditya
-# MODIFIED BY PROBOYX 
+# MODIFIED BY PROBOYX
 
 
 @bot.on(admin_cmd("superunfban ?(.*)"))
@@ -171,9 +189,7 @@ async def _(event):
                 await response.click(0)
                 fedfile = await bot_conv.get_response()
                 if fedfile.media:
-                    downloaded_file_name = await bot.download_media(
-                        fedfile, "fedlist"
-                    )
+                    downloaded_file_name = await bot.download_media(fedfile, "fedlist")
                     file = open(downloaded_file_name, "r")
                     lines = file.readlines()
                     for line in lines:
@@ -181,7 +197,9 @@ async def _(event):
                 else:
                     return
                 if len(fedList) == 0:
-                    await event.edit(f"FINDING {PRO} ALL FEDS GIVE ME SOME TIME({a+1}/3)...")
+                    await event.edit(
+                        f"FINDING {PRO} ALL FEDS GIVE ME SOME TIME({a+1}/3)..."
+                    )
                 else:
                     break
     else:
@@ -215,7 +233,9 @@ async def _(event):
         await asyncio.sleep(5)
         await bot.send_message(chat, f"/unfban {FBAN}")
         await asyncio.sleep(5)
-    await event.edit(f"ULTRAUnFBan Completed. Affected {len(fedList)} Feds by {PRO}.\n#DaisyX Userbot")
+    await event.edit(
+        f"ULTRAUnFBan Completed. Affected {len(fedList)} Feds by {PRO}.\n#DaisyX Userbot"
+    )
 
 
 # By TEAMLEGEND

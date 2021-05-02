@@ -1,12 +1,13 @@
 import asyncio
 from datetime import datetime
-from DaisyX.legend import BOT
+
 from .. import ALIVE_NAME, CMD_HELP
 from ..utils import admin_cmd, edit_or_reply, sudo_cmd
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "DaisyX"
 
 from heroku_config import Var as Config
+
 
 @borg.on(admin_cmd(pattern=f"hping$", outgoing=True))
 async def _(event):
@@ -98,7 +99,7 @@ async def _(event):
         f"**█▀█ █▀█ █▄░█ █▀▀ █ \n█▀▀ █▄█ █░▀█ █▄█ ▄**\n\n✥ **✪ Tɪᴍᴇ Tᴀᴋᴇɴ:** `{ms}` ms \n✥ **✪ Mᴀsᴛᴇʀ:** `{ALIVE_NAME}` \n✥ **✪ Assɪsᴛᴀɴᴛ:** __@{TG_BOT_USER_NAME}__"
     )
 
-    
+
 @bot.on(admin_cmd(pattern="ting$"))
 @bot.on(sudo_cmd(pattern="ting$", allow_sudo=True))
 async def _(event):
@@ -114,7 +115,7 @@ async def _(event):
         f"<i><b>☞ Tong !!</b></i>\n➥ {ms} ms\n➥ <i><b>Bot of: {ALIVE_NAME}</b></i>\n➥ <i><b>Assistant: {TG_BOT_USERNAME}</b></i>",
         parse_mode="html",
     )
-    
+
 
 CMD_HELP.update(
     {

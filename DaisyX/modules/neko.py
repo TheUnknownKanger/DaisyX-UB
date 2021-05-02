@@ -1,14 +1,13 @@
 # pastebin for catuserbot
-from DaisyX.utils import admin_cmd, sudo_cmd
 import os
-from DaisyX import CMD_HELP
+
 import pygments
 import requests
 from pygments.formatters import ImageFormatter
 from pygments.lexers import Python3Lexer
-from requests import exceptions, get
-from telethon import events
-from telethon.errors.rpcerrorlist import YouBlockedUserError
+
+from DaisyX import CMD_HELP
+from DaisyX.utils import admin_cmd, sudo_cmd
 
 
 def progress(current, total):
@@ -17,7 +16,10 @@ def progress(current, total):
             current, total, (current / total) * 100
         )
     )
+
+
 from DaisyX.utils import admin_cmd, sudo_cmd
+
 
 @bot.on(admin_cmd(pattern="neko(?: |$)(.*)", outgoing=True))
 @bot.on(sudo_cmd(pattern="neko(?: |$)(.*)", allow_sudo=True))
@@ -76,6 +78,7 @@ async def _(event):
     reply_text = f"**Pasted to Nekobin :** [Neko]({url})\n**Raw url :** [Raw](https://nekobin.com/raw/{key})\n\n**𝑷𝒂𝒔𝒕𝒆𝒅 𝒂𝒏𝒅 𝑼𝒑𝒍𝒐𝒂𝒅𝒆𝒅 𝒕𝒐 𝑵𝒆𝒌𝒐𝑩𝒊𝒏 𝒃𝒚 ᴅᴀɪsʏ χ**"
     await catevent.edit(reply_text)
 
+
 @bot.on(admin_cmd(pattern="pcode(?: |$)(.*)"))
 @bot.on(sudo_cmd(pattern="pcode(?: |$)(.*)"))
 async def code_print(event):
@@ -118,15 +121,13 @@ async def code_print(event):
     os.remove("out.png")
     os.remove(d_file_name)
 
+
 CMD_HELP.update(
     {
-        "neko":
-        "\n\n•  **Syntax : **`.neko <text/reply>`\
+        "neko": "\n\n•  **Syntax : **`.neko <text/reply>`\
         \n•  **Function : **__Create a paste or a shortened url using nekobin __`https://nekobin.com`\
         \n\n•  **Syntax : **`.pcode reply/input`\
         \n•  **Function : **__Will paste the entire text on the blank page and will send as image__\
     "
     }
 )
-        
- 

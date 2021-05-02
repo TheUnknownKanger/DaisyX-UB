@@ -1,5 +1,6 @@
-from sqlalchemy import Column, String, Numeric
-from DaisyX.modules.sql_helper import SESSION, BASE
+from sqlalchemy import Column, Numeric
+
+from DaisyX.modules.sql_helper import BASE, SESSION
 
 
 class NOLogPMs(BASE):

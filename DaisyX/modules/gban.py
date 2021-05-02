@@ -1,18 +1,14 @@
-
+from telethon.events import ChatAction
 from telethon.tl.functions.contacts import BlockRequest, UnblockRequest
+from telethon.tl.types import MessageEntityMentionName
+
+from Assist.DAISYX import POST, devs
 from DaisyX import CMD_HELP
 from DaisyX.utils import admin_cmd, sudo_cmd
-import html
-from Assist.DAISYX import POST, devs
-from telethon import events
-from telethon.tl.functions.photos import GetUserPhotosRequest
-from telethon.tl.functions.users import GetFullUserRequest
-from telethon.tl.types import MessageEntityMentionName
-from telethon.utils import get_input_location
-from telethon.events import ChatAction
 
-async def get_full_user(event):  
-    args = event.pattern_match.group(1).split(':', 1)
+
+async def get_full_user(event):
+    args = event.pattern_match.group(1).split(":", 1)
     extra = None
     if event.reply_to_msg_id and not len(args) == 2:
         previous_message = await event.get_reply_message()
@@ -29,15 +25,14 @@ async def get_full_user(event):
             return
         if event.message.entities is not None:
             probable_user_mention_entity = event.message.entities[0]
-            if isinstance(probable_user_mention_entity,
-                          MessageEntityMentionName):
+            if isinstance(probable_user_mention_entity, MessageEntityMentionName):
                 user_id = probable_user_mention_entity.user_id
                 user_obj = await event.client.get_entity(user_id)
                 return user_obj
         try:
             user_obj = await event.client.get_entity(user)
         except Exception as err:
-            return await event.edit("**SOMETHING W3NT WRONG 🤔**", str(err))           
+            return await event.edit("**SOMETHING W3NT WRONG 🤔**", str(err))
     return user_obj, extra
 
 
@@ -50,6 +45,7 @@ async def get_user_sender_id(user, event):
         await event.edit(str(err))
         return None
     return user_obj
+
 
 @borg.on(admin_cmd(pattern="gban ?(.*)"))
 @borg.on(sudo_cmd("gban ?(.*)", allow_sudo=True))
@@ -103,7 +99,9 @@ async def gspider(ULTRA):
             try:
                 await ULTRA.client.edit_permissions(i, user, view_messages=False)
                 a += 1
-                await friday.edit(f"**GBANNING [{user.first_name}](tg://user?id={user.id})**\n\n__Please be Patient..This process takes time.__")
+                await friday.edit(
+                    f"**GBANNING [{user.first_name}](tg://user?id={user.id})**\n\n__Please be Patient..This process takes time.__"
+                )
             except:
                 b += 1
     else:
@@ -151,7 +149,9 @@ async def gspider(ULTRA):
         return await friday.edit("**SOMETHING W3NT WRONG 🤔**")
     if user:
         if user.id in devs:
-            return await friday.edit("**You Cant gban him... as a result you can not ungban him... He is My Creator!**")
+            return await friday.edit(
+                "**You Cant gban him... as a result you can not ungban him... He is My Creator!**"
+            )
         try:
             from ULTRA.modules.sql_helper.gmute_sql import ungmute
         except:
@@ -169,7 +169,9 @@ async def gspider(ULTRA):
             try:
                 await ULTRA.client.edit_permissions(i, user, send_messages=True)
                 a += 1
-                await friday.edit(f"**UNGBANNING [{user.first_name}](tg://user?id={user.id})**\n\n__Please be Patient..This process takes time.__")
+                await friday.edit(
+                    f"**UNGBANNING [{user.first_name}](tg://user?id={user.id})**\n\n__Please be Patient..This process takes time.__"
+                )
             except:
                 b += 1
     else:
@@ -184,33 +186,36 @@ async def gspider(ULTRA):
     )
 
 
-
-
 @borg.on(ChatAction)
-async def handler(rkG): 
-   client = borg
-   if rkG.user_joined or rkG.user_added:      
-       try:       	
-         from DaisyX.modules.sql_helper.gmute_sql import is_gmuted
-         guser = await rkG.get_user()      
-         gmuted = is_gmuted(guser.id)             
-       except:      
-          return
-       if gmuted:
-        for i in gmuted:
-            if i.sender == str(guser.id):                                                                         
-                chat = await rkG.get_chat()
-                admin = chat.admin_rights
-                creator = chat.creator   
-                if admin or creator:
-                 try:
-                    await client.edit_permissions(rkG.chat_id, guser.id, view_messages=False)                              
-                    await rkG.reply(
-                     f"**Gbanned User Joined!!** \n"                      
-                     f"**➥ Victim Id**: [{guser.id}](tg://user?id={guser.id})\n"                   
-                     f"**➥ Action **  : `Banned`")                                                
-                 except:       
-                    rkG.reply("`No Permission To Ban`")                   
-                    return 
-CMD_HELP.update({
-    "gban":"gban any user using username or tag dont use id "})
+async def handler(rkG):
+    client = borg
+    if rkG.user_joined or rkG.user_added:
+        try:
+            from DaisyX.modules.sql_helper.gmute_sql import is_gmuted
+
+            guser = await rkG.get_user()
+            gmuted = is_gmuted(guser.id)
+        except:
+            return
+        if gmuted:
+            for i in gmuted:
+                if i.sender == str(guser.id):
+                    chat = await rkG.get_chat()
+                    admin = chat.admin_rights
+                    creator = chat.creator
+                    if admin or creator:
+                        try:
+                            await client.edit_permissions(
+                                rkG.chat_id, guser.id, view_messages=False
+                            )
+                            await rkG.reply(
+                                f"**Gbanned User Joined!!** \n"
+                                f"**➥ Victim Id**: [{guser.id}](tg://user?id={guser.id})\n"
+                                f"**➥ Action **  : `Banned`"
+                            )
+                        except:
+                            rkG.reply("`No Permission To Ban`")
+                            return
+
+
+CMD_HELP.update({"gban": "gban any user using username or tag dont use id "})

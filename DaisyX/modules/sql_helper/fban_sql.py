@@ -1,5 +1,5 @@
 try:
-    from DaisyX.modules.sql_helper import SESSION, BASE
+    from DaisyX.modules.sql_helper import BASE, SESSION
 except ImportError:
     raise AttributeError
 
