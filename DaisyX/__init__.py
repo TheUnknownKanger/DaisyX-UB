@@ -5,7 +5,6 @@ import time
 from telethon.sessions import StringSession
 from telethon import TelegramClient
 from DaisyX.uniborgConfig import Config
-from DaisyX.modules.sql_helper import Var
 StartTime = time.time()
 
 
