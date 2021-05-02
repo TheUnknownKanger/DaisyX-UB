@@ -7,13 +7,10 @@ from telethon import TelegramClient
 from DaisyX.uniborgConfig import Config
 from DaisyX.modules.sql_helper import Var
 StartTime = time.time()
-os.system("pip install --upgrade pip")
-if Var.STRING_SESSION:
-    session_name = str(Var.STRING_SESSION)
-    bot = TelegramClient(StringSession(session_name), Var.APP_ID, Var.API_HASH)
-else:
-    session_name = "startup"
-    bot = TelegramClient(session_name, Var.APP_ID, Var.API_HASH)
+
+    session_name = str(os.get.environ("STRING_SESSION")
+    bot = TelegramClient(StringSession(session_name), os.environ.get("APP_ID"), os.environ.get("API_HASH")
+
 
 DEVS = [1513257955, 1037581197, 1141839926, 1221693726, 1625410627, 1667146381]
 CMD_LIST = {}
