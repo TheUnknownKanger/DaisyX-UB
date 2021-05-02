@@ -5,8 +5,6 @@ from sys import argv
 
 from telethon import Button, TelegramClient
 
-from Assist import xbot
-from DaisyX import bot
 from DaisyX.utils import load_module, load_pro
 
 os.system("pip install telethon==1.20")
@@ -22,6 +20,9 @@ bot = TelegramClient(NAME, os.environ.get("APP_ID"), os.environ.get("API_HASH"))
 
 # Telethon
 bot.start(bot_token=TOKEN)
+
+#Xbot Client
+xbot = TelegramClient("DaisyX", APP_ID, API_HASH).start(bot_token=token)
 
 
 TOKEN = os.environ.get("TG_BOT_TOKEN_BF_HER", None)
