@@ -23,7 +23,7 @@ TOKEN = os.enivron.get("TG_BOT_TOKEN_BF_HER")
 NAME = TOKEN.split(":")[0]
 
 bot = TelegramClient(
-    NAME, os.environ.get("APP_ID"), os.environ.get("APP_HASH")
+    NAME, os.environ.get("APP_ID"), os.environ.get("API_HASH")
 )
 
 # Telethon
