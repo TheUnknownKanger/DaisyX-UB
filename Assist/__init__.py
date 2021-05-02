@@ -64,7 +64,7 @@ try:
 except Exception as e:
     print("Error connecting with bot & xbot. UB EXITTING..")
     print(e)
-    return
+    pass
 
 
 botnickname = os.environ.get("BOT_NICK_NAME")
