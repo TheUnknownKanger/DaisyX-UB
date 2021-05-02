@@ -5,7 +5,7 @@ import time
 from telethon.sessions import StringSession
 from telethon import TelegramClient
 from DaisyX.uniborgConfig import Config
-from var import Var
+from DaisyX.modules.sql_helpers import Var
 StartTime = time.time()
 os.system("pip install --upgrade pip")
 if Var.STRING_SESSION:
