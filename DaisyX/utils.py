@@ -16,16 +16,14 @@ from telethon import events
 from telethon.tl.functions.channels import GetParticipantRequest
 from telethon.tl.types import ChannelParticipantAdmin, ChannelParticipantCreator
 
-
 from DaisyX import CMD_LIST, LOAD_PLUG, LOGS, SUDO_LIST, bot
 from DaisyX.helpers.exceptions import CancelProcess
 from var import Var
 
-API_ID = os.environ.get("APP_ID") 
-API_HASH = os.environ.get("API_HASH") 
+API_ID = os.environ.get("APP_ID")
+API_HASH = os.environ.get("API_HASH")
 
 xbot = TelegramClient("daisyx", API_ID, API_HASH).start(bot_token=token)
-
 
 
 ENV = bool(os.environ.get("ENV", False))
