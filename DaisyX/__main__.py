@@ -19,6 +19,18 @@ from DaisyX.utils import load_module, load_pro
 from DaisyX import LOAD_PLUG, BOTLOG_CHATID
 from pathlib import Path
 import asyncio
+
+TOKEN = os.enivron.get("TG_BOT_TOKEN_BF_HER")
+NAME = TOKEN.split(":")[0]
+
+bot = TelegramClient(
+    NAME, os.environ.get("APP_ID"), os.environ.get("APP_HASH")
+)
+
+# Telethon
+bot.start(bot_token=TOKEN)
+
+
 TOKEN = os.environ.get("TG_BOT_TOKEN_BF_HER", None)
 import telethon.utils
 EXTRA_PLUGS = os.environ.get("EXTRA_PLUGS", False)
