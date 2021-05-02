@@ -14,7 +14,6 @@ import glob
 from telethon.errors.rpcerrorlist import PhoneNumberInvalidError
 import os
 from telethon import TelegramClient, Button
-from var import Var
 from DaisyX.utils import load_module, load_pro
 from DaisyX import LOAD_PLUG, BOTLOG_CHATID
 from pathlib import Path
@@ -43,17 +42,17 @@ if len(argv) not in (1, 3, 4):
     bot.disconnect()
 else:
     bot.tgbot = None
-    if Var.TG_BOT_USER_NAME_BF_HER is not None:
+    if os.environ.get("TG_BOT_USER_NAME_BF_HER") is not None:
         print("Initiating Inline Bot")
         # ForTheGreatrerGood of beautification
         bot.tgbot = TelegramClient(
             "TG_BOT_TOKEN",
-            api_id=Var.APP_ID,
-            api_hash=Var.API_HASH
-        ).start(bot_token=Var.TG_BOT_TOKEN_BF_HER)
+            api_id=os.environ.get("APP_ID"),
+            api_hash=os.environ.get("API_HASH") 
+        ).start(bot_token=os.environ.get("TG_BOT_TOKEN_BF_HER")
         print("Initialisation finished with no errors")
         print("Starting Userbot")
-        bot.loop.run_until_complete(add_bot(Var.TG_BOT_USER_NAME_BF_HER))
+        bot.loop.run_until_complete(add_bot(os.environ.get("TG_BOT_USER_NAME_BF_HER")))
         print("Startup Completed")
     else:
         bot.start()
