@@ -3,7 +3,7 @@ try:
   from Assist import id, ID, devs, rd, wt
 
   print ("DaisyX X IS STARTING WITH TELETHON") 
-from DaisyX.functions.DaisyX import xbot
+from Assist import xbot
 from DaisyX import bot, CMD_HELP
 from sys import argv
 os.system("pip install telethon==1.20")
