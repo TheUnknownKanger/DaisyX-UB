@@ -1,15 +1,12 @@
 import os
-try:
-  from Assist import id, ID, devs, rd, wt
 
-  print ("DaisyX X IS STARTING WITH TELETHON") 
 from Assist import xbot
 from DaisyX import bot, CMD_HELP
 from sys import argv
-os.system("pip install telethon==1.20")
+
 import sys
-import os
-os.system("pip install google_trans_new")
+
+
 import glob
 from telethon.errors.rpcerrorlist import PhoneNumberInvalidError
 import os
@@ -19,6 +16,13 @@ from DaisyX import LOAD_PLUG, BOTLOG_CHATID
 from pathlib import Path
 import asyncio
 
+os.system("pip install telethon==1.20")
+os.system("pip install google_trans_new")
+try:
+  from Assist import id, ID, devs, rd, wt
+  print ("DaisyX X UB IS STARTING WITH TELETHON") 
+except:
+  pass
 TOKEN = os.enivron.get("TG_BOT_TOKEN_BF_HER")
 NAME = TOKEN.split(":")[0]
 
@@ -49,7 +53,7 @@ else:
             "TG_BOT_TOKEN",
             api_id=os.environ.get("APP_ID"),
             api_hash=os.environ.get("API_HASH") 
-        ).start(bot_token=os.environ.get("TG_BOT_TOKEN_BF_HER")
+        ).start(bot_token=os.environ.get("TG_BOT_TOKEN_BF_HER"))
         print("Initialisation finished with no errors")
         print("Starting Userbot")
         bot.loop.run_until_complete(add_bot(os.environ.get("TG_BOT_USER_NAME_BF_HER")))
