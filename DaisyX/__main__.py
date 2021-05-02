@@ -21,7 +21,7 @@ bot = TelegramClient(NAME, os.environ.get("APP_ID"), os.environ.get("API_HASH"))
 # Telethon
 bot.start(bot_token=TOKEN)
 
-#Xbot Client
+# Xbot Client
 xbot = TelegramClient("DaisyX", APP_ID, API_HASH).start(bot_token=token)
 
 
