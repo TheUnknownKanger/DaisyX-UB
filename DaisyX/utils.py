@@ -12,7 +12,7 @@ import traceback
 from pathlib import Path
 from time import gmtime, strftime
 
-from telethon import events
+from telethon import events, TelegramClient
 from telethon.tl.functions.channels import GetParticipantRequest
 from telethon.tl.types import ChannelParticipantAdmin, ChannelParticipantCreator
 
