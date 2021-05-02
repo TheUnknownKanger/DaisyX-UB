@@ -13,7 +13,7 @@ try:
     print("DaisyX X UB IS STARTING WITH TELETHON")
 except:
     pass
-TOKEN = os.enivron.get("TG_BOT_TOKEN_BF_HER")
+TOKEN = os.environ.get("TG_BOT_TOKEN_BF_HER")
 NAME = TOKEN.split(":")[0]
 
 bot = TelegramClient(NAME, os.environ.get("APP_ID"), os.environ.get("API_HASH"))
