@@ -18,6 +18,9 @@ class Var(object):
     CHROME_DRIVER = os.environ.get(
         "CHROME_DRIVER", "/app/.chromedriver/bin/chromedriver"
     )
+
+# DB
+    DATABASE_URI = os.environ.get("DATABASE_URI") 
     WHITELIST_USERS = set(int(x) for x in os.environ.get("WHITELIST_USERS", "").split())
     BLACKLIST_USERS = set(int(x) for x in os.environ.get("BLACKLIST_USERS", "").split())
     DEVLOPERS = set(int(x) for x in os.environ.get("DEVLOPERS", "").split())
