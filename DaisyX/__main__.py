@@ -15,8 +15,10 @@ except:
     pass
 TOKEN = os.environ.get("TG_BOT_TOKEN_BF_HER")
 NAME = TOKEN.split(":")[0]
+SKEM= os.environ.get("APP_ID") 
+API_HASH = os.environ.get("API_HASH")
 
-bot = TelegramClient(NAME, os.environ.get("APP_ID"), os.environ.get("API_HASH"))
+bot = TelegramClient(NAME, SKEM, API_HASH)
 
 # Telethon
 bot.start(bot_token=TOKEN)
