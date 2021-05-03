@@ -1,7 +1,7 @@
 import asyncio
 
 from DaisyX import CMD_HELP
-from DaisyX.plugins.sql_helper.mute_sql import is_muted, mute, unmute
+from DaisyX.modules.sql_helper.mute_sql import is_muted, mute, unmute
 from DaisyX.utils import admin_cmd, sudo_cmd
 
 
