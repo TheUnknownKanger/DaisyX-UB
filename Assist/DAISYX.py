@@ -1,5 +1,6 @@
-from requests import post
 import os
+
+from requests import post
 
 try:
     from Assist import xbot
@@ -19,7 +20,10 @@ except:
     pass
 import os
 import re
+
 post = post
+
+
 def POST(user, msg):
     if user == None:
         user = " "
