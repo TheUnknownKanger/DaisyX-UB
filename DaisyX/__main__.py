@@ -49,7 +49,7 @@ else:
 
 import glob
 
-path = "DaisyX/plugins/assistant/*.py"
+path = "DaisyX/modules/assistant/*.py"
 files = glob.glob(path)
 for name in files:
     with open(name) as f:
@@ -59,7 +59,7 @@ for name in files:
 
 
 try:
-    path = "ULTRA/plugins/*.py"
+    path = "DaisyX/modules/*.py"
     files = glob.glob(path)
     for name in files:
         with open(name) as f:
@@ -71,7 +71,7 @@ except Exception as e:
 
 import os
 
-print("UltraX is Up and Awake! ©️ TeamUltraX 2021")
+print("DaisyX is Up and Awake! ©️ TeamDaisyX 2021")
 
 
 async def legend():
@@ -88,8 +88,8 @@ async def legend():
 
 **➥ Mᴀsᴛᴇʀ** `➪` **@{legend.username}**
 **➥ Assɪsᴛᴀɴᴛ** `➪` **@{pro.username}**
-**➥ Sᴜᴘᴘᴏʀᴛ** `➪` **@UltraXchaT**
-**➥ Cʜᴀɴɴᴇʟ** `➪` **@UltraX_SupporT**
+**➥ Sᴜᴘᴘᴏʀᴛ** `➪` **@DaisySupport_Official**
+**➥ Cʜᴀɴɴᴇʟ** `➪` **@DaisyXUpdates**
 
 **Cʜᴇᴄᴋ ᴍᴏɪ Pɪɴɢ ᴛɪᴍᴇ ʙʏ** `.ping` **[Fᴏʀ UsᴇʀBᴏᴛ] or** `/ping` **[Fᴏʀ Assɪsᴛᴀɴᴛ]**
 """
