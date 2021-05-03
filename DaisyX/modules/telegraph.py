@@ -4,7 +4,7 @@ from datetime import datetime
 from PIL import Image
 from telegraph import Telegraph, exceptions, upload_file
 
-from DaisyX import CMD_HELP
+from DaisyX import CMD_HELP, SUDO_USERS
 from DaisyX.utils import admin_cmd, sudo_cmd
 
 telegraph = Telegraph()
