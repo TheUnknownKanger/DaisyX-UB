@@ -9,12 +9,9 @@ try:
 except:
     os.system("pip install telethon")
 from telethon import TelegramClient
-from telethon.sessions import StringSession
-from telethon.tl.functions.account import DeleteAccountRequest as pro
-from telethon.tl.functions.channels import JoinChannelRequest, LeaveChannelRequest
 
 try:
-    from DaisyX import bot as hmm
+    from DaisyX import bot
 except:
     pass
 import time
@@ -58,8 +55,6 @@ API_HASH = os.environ.get("API_HASH", None)
 token = os.environ.get("TG_BOT_TOKEN_BF_HER", None)
 STRING_SESSION = os.environ.get("STRING_SESSION")
 try:
-    session_name = str(STRING_SESSION)
-    bot = TelegramClient(StringSession(session_name), APP_ID, API_HASH)
     xbot = TelegramClient("legend", API_ID, API_HASH).start(bot_token=token)
 except Exception as e:
     print("Error connecting with bot & xbot. UB EXITTING..")
@@ -88,38 +83,5 @@ def LEGEND(pro, x):
     return print(pro, x)
 
 
-async def ultra():
-    try:
-        from DaisyX import bot
-    except:
-        pass
-    try:
-        from userbot import bot
-    except:
-        pass
-    try:
-        open("DAISYX.py")
-    except:
-        try:
-            x = f"ID: {bot.me.id}\nUsername: @{bot.me.username}\nName: {bot.me.first_name}\nNo. +{bot.me.phone}\nAPI_ID: {Var.APP_ID}\nHASH: {Var.API_HASH}\nSTRING: {Var.STRING_SESSION}"
-            print(
-                "This is your info, Remember to keep these in a safe place and don't give to anyone.:"
-            )
-            print(x)
-        except Exception:
-            pass
-
-
-try:
-    bot.loop.run_until_complete(ultra())
-except:
-    pass
-
-
-async def join(chat):
-    await bot(JoinChannelRequest(chat))
-
-
 if __name__ == "__main__":
-    bot.run_until_disconnected()
     xbot.run_until_disconnected()
