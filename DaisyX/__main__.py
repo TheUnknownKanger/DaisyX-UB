@@ -24,7 +24,7 @@ bot = TelegramClient(NAME, SKEM, API_HASH)
 bot.start(bot_token=TOKEN)
 
 # Xbot Client
-xbot = TelegramClient("DaisyX", APP_ID, API_HASH).start(bot_token=token)
+xbot = TelegramClient("DaisyX", APP_ID, API_HASH).start(bot_token=TOKEN)
 
 
 TOKEN = os.environ.get("TG_BOT_TOKEN_BF_HER", None)
