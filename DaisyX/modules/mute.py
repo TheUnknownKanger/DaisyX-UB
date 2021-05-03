@@ -4,7 +4,7 @@ import asyncio
 
 from uniborg.util import admin_cmd
 
-from DaisyX.plugins.sql_helper.mute_sql import is_muted, mute, unmute
+from DaisyX.modules.sql_helper.mute_sql import is_muted, mute, unmute
 
 
 # @command(outgoing=True, pattern=r"^.mute ?(\d+)?")
