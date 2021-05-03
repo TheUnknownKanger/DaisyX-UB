@@ -14,4 +14,3 @@ REPO = "[ᴅᴀɪsʏ χ вσт](https://github.com/TeamDaisyX/DaisyX-UB)"
 
 MASTER = NAME
 GROUP = "[SUPPORT GROUP](https://t.me/DaisySupport_Official)"
-
