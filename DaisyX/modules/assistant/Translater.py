@@ -2,7 +2,7 @@ import requests
 from google_trans_new import google_translator
 from telethon import events
 
-from DaisyX.functions.DaisyX import xbot
+from Assist import xbot
 
 
 @xbot.on(events.NewMessage(pattern="/tr ?(.*)"))
