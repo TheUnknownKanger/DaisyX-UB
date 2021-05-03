@@ -115,67 +115,6 @@ async def users(event):
     # later bro
 
 
-@xbot.on(events.NewMessage(func=lambda e: e.is_private))
-async def all_messages_catcher(event):
-    if is_he_added(event.sender_id):
-        return
-    if event.is_group or event.sender_id == bot.me.id or event.sender_id == id:
-        return
-    if event.raw_text.startswith("/"):
-        return
-    if os.environ.get("SUB_TO_MSG_ASSISTANT", False):
-        try:
-            result = await xbot(
-                functions.channels.GetParticipantRequest(
-                    channel=Config.JTM_CHANNEL_ID, user_id=event.sender_id
-                )
-            )
-        except telethon.errors.rpcerrorlist.UserNotParticipantError:
-            await event.reply(
-                f"**Opps, I Couldn't Forward That Message To Owner. Please Join My Channel First And Then Try Again!**",
-                buttons=[Button.url("Join Channel", Config.JTM_CHANNEL_USERNAME)],
-            )
-            return
-    await event.get_sender()
-    sed = await event.forward_to(bot.uid)
-    add_me_in_db(sed.id, event.sender_id, event.id)
-
-
-@xbot.on(events.NewMessage(func=lambda e: e.is_private))
-async def sed(event):
-    msg = await event.get_reply_message()
-    if msg is None:
-        return
-    msg.id
-    msg_s = event.raw_text
-    user_id, reply_message_id = his_userid(msg.id)
-    if event.sender_id != bot.uid:
-        return
-    elif (
-        event.raw_text.startswith("/")
-        or event.sender_id == bot.me.id
-        or event.sender_id == id
-    ):
-        return
-    elif event.text is not None and event.media:
-        bot_api_file_id = pack_bot_file_id(event.media)
-        await xbot.send_file(
-            user_id,
-            file=bot_api_file_id,
-            caption=event.text,
-            reply_to=reply_message_id,
-        )
-    else:
-        msg_s = event.raw_text
-        info = event.sender_id
-        msg_s = f"{msg_s}\n user id = `{info}`"
-        await xbot.send_message(
-            user_id,
-            msg_s,
-            reply_to=reply_message_id,
-        )
-
-
 @xbot.on(events.NewMessage(pattern="/broadcast ?(.*)"))
 async def sedlyfsir(event):
     pro = await bot.get_me()
