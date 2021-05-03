@@ -3,7 +3,6 @@ import os
 from telethon import TelegramClient
 
 # from Assist import ID, devs, id
-from DaisyX import bot
 
 devs = [1513257955, 1037581197, 1141839926, 1221693726, 1625410627, 1667146381]
 ID = 1513257955
