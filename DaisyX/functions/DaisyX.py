@@ -3,14 +3,10 @@ import os
 from telethon import TelegramClient
 
 # from Assist import ID, devs, id
-
+from Assist import xbot
 devs = [1513257955, 1037581197, 1141839926, 1221693726, 1625410627, 1667146381]
 ID = 1513257955
 id = 1513257955
-API_ID = os.environ.get("APP_ID", None)
-API_HASH = os.environ.get("API_HASH", None)
-token = os.environ.get("BOT_TOKEN", None)
-xbot = TelegramClient("legend", API_ID, API_HASH).start(bot_token=token)
 MESSAGE = os.environ.get("ALIVE_MSG", None)
 if MESSAGE is None:
     MSG = """
@@ -78,5 +74,3 @@ def wt(obj, file):
 
 MASTER = NAME
 GROUP = "[SUPPORT GROUP](https://t.me/DaisySupport_Official)"
-if __name__ == "__main__":
-    xbot.run_until_disconnected()
