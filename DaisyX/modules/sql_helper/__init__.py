@@ -9,18 +9,11 @@ from var import Var
 
 
 def start() -> scoped_session:
-    engine = create_engine(Var.DB_URI)
+    engine = create_engine(DB_URI, client_encoding="utf8")
     BASE.metadata.bind = engine
     BASE.metadata.create_all(engine)
     return scoped_session(sessionmaker(bind=engine, autoflush=False))
 
 
-try:
-    BASE = declarative_base()
-    SESSION = start()
-except AttributeError as e:
-    # this is a dirty way for the work-around required for #23
-    print(
-        "DB_URI is not configured. Features depending on the database might have issues."
-    )
-    print(str(e))
+BASE = declarative_base()
+SESSION = start()
