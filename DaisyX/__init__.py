@@ -39,7 +39,7 @@ def HELP(**DAISYX):
         DAISYX["NAME"] = __name__
         CMD_HELP.update({see: helper})
     elif helper is None:
-       DAISYX[
+        DAISYX[
             "HELP"
         ] = "🥺🥺NOT COMMAND HELP🥺🥺\nADDED HERE\nIF YOU WANT TO KNOW ABOUT THIS PLUG-IN\nJOIN SUPPORT GROUP"
     else:
