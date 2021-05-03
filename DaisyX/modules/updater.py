@@ -1,7 +1,7 @@
 # (c) Copyright 2021-2022 DaisyX
 # Made by Legend22X
 
-'''import asyncio
+"""import asyncio
 import os
 import sys
 from asyncio import create_subprocess_shell as asyncSubprocess
@@ -225,11 +225,16 @@ async def upstream(ups):
         args = [sys.executable, "-m", "userbot"]
         execle(sys.executable, *args, environ)
         return
-'''
+"""
 
 from DaisyX.utils import admin_cmd
-@borg.on(admin_cmd(pattern="update|update now"))
-async def hehe (event):
-  await event.edit("want to update your bot ?\nnow not use update now use \n`.restart` only")
-#maked by LEGENDX22 🔥🔥🔥⚡⚡⚡⚡
 
+
+@borg.on(admin_cmd(pattern="update|update now"))
+async def hehe(event):
+    await event.edit(
+        "want to update your bot ?\nnow not use update now use \n`.restart` only"
+    )
+
+
+# maked by LEGENDX22 🔥🔥🔥⚡⚡⚡⚡
