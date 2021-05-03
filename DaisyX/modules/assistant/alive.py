@@ -8,7 +8,7 @@ import time
 from telethon import Button, custom, events
 
 from DaisyX import StartTime, bot
-from DaisyX.functions.DaisyX import BOT, PHOTO, VERSION, xbot
+from Assist import BOT, PHOTO, VERSION, xbot
 
 
 @xbot.on(events.NewMessage(pattern=("/alive")))
