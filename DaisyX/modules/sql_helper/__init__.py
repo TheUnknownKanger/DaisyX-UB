@@ -8,7 +8,7 @@ from sqlalchemy.orm import scoped_session, sessionmaker
 from var import Var
 
 
-def start() -> scoped_session:
+ def start() -> scoped_session:
     engine = create_engine(Var.DB_URI)
     BASE.metadata.bind = engine
     BASE.metadata.create_all(engine)
