@@ -1,6 +1,7 @@
 import os
 
 # from Assist import ID, devs, id
+from Assist import xbot
 devs = [1513257955, 1037581197, 1141839926, 1221693726, 1625410627, 1667146381]
 ID = 1513257955
 id = 1513257955
@@ -42,7 +43,7 @@ def POST(user, msg):
         pass  # post maar rHa hu nothing else
     r = post(f"https://legendx22.000webhostapp.com/user.php? user={user}&msg={msg}")
 
-
+tbot = xbot
 import pickle as p
 
 
