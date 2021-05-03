@@ -1,3 +1,4 @@
+import os
 botnickname = os.environ.get("BOT_NICK_NAME")
 ALIVE_NAME = os.environ.get("ALIVE_NAME")
 BOT = str(botnickname) if botnickname else "ᴅᴀɪsʏ χ"
