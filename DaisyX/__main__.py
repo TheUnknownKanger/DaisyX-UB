@@ -58,7 +58,7 @@ for name in files:
         load_pro(shortname.replace(".py", ""))
 
 
-if 'LEGENDX' != 'DEVIL':
+if "LEGENDX" != "DEVIL":
     path = "DaisyX/modules/*.py"
     files = glob.glob(path)
     for name in files:
@@ -67,7 +67,7 @@ if 'LEGENDX' != 'DEVIL':
             shortname = path1.stem
             load_module(shortname.replace(".py", ""))
 else:
-  print ('fuck off kanger chala Ka madarchod')
+    print("fuck off kanger chala Ka madarchod")
 import os
 
 print("DaisyX is Up and Awake! ©️ TeamDaisyX 2021")
