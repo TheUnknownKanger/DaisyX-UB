@@ -5,8 +5,8 @@ from telethon.tl.functions.channels import EditAdminRequest, EditBannedRequest
 from telethon.tl.functions.messages import UpdatePinnedMessageRequest
 from telethon.tl.types import ChatAdminRights, ChatBannedRights
 
-from DaisyX.functions.DaisyX import devs as DEVS
-from DaisyX.functions.DaisyX import xbot
+from Assist import devs as DEVS
+from Assist import xbot
 
 PP_TOO_SMOL = "`The image is too small`"
 PP_ERROR = "`Failure while processing the image`"
