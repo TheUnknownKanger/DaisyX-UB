@@ -1,9 +1,9 @@
 from telethon import events
 from telethon.utils import pack_bot_file_id
 
+from Assist import xbot
 from DaisyX import bot
 from DaisyX.functions.DaisyX import devs as DEVS
-from Assist import xbot
 
 
 @xbot.on(events.NewMessage(pattern="/id ?(.*)"))
