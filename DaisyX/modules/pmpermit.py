@@ -6,7 +6,7 @@ from telethon import events, functions
 from telethon.tl.functions.contacts import BlockRequest as block
 from telethon.tl.functions.users import GetFullUserRequest
 
-import DaisyX.plugins.sql_helper.pmpermit_sql as ULTRA_X
+import DaisyX.modules.sql_helper.pmpermit_sql as ULTRA_X
 from Assist import NAME
 from DaisyX import bot
 from var import Var
