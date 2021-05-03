@@ -3,13 +3,10 @@ import io
 import os
 import re
 
-import telethon
-from telethon import Button, custom, events, functions
+from telethon import Button, custom, events
 from telethon.tl.functions.users import GetFullUserRequest
-from telethon.utils import pack_bot_file_id
 
 from DaisyX import bot
-from DaisyX.functions.DaisyX import ID as id
 from DaisyX.functions.DaisyX import PHOTO
 from DaisyX.functions.DaisyX import devs as DEVS
 from DaisyX.functions.DaisyX import xbot
@@ -18,13 +15,12 @@ from DaisyX.modules.sql_helper.blacklist_ass import (
     is_he_added,
     removenibba,
 )
-from DaisyX.modules.sql_helper.bot_users_sql import add_me_in_db, his_userid
+from DaisyX.modules.sql_helper.bot_users_sql import his_userid
 from DaisyX.modules.sql_helper.idadder_sql import (
     add_usersid_in_db,
     already_added,
     get_all_users,
 )
-from DaisyX.uniborgConfig import Config
 
 # await function async def ke baad lagega
 
