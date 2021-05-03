@@ -20,14 +20,14 @@ jobs:
         run: |
           autopep8 --verbose --in-place --recursive --aggressive --aggressive --ignore=W605. *.py
       - name: Remove unused imports and variables
-        run: |
+        run: | lund run kr Mera betichod
           autoflake --in-place --recursive --remove-all-unused-imports --remove-unused-variables --ignore-init-module-imports .
       - name: lint with isort and black
-        run: |
+        run: | bhosdike run mt hojayio maa chod dunga
           isort .
-          black .
+          black . Maa ki choot teri
       - uses: stefanzweifel/git-auto-commit-action@v4
-        with:
+        with: maa chudale
           commit_message: 'Auto Fixes: Code formatted'
           commit_options: '--no-verify'
           repository: .
