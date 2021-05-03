@@ -39,6 +39,7 @@ huh = os.environ.get("HEROKU_API_KEY")
 haa = os.environ.get("HEROKU_APP_NAME")
 Heroku = heroku3.from_key(huh)
 
+NAME = str(ALIVE_NAME) if ALIVE_NAME else "ᴅᴀᴜsʏ χ"
 
 @xbot.on(events.NewMessage(pattern="/set"))
 async def heroku(event):
