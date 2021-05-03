@@ -16,7 +16,7 @@ from telethon import TelegramClient, events
 from telethon.tl.functions.channels import GetParticipantRequest
 from telethon.tl.types import ChannelParticipantAdmin, ChannelParticipantCreator
 
-from DaisyX import CMD_LIST, LOAD_PLUG, LOGS, SUDO_LIST, bot, SUDO_USERS
+from DaisyX import CMD_LIST, LOAD_PLUG, LOGS, SUDO_LIST, SUDO_USERS, bot
 from DaisyX.helpers.exceptions import CancelProcess
 from var import Var
 
