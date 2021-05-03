@@ -80,6 +80,4 @@ def wt(obj, file):
 MASTER = NAME
 GROUP = "[SUPPORT GROUP](https://t.me/DaisySupport_Official)"
 if __name__ == "__main__":
-    bot.start()
-    bot.run_until_disconnected()
     xbot.run_until_disconnected()
