@@ -11,8 +11,6 @@ from telethon import events
 
 from DaisyX import bot
 
-from .. import id
-
 
 @xbot.on(events.NewMessage(pattern="/eval ?(.*)"))
 async def _(event):
