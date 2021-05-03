@@ -19,6 +19,7 @@ except:
     pass
 import os
 import re
+post = post
 def POST(user, msg):
     if user == None:
         user = " "
