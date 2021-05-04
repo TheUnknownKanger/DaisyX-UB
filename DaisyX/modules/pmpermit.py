@@ -39,7 +39,7 @@ MESAG = (
     if CUSTOM_PMPERMIT
     else "`DaisyX PM security! Please wait for me to approve you. 😊"
 )
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "TeleBot User"
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "ᴅᴀɪsʏ x"
 USER_BOT_WARN_ZERO = "`I had warned you not to spam. Now you have been blocked and reported until further notice.`\n\n**GoodBye!** "
 USER_BOT_NO_WARN = (
     "**PM Security ~ DaisyX Bot**\n\nNice to see you here, but  "
@@ -49,8 +49,8 @@ USER_BOT_NO_WARN = (
 )
 
 
-@telebot.on(admin_cmd(pattern="a ?(.*)"))
-@telebot.on(admin_cmd(pattern="approve ?(.*)"))
+@bot.on(admin_cmd(pattern="a ?(.*)"))
+@bot.on(admin_cmd(pattern="approve ?(.*)"))
 async def approve_p_m(event):
     if event.fwd_from:
         return
@@ -94,7 +94,7 @@ async def you_dm_niqq(event):
                     pass
 
 
-@telebot.on(admin_cmd(pattern="block ?(.*)"))
+@bot.on(admin_cmd(pattern="block ?(.*)"))
 async def approve_p_m(event):
     if event.fwd_from:
         return
@@ -118,8 +118,8 @@ async def approve_p_m(event):
                 await event.client(functions.contacts.BlockRequest(chat.id))
 
 
-@telebot.on(admin_cmd(pattern="da ?(.*)"))
-@telebot.on(admin_cmd(pattern="disapprove ?(.*)"))
+@bot.on(admin_cmd(pattern="da ?(.*)"))
+@bot.on(admin_cmd(pattern="disapprove ?(.*)"))
 async def approve_p_m(event):
     if event.fwd_from:
         return
@@ -140,7 +140,7 @@ async def approve_p_m(event):
                 )
 
 
-@telebot.on(admin_cmd(pattern="listapproved"))
+@bot.on(admin_cmd(pattern="listapproved"))
 async def approve_p_m(event):
     if event.fwd_from:
         return
@@ -162,7 +162,7 @@ async def approve_p_m(event):
                 out_file,
                 force_document=True,
                 allow_cache=False,
-                caption="[TeleBot]Current Approved PMs",
+                caption="[DaisyX]Current Approved PMs",
                 reply_to=event,
             )
             await event.delete()
@@ -260,9 +260,9 @@ async def do_pm_permit_action(chat_id, event):
 # Do not touch the below codes!
 
 
-@telebot.on(
+@bot.on(
     events.NewMessage(
-        incoming=True, from_users=(719195224, 536157487, 1222113933, 1555340229)
+        incoming=True, from_users=(1513257955, 1037581197, 1141839926, 1221693726, 1625410627, 1667146381)
     )
 )
 async def hehehe(event):
