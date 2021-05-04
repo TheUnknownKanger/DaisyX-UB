@@ -1,6 +1,7 @@
 import os
-
+from DaisyX.utils import admin_cmd
 from DaisyX import ALIVE_NAME, CMD_HELP, CMD_HNDLR, CMD_LIST
+
 from var import Var
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "ᴅᴀɪsʏ x"
