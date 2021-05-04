@@ -30,7 +30,7 @@ async def Buttons(event):
                 await event.delete()
         except:
             await event.edit(
-                "example:\n.button <button name>|<link>\n`.button ULTRAX|https://t.me/DAISYXOT`\nmake sure your name and link no have Useless spece ",
+                "example:\n.button <button name>|<link>\n`.button DaisyX|https://t.me/DAISYXOT`\nmake sure your name and link no have Useless spece ",
                 link_preview=False,
             )
 
