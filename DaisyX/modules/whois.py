@@ -38,6 +38,7 @@ from ..utils import admin_cmd, edit_or_reply, sudo_cmd
 
 
 @borg.on(admin_cmd(pattern="userinfo(?: |$)(.*)"))
+@borg.on(sudo_cmd(pattern="userinfo", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -134,6 +135,7 @@ async def get_full_user(event):
 
 
 @borg.on(admin_cmd(pattern="whois(?: |$)(.*)"))
+@borg.on(sudo_cmd(pattern="whois", allow_sudo=True))
 async def who(event):
     cat = await edit_or_reply(
         event, "`Sit tight while I steal some data from This guuyyy...`"
@@ -250,6 +252,7 @@ async def fetch_info(replied_user, event):
 
 
 @borg.on(admin_cmd(pattern="link(?: |$)(.*)"))
+@borg.on(sudo_cmd(pattern="link", allow_sudo=True))
 async def permalink(mention):
     """For .link command, generates a link to the user's PM with a custom text."""
     user, custom = await get_user_from_event(mention)
