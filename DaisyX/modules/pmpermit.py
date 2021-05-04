@@ -24,6 +24,7 @@ from telethon.tl.functions.users import GetFullUserRequest
 import DaisyX.modules.sql_helper.pmpermit_sql as pmpermit_sql
 from DaisyX import ALIVE_NAME, CMD_HELP, CUSTOM_PMPERMIT, bot
 from DaisyX.utils import admin_cmd
+from DaisyX.daisyconfig import Var
 
 PMPERMIT_PIC = os.environ.get("PMPERMIT_PIC", None)
 TELEPIC = (
