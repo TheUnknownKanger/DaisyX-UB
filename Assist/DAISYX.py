@@ -41,7 +41,7 @@ from Assist import ID
 botnickname = os.environ.get("BOT_NICK_NAME")
 ALIVE_NAME = os.environ.get("ALIVE_NAME")
 BOT = str(botnickname) if botnickname else "ᴅᴀɪsʏ χ"
-NAME = str(ALIVE_NAME) if ALIVE_NAME else "ᴅᴀᴜsʏ χ"
+NAME = str(ALIVE_NAME) if ALIVE_NAME else "ᴅᴀɪsʏ χ"
 PHOTO = os.environ.get("ALIVE_PHOTTO", None)
 DAISYX = "[DAISY X](https://t.me/DAISYXOT)"
 VERSION = "0.0.1"
