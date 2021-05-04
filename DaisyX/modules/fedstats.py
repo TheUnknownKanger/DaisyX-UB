@@ -116,7 +116,7 @@ DEVIL = NAME
 async def _(event):
     if event.fwd_from:
         return
-    ok = await event.edit(f"**ᴄʜᴇᴄᴋɪɴɢ ғᴇᴅ sᴛᴀᴛ ɪɴ ᴅᴀɪsʏx ʙᴏᴛ ᴏɴ ᴏʀᴅᴇʀ ᴏғ {DEVIL}**...")
+    ok = await event.edit(f"**ᴄʜᴇᴄᴋɪɴɢ ғᴇᴅ sᴛᴀᴛ ɪɴ ᴅᴀɪsʏ x ʙᴏᴛ ᴏɴ ᴏʀᴅᴇʀ ᴏғ {DEVIL}**...")
     if event.reply_to_msg_id:
         previous_message = await event.get_reply_message()
         sysarg = str(previous_message.sender_id)
