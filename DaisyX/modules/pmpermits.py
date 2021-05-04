@@ -6,7 +6,7 @@ import asyncio
 from telethon import events, functions
 from telethon.tl.functions.users import GetFullUserRequest
 
-import DaisyX.mdoules.sql_helper.pmpermit_sql as lightning_sql
+import DaisyX.modules.sql_helper.pmpermit_sql as lightning_sql
 from DaisyX import ALIVE_NAME, bot
 from DaisyX.uniborgConfig import Config
 from var import Var
