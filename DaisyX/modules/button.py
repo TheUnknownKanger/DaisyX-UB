@@ -1,12 +1,10 @@
-# COPYRIGHT (C) 2021-2022 © Ultra X Bot
-from telethon import Button
+# COPYRIGHT (C) 2021-2022 BY LEGENDX22, PROBOYX
+from telethon import Button, events
 
 from Assist import xbot
-from DaisyX.utils import admin_cmd
-from DaisyX.utils import edit_or_reply as eor
-from DaisyX.utils import sudo_cmd
-
-
+from ..utils import admin_cmd
+from ..utils import edit_or_reply as eor
+from ..utils import sudo_cmd
 @borg.on(admin_cmd(pattern="button (.*)"))
 @borg.on(sudo_cmd(pattern="button", allow_sudo=True))
 async def Buttons(event):
@@ -14,25 +12,26 @@ async def Buttons(event):
     ULTRAX = Var.TG_BOT_USER_NAME_BF_HER
     pro = event.text[7:]
     pro, boy = pro.split("|")
-    if "LEGENDX" == "PROBOYX":
-        await xbot.send_message(event.chat_id, "buttons")
-    else:
-        try:
-            async with bot.conversation(ULTRAX) as proboyx:
-                await proboyx.send_message("/start")
-                await proboyx.get_response()
-                await proboyx.send_message("my button 🥺")
-                await xbot.send_message(
-                    bot.me.id, f"{pro}", buttons=[[Button.url(f"{pro}", f"{boy}")]]
-                )
-                pro = await proboyx.get_response()
-                await pro.forward_to(event.chat_id)
-                await event.delete()
-        except:
-            await event.edit(
-                "example:\n.button <button name>|<link>\n`.button DaisyX|https://t.me/DAISYXOT`\nmake sure your name and link no have Useless spece ",
-                link_preview=False,
-            )
+    f = open("Button.txt", "w") # by LEGENDX22, PROBOYX
+    f.write(f'{pro}\n{boy}')
+    f.close()
+    LEGENDX = await bot.inline_query(ULTRAX, "BUTTON")
+    await LEGENDX[0].click(event.chat_id)
+    await event.delete()
+
+@xbot.on(events.InlineQuery(pattern='BUTTON'))
+async def file(event):
+  f = open("Button.txt")
+  ok = f.readlines()[0]
+  f.close()
+  PROBOYX = open("Button.txt")
+  bc = PROBOYX.readlines()[1]
+  PROBOYX.close()
+  LEGENDX = event.builder
+  DEVIL = [[Button.url(f'{ok}', f'{bc}')]]
+  INUKA = LEGENDX.article(title='Button by DaisyX', text=f'{ok}', buttons=DEVIL)
+  await event.answer([INUKA])
+
 
 
 from .. import CMD_HELP
