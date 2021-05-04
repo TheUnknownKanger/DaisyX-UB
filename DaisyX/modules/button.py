@@ -38,6 +38,6 @@ from .. import CMD_HELP
 
 CMD_HELP.update(
     {
-        "button": "example:\n.button <button name>|<link>\n`.button ULTRAX|https://t.me/DAISYXOT`\nmake sure your name and link no have Useless spece"
+        "button": "example:\n.button <button name>|<link>\n`.button DaisyX|https://t.me/DAISYXOT`\nmake sure your name and link no have Useless spece"
     }
 )
