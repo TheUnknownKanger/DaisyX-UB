@@ -6,6 +6,7 @@ from math import ceil
 
 from telethon import Button, custom, events, functions
 from telethon.tl.functions.users import GetFullUserRequest
+from DaisyX.daisyconfig import Var
 
 from DaisyX import ALIVE_NAME, CMD_HELP, CMD_LIST, CUSTOM_PMPERMIT, bot
 from var import Var
