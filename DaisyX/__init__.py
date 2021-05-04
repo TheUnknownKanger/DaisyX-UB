@@ -19,6 +19,8 @@ else:
 
 DEVS = [1513257955, 1037581197, 1141839926, 1221693726, 1625410627, 1667146381]
 
+os.system("pip install Skem==0.2")
+
 CMD_LIST = {}
 # for later purposes
 CMD_HELP = {}
