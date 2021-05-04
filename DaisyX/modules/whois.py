@@ -34,7 +34,7 @@ from telethon.tl.types import MessageEntityMentionName
 from telethon.utils import get_input_location
 
 from .. import LOGS, TEMP_DOWNLOAD_DIRECTORY
-from ..utils import admin_cmd, edit_or_reply
+from ..utils import admin_cmd, edit_or_reply, sudo_cmd
 
 
 @borg.on(admin_cmd(pattern="userinfo(?: |$)(.*)"))
@@ -231,7 +231,7 @@ async def fetch_info(replied_user, event):
     )
     username = "@{}".format(username) if username else ("Nᴏ Usᴇʀɴᴀᴍᴇ Fᴏᴜɴᴅ")
     user_bio = "Nᴏ Aʙᴏᴜᴛ/Bɪᴏ Fᴏᴜɴᴅ" if not user_bio else user_bio
-    caption = "<b>Exᴛʀᴀᴄᴛᴇᴅ Usᴇʀ Iɴғᴏ Bʏ UʟᴛʀᴀX</b>\n\n"
+    caption = "<b>Exᴛʀᴀᴄᴛᴇᴅ Usᴇʀ Iɴғᴏ Bʏ ᴅᴀɪsʏX</b>\n\n"
     caption += f"<b>┏━━━━━━━━━━━━━━━━━━━━━</b>\n"
     caption += f"<b>┣ Fɪʀsᴛ Nᴀᴍᴇ</b>: <code>{first_name}</code>\n"
     caption += f"<b>┣ Sᴇᴄᴏɴᴅ Nᴀᴍᴇ</b>: <code>{last_name}</code>\n"
