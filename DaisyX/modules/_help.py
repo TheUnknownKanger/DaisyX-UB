@@ -4,7 +4,7 @@ from DaisyX import ALIVE_NAME, CMD_HELP, CMD_HNDLR, CMD_LIST
 from var import Var
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "ᴅᴀɪsʏ x"
-CMD_HNDLR = os.environ.get("CMD_HANDLR") 
+CMD_HNDLR = os.environ.get("CMD_HNDLR") 
 CUSTOM_HELP_EMOJI = os.environ.get("CUSTOM_HELP_EMOJI", "⚡")
 
 if CMD_HNDLR is None:
