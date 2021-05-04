@@ -8,7 +8,7 @@ from datetime import datetime
 import random
 from telethon import events, version
 from DaisyX.utils import admin_cmd, sudo_cmd
-from DaisyX import ALIVE_NAME, Lastupdate
+from DaisyX import ALIVE_NAME, StartTime as Lastupdate
 from . import legdf as dcdef
 from telethon.tl.types import ChannelParticipantsAdmins
 # 🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔
