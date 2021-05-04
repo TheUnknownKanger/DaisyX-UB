@@ -33,6 +33,7 @@ LOAD_PLUG = {}
 # PaperPlaneExtended Support Vars
 ENV = os.environ.get("ENV", False)
 
+CMD_HNDLER = os.environ.get("CMD_HNDLER") 
 
 def HELP(**DAISYX):
     see = DAISYX.get("NAME", None)
