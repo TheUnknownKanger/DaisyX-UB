@@ -9,7 +9,7 @@ import random
 from telethon import events, version
 from DaisyX.utils import admin_cmd, sudo_cmd
 from DaisyX import ALIVE_NAME, StartTime as Lastupdate
-from . import legdf as dcdef
+from DaisyX.helpers import functions as dcdef
 from telethon.tl.types import ChannelParticipantsAdmins
 # 🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "ᴅᴀɪsʏ χ"
