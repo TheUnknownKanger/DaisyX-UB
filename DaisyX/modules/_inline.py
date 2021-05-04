@@ -9,7 +9,7 @@ from telethon.tl.functions.users import GetFullUserRequest
 from DaisyX.daisyconfig import Var
 
 from DaisyX import ALIVE_NAME, CMD_HELP, CMD_LIST, CUSTOM_PMPERMIT, bot
-from var import Var
+
 
 PMPERMIT_PIC = os.environ.get("PMPERMIT_PIC", None)
 TELEPIC = (
