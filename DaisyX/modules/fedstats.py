@@ -134,7 +134,7 @@ async def _(event):
             try:
                 await conv.send_message("/start")
                 await conv.get_response()
-                await conv.send_message("/fedstat " + sysarg)
+                await conv.send_message("/fstat " + sysarg)
                 await asyncio.sleep(3)
                 audio = await conv.get_response()
                 if "Looks like" in audio.text:
