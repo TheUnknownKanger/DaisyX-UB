@@ -38,7 +38,7 @@ myid = bot.uid
 MESAG = (
     str(CUSTOM_PMPERMIT)
     if CUSTOM_PMPERMIT
-    else "`DaisyX PM security! Please wait for me to approve you. 😊"
+    else " DaisyX PM security! Please wait for me to approve you. 😊"
 )
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "ᴅᴀɪsʏ x"
 USER_BOT_WARN_ZERO = "`I had warned you not to spam. Now you have been blocked and reported until further notice.`\n\n**GoodBye!** "
