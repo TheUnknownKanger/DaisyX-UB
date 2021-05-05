@@ -135,7 +135,6 @@ def load_pro(shortname):
         mod.tgbot = bot.tgbot
         mod.Var = Var
         mod.xbot = xbot
-        mod.eor = eor
         mod.command = command
         mod.logger = logging.getLogger(shortname)
         # support for uniborg
@@ -167,14 +166,6 @@ def remove_plugin(shortname):
                     del bot._event_builders[i]
     except BaseException:
         raise ValueError
-
-async def eor(event, text):
-    if event.sender_id in Config.SUDO_USERS:
-        reply_to = await event.get_reply_message()
-        if reply_to:
-            return await reply_to.reply(text)
-        return await event.reply(text)
-    return await event.edit(text)
 
 def admin_cmd(pattern=None, command=None, **args):
     args["func"] = lambda e: e.via_bot_id is None
