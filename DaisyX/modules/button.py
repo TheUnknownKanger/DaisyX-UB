@@ -35,9 +35,8 @@ async def file(event):
   INUKA = LEGENDX.article(title='Button by DaisyX', text=f'{ok}', buttons=DEVIL)
   await event.answer([INUKA])
 
-
 CMD_HELP.update(
     {
-        "button": "example:\n.button <button name>|<link>\n`.button DaisyX|https://t.me/DAISYXOT`\nmake sure your name and link no have Useless spece"
+        "buttons": ".button <button name>|<link>\n`.button DaisyX|https://t.me/DAISYXOT`\nmake sure your name and link no have Useless spece"
     }
-) 
+)
