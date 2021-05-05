@@ -2,17 +2,19 @@
 Syntax: .screencapture <Website URL>"""
 
 
-
+import os
 import io
 import requests
 from telethon import events
 from DaisyX.utils import admin_cmd
 
+SCREEN_SHOT_LAYER_ACCESS_KEY = os.environ.get("SCREEN_SHOT_LAYER_ACCESS_KEY") 
+
 @borg.on(admin_cmd("webss (.*)"))
 async def _(event):
     if event.fwd_from:
         return
-    if Config.SCREEN_SHOT_LAYER_ACCESS_KEY is None:
+    if SCREEN_SHOT_LAYER_ACCESS_KEY is None:
         await event.edit("Need to get an API key from https://screenshotlayer.com/product \nModule stopping!")
         return
     await event.edit("Processing ...")
