@@ -249,10 +249,10 @@ async def search(event):
 CMD_HELP.update(
     {
         "broadcast": ".add\nUse - Add the channel/group to your database."
-        \n\n".rmchannel (all)<channel/group id>\nUse - Remove the channel/group from database. Use rm all to remove all groups."
-        \n\n".broadcast <reply to message>\nUse - Send the message to all channels/groups in the db."
-        \n\n".forward <reply to polls/stickers>\nUse - Forwards the poll/sticker to all channels/groups in db."
-        \n\n".listchannels\nUse - List all added channels."
-        \n\n".search <channel id>\nUse - Search for the channel name from id."
+        ".rmchannel (all)<channel/group id>\nUse - Remove the channel/group from database. Use rm all to remove all groups."
+        ".broadcast <reply to message>\nUse - Send the message to all channels/groups in the db."
+        ".forward <reply to polls/stickers>\nUse - Forwards the poll/sticker to all channels/groups in db."
+        ".listchannels\nUse - List all added channels."
+        ".search <channel id>\nUse - Search for the channel name from id."
     }
 )
