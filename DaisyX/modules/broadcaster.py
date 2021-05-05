@@ -16,7 +16,7 @@ from telethon.tl.types import (
     MessageMediaPhoto
 )
 from DaisyX.modules.sql_helper.ghdb_sql import in_channels, add_channel, rm_channel, get_all_channels
-
+from DaisyX import CMD_HELP
 logs_id = Var.PRIVATE_GROUP_ID
 
 
@@ -245,3 +245,10 @@ async def search(event):
     if username:
         username = "@" + username
     await event.edit(f"Name : {name}\nUsername: {username}")
+
+CMD_HELP.update(
+    {
+      "broadcast":- /forward :- Reply to the message with `/forward` will forward message to all groups, channels added in database\n./broadcast:- Reply to message which to want for broadcast in group and channels added in broadcast DB via `.addchannel`\n/addchannel:- To add channel in list of forwarding and broadcasting message
+                    \n/rmchannel:- To remove channel or Group from forward and broadcast list.\n/listchannels:- To get list of channel which are in Broadcast or Forward list.\n/search:- search channel in list via username or group/channel id. 
+     }
+) 
