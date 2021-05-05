@@ -36,10 +36,8 @@ async def file(event):
   await event.answer([INUKA])
 
 
-
-
 CMD_HELP.update(
     {
         "button": "example:\n.button <button name>|<link>\n`.button DaisyX|https://t.me/DAISYXOT`\nmake sure your name and link no have Useless spece"
     }
-)
+) 
