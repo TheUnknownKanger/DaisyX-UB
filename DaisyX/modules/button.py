@@ -1,10 +1,13 @@
-# COPYRIGHT (C) 2021-2022 BY LEGENDX22, PROBOYX
+# COPYRIGHT (C) 2021-2022 BY DaisyX
+# Made by LegendX
 from telethon import Button, events
 
 from Assist import xbot
 from ..utils import admin_cmd
 from ..utils import edit_or_reply as eor
 from ..utils import sudo_cmd
+from .. import CMD_HELP
+
 @borg.on(admin_cmd(pattern="button (.*)"))
 @borg.on(sudo_cmd(pattern="button", allow_sudo=True))
 async def Buttons(event):
@@ -34,7 +37,6 @@ async def file(event):
 
 
 
-from .. import CMD_HELP
 
 CMD_HELP.update(
     {
