@@ -202,6 +202,8 @@ if bool(ENV):
 else:
     # Put your ppe vars here if you are using local hosting
     PLACEHOLDER = None
+# For Getting Webss 
+SCREEN_SHOT_LAYER_ACCESS_KEY = os.environ.get("SCREEN_SHOT_LAYER_ACCESS_KEY") 
 
 # Setting Up CloudMail.ru and MEGA.nz extractor binaries,
 # and giving them correct perms to work properly.
