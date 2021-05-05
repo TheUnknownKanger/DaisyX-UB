@@ -40,6 +40,6 @@ async def install(event):
 
 CMD_HELP.update(
     {
-        "command_list": ".cmds\nUsage - Extracts all the plugins of this ULTRA in a link.."
+        "command_list": ".cmds\nUsage - Extracts all the plugins of this DaisyX in a link.."
     }
 )
