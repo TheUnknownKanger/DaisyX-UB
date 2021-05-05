@@ -3,7 +3,7 @@ from telethon.tl.functions.contacts import BlockRequest, UnblockRequest
 from telethon.tl.types import MessageEntityMentionName
 
 from Assist.DAISYX import POST
-from Skem import devs
+from Skem import SUDOERS
 from DaisyX import CMD_HELP
 from DaisyX.utils import admin_cmd, sudo_cmd
 
@@ -79,12 +79,12 @@ async def gspider(ULTRA):
     except:
         return await friday.edit(f"**Something W3NT Wrong 🤔**")
     if user:
-        if user.id in devs:
+        if user.id in SUDOERS:
             return await friday.edit(
                 f"**Didn't, Your Father Teach You ? That You Can't Gban My Creator😑😑🖕**"
             )
         try:
-            from ULTRA.modules.sql_helper.gmute_sql import gmute
+            from DaisyX.modules.sql_helper.gmute_sql import gmute
         except:
             pass
         try:
@@ -149,12 +149,12 @@ async def gspider(ULTRA):
     except:
         return await friday.edit("**SOMETHING W3NT WRONG 🤔**")
     if user:
-        if user.id in devs:
+        if user.id in SUDOERS:
             return await friday.edit(
                 "**You Cant gban him... as a result you can not ungban him... He is My Creator!**"
             )
         try:
-            from ULTRA.modules.sql_helper.gmute_sql import ungmute
+            from DaisyX.modules.sql_helper.gmute_sql import ungmute
         except:
             pass
         try:
