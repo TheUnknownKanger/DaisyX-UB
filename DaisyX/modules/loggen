@@ -14,8 +14,8 @@ import base64
 import sys
 import random
 import requests
-from main_startup.core.decorators import friday_on_cmd
-from DaisyX.utils import edit_or_reply, get_text
+
+from DaisyX.utils import edit_or_reply, get_text, admin_cmd as friday_on_cmd
 
 
 
