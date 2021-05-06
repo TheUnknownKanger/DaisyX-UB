@@ -13,7 +13,7 @@ async def stats(
     event: NewMessage.Event,
 ) -> None:  # pylint: disable = R0912, R0914, R0915
     """Command to get stats about the account"""
-    hell = await edit_or_reply(event, "`Collecting stats...`")
+    alain = await edit_or_reply(event, "`Cᴏʟʟᴇᴄᴛɪɴɢ sᴛᴀᴛs...`")
     start_time = time.time()
     private_chats = 0
     bots = 0
@@ -61,23 +61,22 @@ async def stats(
         unread += dialog.unread_count
     stop_time = time.time() - start_time
     full_name = inline_mention(await event.client.get_me())
-    response = f'🔰**Stats for {full_name}**🔰\n\n'
-    response += f'🔱 **Private Chats:** {private_chats} \n'
-    response += f'🔸   `Users: {private_chats - bots}` \n'
-    response += f'🔹   `Bots: {bots}` \n'
-    response += f'🔱 **Groups:** {groups} \n'
-    response += f'🔱 **Channels:** {broadcast_channels} \n'
-    response += f'☣️  **Admin in Groups:** {admin_in_groups} \n'
-    response += f'🔹   `Creator: {creator_in_groups}` \n'
-    response += f'🔸   `Admin Rights: {admin_in_groups - creator_in_groups}` \n'
-    response += f'☣️  **Admin in Channels:** {admin_in_broadcast_channels} \n'
-    response += f'🔸   `Creator: {creator_in_channels}` \n'
-    response += f'🔹   `Admin Rights: {admin_in_broadcast_channels - creator_in_channels}` \n'
-    response += f'🔱 **Unread:** {unread} \n'
-    response += f'🔱 **Unread Mentions:** {unread_mentions} \n\n'
-    response += f'☣️   __It Took:__ {stop_time:.02f}s \n'
-    response += f'📌 **From The DataBase Of** :- [ᴅᴀɪsʏ x](https://github.com/TeamDaisyX/Daisy-X-UB)'
-    await hell.edit(response)
+    response = f'**📌 Sᴛᴀᴛs ᴏғ {full_name} 📌**\n**┏━━━━━━━━━━━━━━━━━━━━━**\n'
+    response += f'**┣** ᪥ **Pʀɪᴠᴀᴛᴇ ᴄʜᴀᴛs:** `{private_chats}` ᪥\n'
+    response += f'**┣** ᪥ **Usᴇʀs:** `{private_chats - bots}` ᪥\n'
+    response += f'**┣** ᪥ **Bᴏᴛs:** `{bots}` ᪥\n**┗━━━━━━━━━━━━━━━━━━━━━**\n**┏━━━━━━━━━━━━━━━━━━━━━**\n'
+    response += f'**┣** ᪥ **Gʀᴏᴜᴘs:** `{groups}` ᪥\n'
+    response += f'**┣** ᪥ **Cʀᴇᴀᴛᴏʀ:** `{creator_in_groups}` ᪥\n'
+    response += f'**┣** ᪥ **Aᴅᴍɪɴ:** `{admin_in_groups}` ᪥ \n'
+    response += f'**┣** ᪥ **Aᴅᴍɪɴ ʀɪɢʜᴛs:** `{admin_in_groups - creator_in_groups}` ᪥\n**┗━━━━━━━━━━━━━━━━━━━━━**\n**┏━━━━━━━━━━━━━━━━━━━━━**\n'
+    response += f'**┣** ᪥ **Cʜᴀɴɴᴇʟs:** `{broadcast_channels}` ᪥ \n'
+    response += f'**┣** ᪥ **Cʀᴇᴀᴛᴏʀ:** `{creator_in_channels}` ᪥ \n'
+    response += f'**┣** ᪥ **Aᴅᴍɪɴ:** `{admin_in_broadcast_channels}` ᪥ \n'
+    response += f'**┣** ᪥ **Aᴅᴍɪɴ ʀɪɢʜᴛs:** `{admin_in_broadcast_channels - creator_in_channels}` ᪥\n**┗━━━━━━━━━━━━━━━━━━━━━**\n**┏━━━━━━━━━━━━━━━━━━━━━**\n'
+    response += f'**┣** ᪥ **Uɴʀᴇᴀᴅ ᴍᴇssᴀɢᴇs:** `{unread}` ᪥\n'
+    response += f'**┣** ᪥ **Uɴʀᴇᴀᴅ ᴍᴇɴᴛɪᴏɴs:** `{unread_mentions}` ᪥\n**┗━━━━━━━━━━━━━━━━━━━━━**\n'
+    response += f'📌 **Fʀᴏᴍ ᴛʜᴇ ᴅᴀᴛᴀ ʙᴀsᴇ ᴏғ [ᴅᴀɪsʏ X](http://github.com/TeamDaisyX/Daisy-X-UB)** 📌'
+    await alain.edit(response)
 
 
 def make_mention(user):
