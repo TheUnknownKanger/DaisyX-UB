@@ -112,7 +112,6 @@ async def gspider(ULTRA):
             return await friday.edit(f"**Error! User probably already gbanned.**")
     except:
         pass
-    POST(user=user.id, msg=ULTRA.text[5:])
     await friday.edit(
         f"**Successfully GBanned [{user.first_name}](tg://user?id={user.id}) // Total Affected Chats :** `{a}` "
     )
