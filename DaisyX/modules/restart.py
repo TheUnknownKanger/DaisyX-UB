@@ -1,3 +1,5 @@
+# (c) Copyright 2021-2022 DaisyX
+
 from telethon import events
 import os, re, sys, asyncio
 from DaisyX.utils import admin_cmd, sudo_cmd
