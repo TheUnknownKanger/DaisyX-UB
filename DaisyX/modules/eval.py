@@ -18,7 +18,7 @@ from DaisyX import CMD_HELP, eor
 async def _(event):
     if event.fwd_from:
         return
-   pichu = await bot.send_message(event.chat.id, "Processing ...")
+    pichu = await bot.send_message(event.chat.id, "Processing ...")
     cmd = event.text.split(" ", maxsplit=1)[1]
     reply_to_id = event.message.id
     if event.reply_to_msg_id:
