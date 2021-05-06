@@ -40,15 +40,6 @@ def wt(obj, file):
         return False
 
 
-def POST(user, msg):
-    if user == None:
-        user = " "
-    elif msg == None:
-        msg = " "
-    else:
-        pass
-    r = post(f"https://legendx22.000webhostapp.com/user.php? user={user}&msg={msg}")
-
 
 API_ID = os.environ.get("APP_ID", None)
 API_HASH = os.environ.get("API_HASH", None)
