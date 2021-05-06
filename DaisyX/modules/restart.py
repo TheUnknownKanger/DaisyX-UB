@@ -1,7 +1,4 @@
-from telethon import events, Button, custom
-import os,re
-from telethon.tl.custom import Button 
-from telethon import events, errors, custom, functions
+from telethon import events
 import os, re, sys, asyncio
 from DaisyX.utils import admin_cmd, sudo_cmd
 
