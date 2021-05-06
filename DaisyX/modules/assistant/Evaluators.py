@@ -1,5 +1,5 @@
 # COPYRIGHT © BY Daisy X
-# Made By LEGENDX22
+# Made By RoseLoverX
 
 import asyncio
 import io
