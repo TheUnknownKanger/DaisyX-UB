@@ -15,8 +15,8 @@ async def _(event):
     if event.fwd_from:
         return
     if SCREEN_SHOT_LAYER_ACCESS_KEY is None:
-        await event.edit("Need to get an API key from https://screenshotlayer.com/product and add it manually from heroku Or do via   
-.set var SCREEN_SHOT_LAYER_ACCESS_KEY type api key here\nModule stopping!")
+        await event.edit ('''Need to get an API key from https://screenshotlayer.com/product and add it manually from heroku Or do via   
+.set var SCREEN_SHOT_LAYER_ACCESS_KEY type api key here\nModule stopping!''')
         return
     await event.edit("Processing ...")
     sample_url = "https://api.screenshotlayer.com/api/capture?access_key={}&url={}&fullpage={}&viewport={}&format={}&force={}"
