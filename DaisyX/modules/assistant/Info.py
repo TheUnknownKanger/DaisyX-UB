@@ -1,4 +1,4 @@
-# (c) Copyright 2021-2022
+# (c) Copyright 2021-2022 DaisyX
 # Made By RoseLoverX
 
 from telethon import events
