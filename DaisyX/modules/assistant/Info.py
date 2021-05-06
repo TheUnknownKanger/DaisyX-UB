@@ -1,3 +1,6 @@
+# (c) Copyright 2021-2022
+# Made By RoseLoverX
+
 from telethon import events
 from telethon.utils import pack_bot_file_id
 
