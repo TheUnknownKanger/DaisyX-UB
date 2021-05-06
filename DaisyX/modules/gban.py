@@ -2,7 +2,6 @@ from telethon.events import ChatAction
 from telethon.tl.functions.contacts import BlockRequest, UnblockRequest
 from telethon.tl.types import MessageEntityMentionName
 
-from Assist.DAISYX import POST
 from Skem import SUDOERS
 from DaisyX import CMD_HELP
 from DaisyX.utils import admin_cmd, sudo_cmd
