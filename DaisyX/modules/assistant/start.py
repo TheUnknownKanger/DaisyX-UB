@@ -1,3 +1,7 @@
+# (c) Copyright 2021-2022 DaisyX
+# By RoseLoverX
+
+
 import asyncio
 import io
 import os
