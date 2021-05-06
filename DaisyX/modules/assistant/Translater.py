@@ -1,3 +1,6 @@
+# (c) Copyright 2021-2022 DaisyX
+# Made by RoseLoverX
+
 import requests
 from google_trans_new import google_translator
 from telethon import events
