@@ -5,10 +5,10 @@ from DaisyX.utils import admin_cmd, sudo_cmd
 @bot.on(admin_cmd(pattern="restart"))
 @bot.on(sudo_cmd(pattern="restart ?(.*)", allow_sudo=True))
 async def _(event):
-    await bot.send_message(event.chat.id, '`Wait restarting`')
-    await event.delete.message(event.chat.id, '`Wait restarting`') 
+    k = await bot.send_message(event.chat.id, '`Wait restarting`') 
     asyncio.sleep(0.5)
-    await event.edit('`Restarted successfully`')
+    await k.edit('`Restarted successfully`')
+    await event.delete()
     os.execl(sys.executable, sys.executable, *sys.argv)
     quit ()
     
