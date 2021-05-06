@@ -1,3 +1,6 @@
+# (c) Copyright 2021-2022 DaisyX
+# By RoseLoverX
+
 from telethon import events
 from telethon.errors import BadRequestError
 from telethon.tl import functions, types
