@@ -9,12 +9,12 @@ from DaisyX.events import remove_plugin
 from DaisyX.utils import admin_cmd, remove_plugin
 
 
-@bot.on(admin_cmd(pattern=r"uninstall (?P<shortname>\w+)$"))
+@bot.on(admin_cmd(pattern=r"^uninstall (?P<shortname>\w+)$"))
 async def unload(event):
     if event.fwd_from:
         return
     shortname = event.pattern_match["shortname"]
-    dir_path = f"./ULTRA/plugins/{shortname}.py"
+    dir_path = f"./DaisyX/modules/{shortname}.py"
     try:
         remove_plugin(shortname)
         os.remove(dir_path)
