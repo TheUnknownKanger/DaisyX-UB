@@ -3,7 +3,7 @@
 
 import asyncio
 from asyncio import wait
-from DaisyX import CMD_HELP
+from DaisyX import CMD_HELP, LOGGER
 
 
 from DaisyX.events import register
