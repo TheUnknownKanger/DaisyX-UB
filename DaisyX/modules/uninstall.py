@@ -9,7 +9,7 @@ from DaisyX.events import remove_plugin
 from DaisyX.utils import admin_cmd, remove_plugin
 
 
-@bot.on(admin_cmd(pattern=r"^uninstall (?P<shortname>\w+)$"))
+@bot.on(admin_cmd(pattern=r"uninstall (?P<shortname>\w+)$"))
 async def unload(event):
     if event.fwd_from:
         return
@@ -26,7 +26,7 @@ async def unload(event):
 CMD_HELP.update(
     {
         "uninstall": "**Plugin : **`uninstall`\
-    \n\n**Syntax : **`uninstall`\
-    \n**Function : **use this plugin without . and small later"
+    \n\n**Syntax : **`.uninstall`\
+    \n**Function : **use this plugin to uninstall any plug"
     }
 )
