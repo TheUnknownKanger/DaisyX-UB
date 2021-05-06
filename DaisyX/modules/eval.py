@@ -13,12 +13,12 @@ from uniborg.util import admin_cmd, sudo_cmd
 from DaisyX import CMD_HELP, eor
 
 
-@borg.on(admin_cmd("eval"))
-@borg.on(sudo_cmd(pattern="eval", allow_sudo=True))
+@borg.on(admin_cmd(r"eval"))
+@borg.on(sudo_cmd(pattern=r"eval", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
-    await eor(event, "Processing ...")
+    await bot.send_message(event.chat.id, "Processing ...")
     cmd = event.text.split(" ", maxsplit=1)[1]
     reply_to_id = event.message.id
     if event.reply_to_msg_id:
@@ -65,7 +65,7 @@ async def _(event):
             )
             await event.delete()
     else:
-        await eor(event, final_output)
+        await bot.send_message(event.chat.id, final_output)
 
 
 async def aexec(code, event):
