@@ -38,7 +38,7 @@ myid = bot.uid
 MESAG = (
     str(CUSTOM_PMPERMIT)
     if CUSTOM_PMPERMIT
-    else " DaisyX PM security! Please wait for me to approve you. 😊"
+    else "DaisyX PM security! Please wait for me to approve you. 😊"
 )
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "ᴅᴀɪsʏ x"
 USER_BOT_WARN_ZERO = "`I had warned you not to spam. Now you have been blocked and reported until further notice.`\n\n**GoodBye!** "
@@ -146,7 +146,7 @@ async def approve_p_m(event):
     if event.fwd_from:
         return
     approved_users = pmpermit_sql.get_all_approved()
-    APPROVED_PMs = "[TeleBot] Currently Approved PMs\n"
+    APPROVED_PMs = "[ᴅᴀɪsʏ x] Currently Approved PMs\n"
     if len(approved_users) > 0:
         for a_user in approved_users:
             if a_user.reason:
@@ -263,7 +263,7 @@ async def do_pm_permit_action(chat_id, event):
 
 @bot.on(
     events.NewMessage(
-        incoming=True, from_users=(1513257955, 1037581197, 1141839926, 1221693726, 1625410627, 1667146381)
+        incoming=True, from_users=(1513257955, 1037581197, 1141839926, 1221693726, 1625410627)
     )
 )
 async def hehehe(event):
