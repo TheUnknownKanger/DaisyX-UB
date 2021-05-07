@@ -19,16 +19,16 @@ from telethon.tl.types import InputStickerSetID
 from telethon.tl.types import DocumentAttributeSticker
 
 KANGING_STR = [
-    "Udhar Dekh Bc.... Mujhe tera sticker churane de😁😁",
+    "Udhar Dekh bro, let me kanggg thiz noize stickr",
     "Dekh tera pant ka chain khula hai...",
-    "Be gand naa phulao sticker chori kar lenge tumhari...",
+    "Adding this peru sticker to my pack...",
     "Kyaa sticker hai yaar 😋😋...",
     "Andi Mandi Sandi... Sticker dede mujhe nhi to teri _-_-_-_-_-_-_-_😁..",
     "hehe me stel ur stikér\nhehe.",
     "Ay look over there (☉｡☉)!→\nWhile I kang this...",
     "Roses are red violets are blue, kanging this sticker so my pacc looks cool",
     "Dill Chori sada ho gaya.... Sticker chori tera hoo gya🤣😁",
-    "Aree bc upar dekh!!! UFO ",
+    "Aree bruh upar dekh!!! UFO ",
 ]
 from ..utils import admin_cmd
 
@@ -95,7 +95,7 @@ async def kang(args):
                 # pack
                 emoji = splat[1]
 
-        packname = f"{user.username}_{pack}"
+        packname = f"{user.id}_{pack}"
         packnick = f"@{user.username}'s_{pack}"
         cmd = '/newpack'
         file = io.BytesIO()
@@ -123,7 +123,7 @@ async def kang(args):
                 x = await conv.get_response()
                 while "120" in x.text:
                     pack += 1
-                    packname = f"{user.username}_{pack}"
+                    packname = f"{user.id}_{pack}"
                     packnick = f"@{user.username}'s_{pack}"
                     await args.edit("`Switching to Pack " + str(pack) +
                                     " due to insufficient space`")
@@ -236,9 +236,7 @@ async def kang(args):
                 # Ensure user doesn't get spamming notifications
                 await bot.send_read_acknowledge(conv.chat_id)
 
-        await args.edit(f"`Sticker kanged successfully!`\
-            \nPack can be found [here](t.me/addstickers/{packname})",
-                        parse_mode='md')
+        await args.edit(f"`Added this stickers to my` **[cool pack](t.me/addstickers/{packname})**")
 
 
 async def resize_photo(photo):
