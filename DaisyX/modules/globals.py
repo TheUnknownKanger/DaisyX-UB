@@ -5,6 +5,7 @@ from telethon.tl.types import MessageEntityMentionName
 from Skem import SUDOERS
 from DaisyX import CMD_HELP
 from DaisyX.utils import admin_cmd, sudo_cmd
+from DaisyX.modules.sql_helper.mute_sql import is_muted, mute, unmute
 
 
 async def get_full_user(event):
@@ -217,10 +218,9 @@ async def handler(rkG):
                             return
 
 
-from ..utils import admin_cmd as ultra_cmd
 
-
-@bot.on(ultra_cmd(pattern="gkick"))
+@bot.on(admin_cmd(pattern="gkick"))
+@bot.on(sudo_cmd("gkick ?(.*)", allow_sudo=True))
 async def kick(kick):
     xxx = await kick.edit("`Gʟᴏʙᴀʟʟʏ ᴋɪᴄᴋɪɴɢ ᴛʜɪs ɴᴏᴏʙ ᴋɪᴅᴅᴏ`")
     ids = (await kick.get_reply_message()).sender_id
@@ -237,13 +237,6 @@ async def kick(kick):
     await xxx.edit(
         f"**Gʟᴏʙᴀʟʟʏ Kɪᴄᴋᴇᴅ [{name}](tg://user?id={ohk}) \\ Cʜᴀᴛs Aғғᴇᴄᴛᴇᴅ: {t}**"
     )
-
-import asyncio
-
-from DaisyX import CMD_HELP
-from DaisyX.modules.sql_helper.mute_sql import is_muted, mute, unmute
-from DaisyX.utils import admin_cmd, sudo_cmd
-
 
 # @command(outgoing=True, pattern=r"^.gmute ?(\d+)?")
 @borg.on(admin_cmd(pattern=r"gmute ?(\d+)?"))
