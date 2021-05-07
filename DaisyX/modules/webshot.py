@@ -4,24 +4,22 @@ Syntax: .screencapture <Website URL>"""
 
 import os
 import io
-import requests
+import requests, asyncio
 from telethon import events
-from DaisyX.utils import admin_cmd
+from AlainX import bot
+from telethon import events
      
         
-@borg.on(admin_cmd("webss (.*)"))
+@bot.on(events.NewMessage(pattern="/webss (.*)"))
 async def take_ss(event):
     if event.fwd_from:
         return
     url = event.pattern_match.group(1)
-    m = await event.edit("Processing ...")
-    await m.edit("**Uploading**")
+    await bot.send_message(event.chat.id, "Hi")
     try:
-        await borg.send_file(
-            event.chat_id,
-            photo=f"https://webshot.amanoteam.com/print?q={url}",
-        )
+        photo = f"https://webshot.amanoteam.com/print?q={url}"
+        await bot.send_file(event.chat_id,photo )
     except TypeError:
-        await m.edit("No Such Website.")
+        await event.reply("No Such Website.")
         return
-    await m.delete()
+await take_ss(event)
