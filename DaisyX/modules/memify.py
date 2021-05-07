@@ -47,7 +47,7 @@ async def drawText(image_path, text):
     if os.name == "nt":
         fnt = "arial.ttf"
     else:
-        fnt = "Resources/Streamster.ttf"
+        fnt = "Resources/Vampire Wars.otf"
     m_font = ImageFont.truetype(fnt, int((70 / 640) * i_width))
     if "," in text:
         upper_text, lower_text = text.split(",")
