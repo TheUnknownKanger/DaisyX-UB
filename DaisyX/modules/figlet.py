@@ -3,6 +3,7 @@ from DaisyX.utils import admin_cmd, sudo_cmd
 
 #@command(pattern="^.figlet ?(.*)", outgoing=True)
 @borg.on(admin_cmd(pattern=r"figlet ?(.*)"))
+@bot.on(sudo_cmd(pattern="figlet$", allow_sudo=True))
 async def figlet(event):
     if event.fwd_from:
         return
