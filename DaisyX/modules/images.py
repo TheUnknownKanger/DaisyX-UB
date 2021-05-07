@@ -11,8 +11,9 @@ from DaisyX import CMD_HELP
 async def img_sampler(event):
     if event.fwd_from:
         return
-        if event.reply_to_msg_id:
-    reply_to_id = event.reply_to_msg_id
+    if event.reply_to_msg_id:
+        reply_to_id = 
+    event.reply_to_msg_id
     if event.is_reply and not event.pattern_match.group(2):
         query = await event.get_reply_message()
         query = str(query.message)
