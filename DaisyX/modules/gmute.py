@@ -13,7 +13,7 @@ async def startgmute(event):
     if event.fwd_from:
         return
     elif event.is_private:
-        await event.edit("gмυтιηg тнιѕ ρєяѕση...")
+        await event.edit("**ɢᴍᴜᴛɪɴɢ ᴛʜɪs ᴜsᴇʀ...**")
         await asyncio.sleep(3)
         private = True
     reply = await event.get_reply_message()
