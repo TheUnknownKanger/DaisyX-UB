@@ -217,8 +217,6 @@ async def handler(rkG):
                             return
 
 
-CMD_HELP.update({"gban": "gban any user using username or tag dont use id "})
-
 from ..utils import admin_cmd as ultra_cmd
 
 
@@ -239,3 +237,6 @@ async def kick(kick):
     await xxx.edit(
         f"**Gʟᴏʙᴀʟʟʏ Kɪᴄᴋᴇᴅ [{name}](tg://user?id={ohk}) \\ Cʜᴀᴛs Aғғᴇᴄᴛᴇᴅ: {t}**"
     )
+
+
+CMD_HELP.update({"gban": "gban any user using username or tag dont use id "})
