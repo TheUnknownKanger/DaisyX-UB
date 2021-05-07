@@ -313,14 +313,3 @@ async def watcher(event):
         await event.delete()
 
 
-CMD_HELP.update(
-    {
-        "gmute": ".gmute <reply to user> or user id will gmute that user from all group where you admin with delete message right"
-        "ungmute": ".ungmute <reply to user> or user ID will ungmute that person from all groups where you gmuted user"
-        "gban": ".gban any user using username or tag dont use id "
-        "ungban": ".ungban <reply to user> or user ID to unban user from all groups where you have right to unban or ban"
-        "gkick": ".gkick <reply to user> or user ID will kick user from all group where you have capability or rights to kick that user"
-
-    }
-)
-
