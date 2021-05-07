@@ -1,5 +1,5 @@
 import asyncio
-import os
+import os,re , requests
 from datetime import datetime
 from pathlib import Path
 
@@ -7,6 +7,7 @@ from DaisyX import ALIVE_NAME, bot, CMD_HELP
 from DaisyX.utils import admin_cmd, sudo_cmd
 from DaisyX.utils import edit_or_reply as eor
 from DaisyX.utils import load_module, remove_plugin, sudo_cmd
+from telethon import Button
 
 DELETE_TIMEOUT = 3
 thumb_image_path = "./Resources/daisy.jpg"
@@ -125,10 +126,16 @@ async def _(event):
     a.close()
     a = await event.reply("**Reading file...**")
     if len(c) > 4095:
-        await a.edit("`The Total words in this file is more than telegram limits.`")
+        out = c
+            url = "https://del.dog/documents"
+            r = requests.post(url, data=out.encode("UTF-8")).json()
+            url = f"https://del.dog/{r['key']}"
+            wow = [[Button.url("Dᴏɢ Bɪɴ",f"{url}")]]
+            await bot.send_message(event.chat.id, "`The output is more than the telegram limites which cant be opened to pasted to dog bin`",buttons=wow)
+            await event.delete()
     else:
-        await event.client.send_message(event.chat_id, f"```{c}```")
-        await a.delete()
+        await bot.send_message(event.chat_id, f"`{c}`")
+        await event.delete()
     os.remove(b)
 
 
