@@ -6,7 +6,7 @@ import os
 import io
 import requests, asyncio
 from telethon import events
-from AlainX import bot
+from DaisyX import bot
 from telethon import events
      
         
