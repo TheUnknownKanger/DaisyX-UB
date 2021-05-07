@@ -13,8 +13,8 @@ from datetime import datetime
 import youtube_dl
 from telethon import events
 
-from DaisyX.daisyconfig import Config
-from DaisyX.utila import admin_cmd
+from DaisyX.uniborgConfig import Config
+from DaisyX.utils import admin_cmd
 
 logging.basicConfig(format='[%(levelname) 5s/%(asctime)s] %(name)s: %(message)s',
                     level=logging.WARNING)
