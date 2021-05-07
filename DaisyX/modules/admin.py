@@ -5,7 +5,7 @@
 """
 Userbot module to help you manage a group
 """
-#credits LEGENDX22
+
 from asyncio import sleep
 from os import remove
 
@@ -133,7 +133,7 @@ async def promote(promt):
     await promt.edit("`Promoting...`")
     user, rank = await get_user_from_event(promt)
     if not rank:
-        rank = "ƚԋҽ υʅƚɾαx υʂҽɾ"  # Just in case.
+        rank = "ᴅᴀɪsʏ x ᴜsᴇʀ"  # Just in case.
     if user:
         pass
     else:
