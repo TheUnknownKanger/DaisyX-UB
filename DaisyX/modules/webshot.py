@@ -7,43 +7,21 @@ import io
 import requests
 from telethon import events
 from DaisyX.utils import admin_cmd
-
-SCREEN_SHOT_LAYER_ACCESS_KEY = os.environ.get("SCREEN_SHOT_LAYER_ACCESS_KEY") 
-
+     
+        
 @borg.on(admin_cmd("webss (.*)"))
-async def _(event):
+async def take_ss(event):
     if event.fwd_from:
         return
-    if SCREEN_SHOT_LAYER_ACCESS_KEY is None:
-        await event.edit('''Need to get an API key from https://screenshotlayer.com/product and add it manually from heroku Or do via   
-.set var SCREEN_SHOT_LAYER_ACCESS_KEY type api key here\nModule stopping!''')
+    url = event.pattern_match.group(1)
+    m = await event.edit("Processing ...")
+    await m.edit("**Uploading**")
+    try:
+        await borg.send_photo(
+            event.chat_id,
+            photo=f"https://webshot.amanoteam.com/print?q={url}",
+        )
+    except TypeError:
+        await m.edit("No Such Website.")
         return
-    await event.edit("Processing ...")
-    sample_url = "https://api.screenshotlayer.com/api/capture?access_key={}&url={}&fullpage={}&viewport={}&format={}&force={}"
-    input_str = event.pattern_match.group(1)
-    response_api = requests.get(sample_url.format(
-        SCREEN_SHOT_LAYER_ACCESS_KEY,
-        input_str,
-        "1",
-        "2560x1440",
-        "PNG",
-        "1"
-    ))
-    # https://stackoverflow.com/a/23718458/4723940
-    contentType = response_api.headers['content-type']
-    if "image" in contentType:
-        with io.BytesIO(response_api.content) as screenshot_image:
-            screenshot_image.name = "screencapture.png"
-            try:
-                await borg.send_file(
-                    event.chat_id,
-                    screenshot_image,
-                    caption=input_str,
-                    force_document=True,
-                    reply_to=event.message.reply_to_msg_id
-                )
-                await event.delete()
-            except Exception as e:
-                await event.edit(str(e))
-    else:
-        await event.edit(response_api.text)
+    await m.delete()
