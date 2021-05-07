@@ -90,7 +90,6 @@ async def _(event):
         common_chats,
         dc_id,
         replied_user.user.restricted,
-        sw,
         cas,
     )
     await event.edit(caption)
