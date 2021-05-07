@@ -1,5 +1,7 @@
 import requests
 from DaisyX import bot
+from telethon events
+from DaisyX.utils import admin_cmd
 
 BASE = 'https://render-tron.appspot.com/screenshot/'
 url = event.pattern_match.group(1)
