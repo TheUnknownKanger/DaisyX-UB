@@ -17,7 +17,7 @@ async def take_ss(event):
     m = await event.edit("Processing ...")
     await m.edit("**Uploading**")
     try:
-        await borg.send_photo(
+        await borg.send_file(
             event.chat_id,
             photo=f"https://webshot.amanoteam.com/print?q={url}",
         )
