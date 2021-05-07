@@ -12,9 +12,9 @@ async def img_sampler(event):
     if event.fwd_from:
         return
     if event.reply_to_msg_id:
-     reply_to=event.reply_to_msg_id
+     reply_to_id=event.reply_to_msg_id
     else:
-     reply_to=event.id
+     reply_to_id=event.id
     if event.is_reply and not event.pattern_match.group(2):
         query = await event.get_reply_message()
         query = str(query.message)
@@ -47,7 +47,7 @@ async def img_sampler(event):
     except Exception as e:
         return await cat.edit(f"Error: \n`{e}`")
     lst = paths[0][query]
-    await event.client.send_file(event.chat_id, lst, reply_to=event.reply_to_msg_id)
+    await event.client.send_file(event.chat_id, lst, reply_to=reply_to_id)
     shutil.rmtree(os.path.dirname(os.path.abspath(lst[0])))
     await cat.delete()
 
