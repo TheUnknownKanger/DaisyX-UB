@@ -9,7 +9,7 @@ from DaisyX.utils import edit_or_reply as eor
 from DaisyX.utils import load_module, remove_plugin, sudo_cmd
 
 DELETE_TIMEOUT = 3
-thumb_image_path = "./Resources/DaisyX.jpg"
+thumb_image_path = "./Resources/daisy.jpg"
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "DAISY X"
 
 
