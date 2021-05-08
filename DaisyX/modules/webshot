@@ -4,7 +4,7 @@ from telethon events
 from DaisyX.utils import admin_cmd
 
 @bot.on(admin_cmd(pattern="webss"))
-async def events() 
+async def events():
 BASE = 'https://render-tron.appspot.com/screenshot/'
 url = event.pattern_match.group(1)
 path = 'target.jpg'
