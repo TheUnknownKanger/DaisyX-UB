@@ -1,6 +1,6 @@
 import requests
 from DaisyX import bot
-from telethon events
+from telethon import events
 from DaisyX.utils import admin_cmd
 
 @bot.on(admin_cmd(pattern="webss"))
