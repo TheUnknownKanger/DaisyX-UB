@@ -68,6 +68,7 @@ if "LEGENDX" != "DEVIL":
             load_module(shortname.replace(".py", ""))
             
 if EXTRA_PLUGS != False:
+    print("LoAdInG XtRa PlUgInS.. ")
     run_cmd("bash main_utils/other_plugins.sh")
     path = "ExtraPlugins/*.py"
     files = glob.glob(path)
@@ -75,7 +76,8 @@ if EXTRA_PLUGS != False:
         with open(name) as f:
             path1 = Path(f.name)
             shortname = path1.stem
-            load_module(shortname.replace(".py", ""))    
+            load_module(shortname.replace(".py", ""))   
+    print("X-TrA pLuGiNs LoAdEd")
             
 else:
     print("fuck off kanger chala Ka madarchod")
