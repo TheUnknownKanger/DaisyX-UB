@@ -3,7 +3,7 @@ from sys import argv
 
 from Assist import xbot
 from DaisyX import bot
-
+from DaisyX.functions.run import run_cmd
 os.system("pip install telethon==1.19.0")
 import os
 
@@ -66,6 +66,17 @@ if "LEGENDX" != "DEVIL":
             path1 = Path(f.name)
             shortname = path1.stem
             load_module(shortname.replace(".py", ""))
+            
+if EXTRA_PLUGS != False:
+    await run_cmd("bash main_utils/other_plugins.sh")
+    path = "ExtraPlugins/*.py"
+    files = glob.glob(path)
+    for name in files:
+        with open(name) as f:
+            path1 = Path(f.name)
+            shortname = path1.stem
+            load_module(shortname.replace(".py", ""))    
+            
 else:
     print("fuck off kanger chala Ka madarchod")
 import os
