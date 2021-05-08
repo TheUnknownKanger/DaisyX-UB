@@ -22,7 +22,7 @@ import telethon.utils
 
 EXTRA_PLUGS = os.environ.get("EXTRA_PLUGS", False)
 
-async def xtra_load()
+async def xtra_load():
     await run_cmd("bash main_utils/other_plugins.sh")
     
 async def add_bot(bot_token):
