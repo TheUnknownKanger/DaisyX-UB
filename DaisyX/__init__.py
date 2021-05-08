@@ -48,9 +48,9 @@ def HELP(**DAISYX):
     else:
         CMD_HELP.update({see: helper})
     CMD_HELP.update({see: helper})
-def PROBOYX (event):
-  I_AM_PROBOY_X = event.text.split(" ", maxsplit=1)[1]
-  return I_AM_PROBOY_X
+def DAISYX (event):
+  I_AM_DAISY_X = event.text.split(" ", maxsplit=1)[1]
+  return I_AM_DAISY_X
 
 DAISY_ID = ["1557333374"]
 
