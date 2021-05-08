@@ -90,7 +90,7 @@ async def legend():
         with open(name) as f:
           path1 = Path(f.name)
           shortname = path1.stem
-          load_module(shortname.replace(".py", ""))   
+          load_extra(shortname.replace(".py", ""))   
       print("X-TrA pLuGiNs LoAdEd")
     LEGENDX = f"""
 **Sᴏᴍᴇᴛʜɪɴɢ Hᴀᴘᴘᴇɴᴇᴅ ! Lᴇᴛs Cʜᴇᴄᴋ** 🤔 
