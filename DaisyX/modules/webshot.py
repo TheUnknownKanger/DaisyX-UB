@@ -2,7 +2,7 @@
 # Made By Sipak_Op, Devil and InukaAsith
 # CREDIS = PROBOYX
 import requests
-from DaisyX import bot, PROBOYX
+from DaisyX import bot, DAISYX
 from telethon import events
 from DaisyX.utils import admin_cmd
 
