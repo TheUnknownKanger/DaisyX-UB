@@ -42,8 +42,8 @@ def load_extra(shortname):
     elif shortname.endswith("_"):
         import DaisyX.utils
 
-        path = Path(f"DaisyX-Extra/{shortname}.py")
-        name = "DaisyX-Extra.{}".format(shortname)
+        path = Path(f"ExtraPlugins/{shortname}.py")
+        name = "ExtraPlugins.{}".format(shortname)
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(mod)
@@ -51,8 +51,8 @@ def load_extra(shortname):
     else:
         import DaisyX.utils
 
-        path = Path(f"DaisyX-Extra/{shortname}.py")
-        name = "DaisyX-Extra.{}".format(shortname)
+        path = Path(f"ExtraPlugins/{shortname}.py")
+        name = "ExtraPlugins.{}".format(shortname)
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
         mod.bot = bot
