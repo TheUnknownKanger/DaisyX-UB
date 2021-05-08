@@ -71,7 +71,7 @@ if "LEGENDX" != "DEVIL":
             
 if EXTRA_PLUGS != False:
     print("LoAdInG XtRa PlUgInS.. ")
-    os.system("chmod +x ./main_utils/other_plugins.sh")
+    os.system("git clone https://github.com/teamdaisyx/DaisyX-Extra /ExtraPlugins && cd /ExtraPlugins/ && pip install -r Extrarequirements.txt && cd ..")
     path = "ExtraPlugins/*.py"
     files = glob.glob(path)
     for name in files:
