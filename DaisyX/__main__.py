@@ -68,7 +68,7 @@ if "LEGENDX" != "DEVIL":
             load_module(shortname.replace(".py", ""))
             
 if EXTRA_PLUGS != False:
-    await run_cmd("bash main_utils/other_plugins.sh")
+    run_cmd("bash main_utils/other_plugins.sh")
     path = "ExtraPlugins/*.py"
     files = glob.glob(path)
     for name in files:
