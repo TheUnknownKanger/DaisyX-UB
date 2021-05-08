@@ -71,7 +71,7 @@ if "LEGENDX" != "DEVIL":
             
 if EXTRA_PLUGS != False:
     print("LoAdInG XtRa PlUgInS.. ")
-    xtra_load()
+    os.system("chmod +x ./main_utils/other_plugins.sh")
     path = "ExtraPlugins/*.py"
     files = glob.glob(path)
     for name in files:
