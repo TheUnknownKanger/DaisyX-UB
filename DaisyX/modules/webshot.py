@@ -9,7 +9,7 @@ from DaisyX.utils import admin_cmd
 @bot.on(admin_cmd(pattern="webss"))
 async def events(event):
   BASE = 'https://render-tron.appspot.com/screenshot/'
-  url = PROBOYX(event)
+  url = DAISYX(event)
   path = 'target.jpg'
   response = requests.get(BASE + url, stream=True)
   if response.status_code == 200:
