@@ -2,11 +2,10 @@
 # Made By Sipak_Op, Devil and InukaAsith, RoseLoberX
 import requests
 from DaisyX import bot, DAISYX
-from telethon import events
 from DaisyX.utils import admin_cmd
 
 @bot.on(admin_cmd(pattern="webss ?(.*)"))
-async def events(event):
+async def webss(event):
  BASE = 'https://render-tron.appspot.com/screenshot/'
  url = event.pattern_match.group(1)
  if not url.startswith('https://'):
