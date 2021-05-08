@@ -81,7 +81,6 @@ async def _(event):
    **┣ Dᴄ Iᴅ**: `{}`
    **┣ Rᴇsᴛʀɪᴄᴛᴇᴅ**: `{}`
    **┣** {}
-   **┣** {}
    **┗━━━━━━━━━━━━━━━━━━━━━**
 """.format(
         first_name,
@@ -90,7 +89,6 @@ async def _(event):
         common_chats,
         dc_id,
         replied_user.user.restricted,
-        sw,
         cas,
     )
     await event.edit(caption)
