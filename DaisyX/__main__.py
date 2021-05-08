@@ -22,7 +22,9 @@ import telethon.utils
 
 EXTRA_PLUGS = os.environ.get("EXTRA_PLUGS", False)
 
-
+async def xtra_load()
+    await run_cmd("bash main_utils/other_plugins.sh")
+    
 async def add_bot(bot_token):
     await bot.start(bot_token)
     bot.me = await bot.get_me()
@@ -69,7 +71,7 @@ if "LEGENDX" != "DEVIL":
             
 if EXTRA_PLUGS != False:
     print("LoAdInG XtRa PlUgInS.. ")
-    run_cmd("bash main_utils/other_plugins.sh")
+    xtra_load()
     path = "ExtraPlugins/*.py"
     files = glob.glob(path)
     for name in files:
