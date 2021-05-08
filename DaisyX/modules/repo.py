@@ -22,7 +22,7 @@ async def callback_query_handler(event):
                     Button.url(f"⚜️ Rᴇᴘᴏ ⚜️", url="https://github.com/TeamDaisyX/Daisy-X-UB"),
                     Button.url(f"🌚 Sᴜᴘᴘᴏʀᴛ Cʜᴀᴛ 🌝", url="https://t.me/DaisySupport_Official")],
                     [Button.url(f"🔰 Dᴇᴘʟᴏʏ 🔰", url="https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2FTeamDaisyX%2FDaisy-X-UB&template=https%3A%2F%2Fgithub.com%2FTeamDaisyX%2FDaisy-X-UB"),
-                     Button.url(f"💠 Sᴛʀɪɴɢ 💠", url="https://replit.com/@legendx22/ULTRA-X#main.py"),
+                     Button.url(f"💠 Sᴛʀɪɴɢ 💠", url="https://repl.it/@SpEcHiDe/GenerateStringSession"),
                 ]
             ]
                    
