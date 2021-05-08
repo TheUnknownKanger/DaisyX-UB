@@ -1,6 +1,6 @@
 SKEM_REPO="https://github.com/TeamDaisyX/DaisyX-Extra.git"
-FOLDER="./DaisyX/modules"
-reqirements_file="./DaisyX/modules/Extrarequirements.txt"
+FOLDER="./ExtraPlugins"
+reqirements_file="./ExtraPlugins/Extrarequirements.txt"
 
 
 git_clone () {
