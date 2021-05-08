@@ -69,17 +69,7 @@ if "LEGENDX" != "DEVIL":
             shortname = path1.stem
             load_module(shortname.replace(".py", ""))
             
-if EXTRA_PLUGS != False:
-    print("LoAdInG XtRa PlUgInS.. ")
-    os.system("git clone https://github.com/teamdaisyx/DaisyX-Extra /ExtraPlugins && cd /ExtraPlugins/ && pip install -r Extrarequirements.txt && cd ..")
-    path = "ExtraPlugins/*.py"
-    files = glob.glob(path)
-    for name in files:
-        with open(name) as f:
-            path1 = Path(f.name)
-            shortname = path1.stem
-            load_module(shortname.replace(".py", ""))   
-    print("X-TrA pLuGiNs LoAdEd")
+
             
 else:
     print("fuck off kanger chala Ka madarchod")
@@ -91,6 +81,17 @@ print("DaisyX is Up and Awake! ©️ TeamDaisyX 2021")
 async def legend():
     pro = await xbot.get_me()
     legend = await bot.get_me()
+    if EXTRA_PLUGS != False:
+      print("LoAdInG XtRa PlUgInS.. ")
+      await xtra_load()
+      path = "ExtraPlugins/*.py"
+      files = glob.glob(path)
+      for name in files:
+        with open(name) as f:
+          path1 = Path(f.name)
+          shortname = path1.stem
+          load_module(shortname.replace(".py", ""))   
+      print("X-TrA pLuGiNs LoAdEd")
     LEGENDX = f"""
 **Sᴏᴍᴇᴛʜɪɴɢ Hᴀᴘᴘᴇɴᴇᴅ ! Lᴇᴛs Cʜᴇᴄᴋ** 🤔 
 
