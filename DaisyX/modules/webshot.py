@@ -1,6 +1,5 @@
 # (c) Copyright 2021-2022 DaisyX
 # Made By Sipak_Op, Devil and InukaAsith, RoseLoberX
-# CREDIS = PROBOYX
 import requests
 from DaisyX import bot, DAISYX
 from telethon import events
