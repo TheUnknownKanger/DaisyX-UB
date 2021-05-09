@@ -6,20 +6,16 @@ import re
 import shlex
 import subprocess
 import time
-import webbrowser
-import zipfile
 from os.path import basename
 from pathlib import Path
 from typing import List, Optional, Tuple, Union
 
 import aiohttp
-import hachoir
 import requests
 import telethon
 from bs4 import BeautifulSoup
 from bs4 import BeautifulSoup as bs
-from hachoir.metadata import extractMetadata
-from hachoir.parser import createParser
+
 from pymediainfo import MediaInfo
 from telethon import Button, custom, events, functions
 from telethon.tl.types import (
@@ -27,26 +23,31 @@ from telethon.tl.types import (
     InputMessagesFilterDocument,
     MessageMediaPhoto,
 )
-from youtube_dl import YoutubeDL
-from youtube_dl.utils import (
-    ContentTooShortError,
-    DownloadError,
-    ExtractorError,
-    GeoRestrictedError,
-    MaxDownloadsReached,
-    PostProcessingError,
-    UnavailableVideoError,
-    XAttrMetadataError,
-)
+
 
 session = aiohttp.ClientSession()
 
 sedpath = "./"
 from DaisyX import logging
 
-logger = logging.getLogger("[--WARNING--]")
-if not os.path.isdir(sedpath):
-    os.makedirs(sedpath)
+
+# Thanks To Userge-X
+async def take_screen_shot(
+    video_file: str, duration: int, path: str = ""
+) -> Optional[str]:
+    """take a screenshot"""
+    logger.info(
+        "[[[Extracting a frame from %s ||| Video duration => %s]]]",
+        video_file,
+        duration,
+    )
+    ttl = duration // 2
+    thumb_image_path = path or os.path.join(sedpath, f"{basename(video_file)}.jpg")
+    command = f'''ffmpeg -ss {ttl} -i "{video_file}" -vframes 1 "{thumb_image_path}"'''
+    err = (await runcmd(command))[1]
+    if err:
+        logger.error(err)
+    return thumb_image_path if os.path.exists(thumb_image_path) else None
 
 
 # Thanks To Userge-X
