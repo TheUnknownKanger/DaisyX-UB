@@ -25,8 +25,8 @@ file4 = "https://telegra.ph/file/22ab2fe44d05ed825c422.jpg"
 """ =======================CONSTANTS====================== """
 
 
-@borg.on(admin_cmd(pattern=r"alive"))
-@borg.on(sudo_cmd(pattern=r"alive", allow_sudo=True))
+@borg.on(admin_cmd(pattern=r"awake"))
+@borg.on(sudo_cmd(pattern=r"awake", allow_sudo=True))
 
 async def hmm(yes):
     chat = await yes.get_chat()
