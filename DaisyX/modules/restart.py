@@ -14,3 +14,9 @@ async def _(event):
     os.execl(sys.executable, sys.executable, *sys.argv)
     quit ()
     
+# Made by Devil ( @lucifeermorningstar) 
+
+@bot.on(admin_cmd(pattern="update")) 
+@bot.on(sudo_cmd(pattern="update ? (.*)", allow_sudo=True)) 
+async def update(event):
+     await event.edit("ᴅᴏ ʏᴏᴜ ᴡᴀɴɴᴀ ᴜᴘᴅᴀᴛᴇ ʏᴏᴜʀ ᴅᴀɪsʏx ᴜsᴇʀʙᴏᴛ ᴛʜᴇɴ ᴊᴜsᴛ `.restart` ᴏɴʟʏ") 
