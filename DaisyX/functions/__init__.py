@@ -28,7 +28,7 @@ from telethon.tl.types import (
 session = aiohttp.ClientSession()
 
 sedpath = "./"
-from DaisyX import logging
+import logging
 
 
 # Thanks To Userge-X
