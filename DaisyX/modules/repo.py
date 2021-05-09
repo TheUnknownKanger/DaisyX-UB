@@ -36,4 +36,4 @@ async def callback_query_handler(event):
 @bot.on(sudo_cmd(pattern="repo ? (.*) ", allow_sudo=True))
 async def repo(event):
     buttons = [Button.url(f"⚜️ Rᴇᴘᴏ ⚜️", "https://github.com/TeamDaisyX/Daisy-X-UB")]
-    await event.edit(buttons=buttons)
+    await event.edit('**DAISYX UB**', buttons=buttons)
