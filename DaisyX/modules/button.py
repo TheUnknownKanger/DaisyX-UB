@@ -8,8 +8,8 @@ from ..utils import edit_or_reply as eor
 from ..utils import sudo_cmd
 from .. import CMD_HELP
 
-@borg.on(admin_cmd(pattern="button (.*)"))
-@borg.on(sudo_cmd(pattern="button", allow_sudo=True))
+@borg.on(admin_cmd(pattern="btn (.*)"))
+@borg.on(sudo_cmd(pattern="btn", allow_sudo=True))
 async def Buttons(event):
     await eor(event, "`Mᴀᴋɪɴɢ Yᴏᴜʀ Bᴜᴛᴛᴏɴ ᴡᴇɪᴛ ᴍᴀsᴛᴇʀ !!!`")
     ULTRAX = Var.TG_BOT_USER_NAME_BF_HER
@@ -37,6 +37,6 @@ async def file(event):
 
 CMD_HELP.update(
     {
-        "buttons": ".button <button name>|<link>\n`.button DaisyX|https://t.me/DAISYXOT`\nmake sure your name and link no have Useless spece"
+        "buttons": ".btn <button name>|<link>\n`.btn DaisyX|https://t.me/DAISYXOT`\nmake sure your name and link no have Useless spece"
     }
 )
