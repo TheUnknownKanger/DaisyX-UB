@@ -99,13 +99,3 @@ async def _(event):
     await event.edit(mentions)
 
 
-CMD_HELP.update(
-    {
-        "get_them": "**Plugin : **`get_bot`\
-    \n\n**Syntax : **`.get_bot`\
-    \n**Function : **all bots list use .get_bot"
-        "get_them":"**Plugin:**`get_admin`\
-    \n\n**Syntax : **`.get_admin`\
-    \n\n**Function : ** list of group admins use `.get_admin`\
-    }
-)
