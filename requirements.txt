@@ -4,6 +4,7 @@ google_trans_new
 PyGithub
 pygifsicle
 PyDictionary
+pymediainfo 
 PyPDF2
 pygments
 pymediainfo
@@ -75,4 +76,4 @@ youtube-dl
 youtube-search-python
 tswift
 telethon==1.21.1
-
+bs4
