@@ -60,3 +60,52 @@ async def _(event):
         await event.delete()
     else:
         await event.edit(mentions)
+
+""" Get the Bots in any chat*
+Syntax: .get_bot"""
+from telethon.tl.types import ChannelParticipantAdmin, ChannelParticipantsBots
+
+from DaisyX import CMD_HELP
+
+@borg.on(admin_cmd("get_bot ?(.*)"))
+async def _(event):
+    if event.fwd_from:
+        return
+    mentions = "**Bots in this Channel**: \n"
+    input_str = event.pattern_match.group(1)
+    to_write_chat = await event.get_input_chat()
+    chat = None
+    if not input_str:
+        chat = to_write_chat
+    else:
+        mentions = "Bots in {} channel: \n".format(input_str)
+        try:
+            chat = await borg.get_entity(input_str)
+        except Exception as e:
+            await event.edit(str(e))
+            return None
+    try:
+        async for x in borg.iter_participants(chat, filter=ChannelParticipantsBots):
+            if isinstance(x.participant, ChannelParticipantAdmin):
+                mentions += "\n ⚜️ [{}](tg://user?id={}) `{}`".format(
+                    x.first_name, x.id, x.id
+                )
+            else:
+                mentions += "\n [{}](tg://user?id={}) `{}`".format(
+                    x.first_name, x.id, x.id
+                )
+    except Exception as e:
+        mentions += " " + str(e) + "\n"
+    await event.edit(mentions)
+
+
+CMD_HELP.update(
+    {
+        "get_them": "**Plugin : **`get_bot`\
+    \n\n**Syntax : **`.get_bot`\
+    \n**Function : **all bots list use .get_bot"
+        "get_them":"**Plugin:**`get_admin`\
+    \n\n**Syntax : **`.get_admin`\
+    \n\n**Function : ** list of group admins use `.get_admin`\
+    }
+)
