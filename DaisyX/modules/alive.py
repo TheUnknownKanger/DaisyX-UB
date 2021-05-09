@@ -7,6 +7,6 @@ from DaisyX import bot
 from DaisyX.utils import admin_cmd
 @bot.on(admin_cmd(pattern=r"alive"))
 async def amialivedad(event): 
-   chat = event.chat.id 
+   chat = event.chat_id 
    message = " Master ! I am alive :)" 
    await event.edit(message)
