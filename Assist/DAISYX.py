@@ -1,7 +1,5 @@
 import os
 
-from requests import post
-
 try:
     from Assist import xbot
 except:
@@ -20,7 +18,6 @@ except:
     pass
 import os
 import re
-
 
 from telethon import Button, events
 

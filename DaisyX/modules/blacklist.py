@@ -8,9 +8,10 @@ Available Commands:
 .rmblacklist"""
 
 import re
-from telethon import events
-import DaisyX.modules.sql_helper.blacklist_sql as sql
 
+from telethon import events
+
+import DaisyX.modules.sql_helper.blacklist_sql as sql
 from DaisyX import CMD_HELP
 from DaisyX.utils import admin_cmd, edit_or_reply, sudo_cmd
 

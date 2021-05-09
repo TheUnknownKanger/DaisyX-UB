@@ -4,6 +4,7 @@ from sys import argv
 from Assist import xbot
 from DaisyX import bot
 from DaisyX.functions.run import run_cmd
+
 os.system("pip install telethon==1.19.0")
 import os
 
@@ -14,7 +15,7 @@ from pathlib import Path
 
 from telethon import Button, TelegramClient
 
-from DaisyX.utils import load_module, load_pro, load_extra
+from DaisyX.utils import load_extra, load_module, load_pro
 from var import Var
 
 TOKEN = os.environ.get("TG_BOT_TOKEN", None)
@@ -22,9 +23,11 @@ import telethon.utils
 
 EXTRA_PLUGS = os.environ.get("EXTRA_PLUGS", False)
 
+
 async def xtra_load():
     await run_cmd("bash main_utils/other_plugins.sh")
-    
+
+
 async def add_bot(bot_token):
     await bot.start(bot_token)
     bot.me = await bot.get_me()
@@ -68,9 +71,8 @@ if "LEGENDX" != "DEVIL":
             path1 = Path(f.name)
             shortname = path1.stem
             load_module(shortname.replace(".py", ""))
-            
 
-            
+
 else:
     print("fuck off kanger chala Ka madarchod")
 import os
@@ -82,16 +84,16 @@ async def legend():
     pro = await xbot.get_me()
     legend = await bot.get_me()
     if EXTRA_PLUGS != False:
-      print("LoAdInG XtRa PlUgInS.. ")
-      await xtra_load()
-      path = "ExtraPlugins/*.py"
-      files = glob.glob(path)
-      for name in files:
-        with open(name) as f:
-          path1 = Path(f.name)
-          shortname = path1.stem
-          load_extra(shortname.replace(".py", ""))   
-      print("X-TrA pLuGiNs LoAdEd")
+        print("LoAdInG XtRa PlUgInS.. ")
+        await xtra_load()
+        path = "ExtraPlugins/*.py"
+        files = glob.glob(path)
+        for name in files:
+            with open(name) as f:
+                path1 = Path(f.name)
+                shortname = path1.stem
+                load_extra(shortname.replace(".py", ""))
+        print("X-TrA pLuGiNs LoAdEd")
     LEGENDX = f"""
 **Sᴏᴍᴇᴛʜɪɴɢ Hᴀᴘᴘᴇɴᴇᴅ ! Lᴇᴛs Cʜᴇᴄᴋ** 🤔 
 

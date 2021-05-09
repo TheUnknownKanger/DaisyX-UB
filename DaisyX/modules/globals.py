@@ -1,11 +1,10 @@
+from Skem import SUDOERS
 from telethon.events import ChatAction
 from telethon.tl.functions.contacts import BlockRequest, UnblockRequest
 from telethon.tl.types import MessageEntityMentionName
 
-from Skem import SUDOERS
-from DaisyX import CMD_HELP
-from DaisyX.utils import admin_cmd, sudo_cmd
 from DaisyX.modules.sql_helper.mute_sql import is_muted, mute, unmute
+from DaisyX.utils import admin_cmd, sudo_cmd
 
 
 async def get_full_user(event):
@@ -218,7 +217,6 @@ async def handler(rkG):
                             return
 
 
-
 @bot.on(admin_cmd(pattern="gkick"))
 @bot.on(sudo_cmd("gkick ?(.*)", allow_sudo=True))
 async def kick(kick):
@@ -237,6 +235,7 @@ async def kick(kick):
     await xxx.edit(
         f"**Gʟᴏʙᴀʟʟʏ Kɪᴄᴋᴇᴅ [{name}](tg://user?id={ohk}) \\ Cʜᴀᴛs Aғғᴇᴄᴛᴇᴅ: {t}**"
     )
+
 
 # @command(outgoing=True, pattern=r"^.gmute ?(\d+)?")
 @borg.on(admin_cmd(pattern=r"gmute ?(\d+)?"))
@@ -312,10 +311,10 @@ async def watcher(event):
     if is_muted(event.sender_id, "gmute"):
         await event.delete()
 
+
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 
 from Assist.DAISYX import MASTER
-
 
 LEGEND = MASTER
 PROBOY = "@tgscanrobot"
@@ -685,4 +684,3 @@ async def gben(userbot):
                 pass
     else:
         await ultrax.edit(f"`Rᴇᴘʟʏ ᴛᴏ ᴀ ᴜsᴇʀ ᴛᴏ Gᴘʀᴏᴍᴏᴛᴇ ᴛʜᴇᴍ...`")
-

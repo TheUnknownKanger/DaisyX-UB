@@ -61,11 +61,11 @@ async def _(event):
     else:
         await event.edit(mentions)
 
+
 """ Get the Bots in any chat*
 Syntax: .get_bot"""
 from telethon.tl.types import ChannelParticipantAdmin, ChannelParticipantsBots
 
-from DaisyX import CMD_HELP
 
 @borg.on(admin_cmd("get_bot ?(.*)"))
 async def _(event):
@@ -97,5 +97,3 @@ async def _(event):
     except Exception as e:
         mentions += " " + str(e) + "\n"
     await event.edit(mentions)
-
-

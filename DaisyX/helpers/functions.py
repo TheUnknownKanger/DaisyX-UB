@@ -26,6 +26,7 @@ MARGINS = [50, 150, 250, 350, 450]
 # For using gif , animated stickers and videos in some parts , this
 # function takes  take a screenshot and stores ported from userge
 
+
 async def get_readable_time(seconds: int) -> str:
     count = 0
     up_time = ""
@@ -46,7 +47,6 @@ async def get_readable_time(seconds: int) -> str:
     time_list.reverse()
     up_time += ":".join(time_list)
     return up_time
-
 
 
 async def take_screen_shot(video_file, output_directory, ttl):

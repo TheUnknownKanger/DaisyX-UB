@@ -1,8 +1,8 @@
-
-
 import asyncio
+
 from telethon.tl.functions.channels import EditBannedRequest
 from telethon.tl.types import ChatBannedRights
+
 import DaisyX.modules.sql_helper.antiflood_sql as sql
 from DaisyX import CMD_HELP
 from DaisyX.utils import admin_cmd, edit_or_reply, sudo_cmd
@@ -63,7 +63,7 @@ async def _(event):
     input_str = event.pattern_match.group(1)
     event = await edit_or_reply(event, "updating flood settings!")
     try:
-        sql.set_flood(event.chat_id, input_str) 
+        sql.set_flood(event.chat_id, input_str)
         sql.__load_flood_settings()
         await event.edit(
             "Antiflood updated to {} in the current chat".format(input_str)

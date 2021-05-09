@@ -4,14 +4,13 @@ Syntax: .eval PythonCode"""
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-from telethon import events, errors, functions, types
-import inspect
-import traceback
-import asyncio
-import sys
 import io
-from DaisyX import CMD_HELP, eor
+import sys
+import traceback
+
 from uniborg.util import admin_cmd, sudo_cmd
+
+from DaisyX import CMD_HELP, eor
 
 
 @borg.on(admin_cmd("eval"))
@@ -62,7 +61,7 @@ async def _(event):
                 force_document=True,
                 allow_cache=False,
                 caption=cmd,
-                reply_to=reply_to_id
+                reply_to=reply_to_id,
             )
             await event.delete()
     else:
@@ -70,11 +69,9 @@ async def _(event):
 
 
 async def aexec(code, event):
-    exec(
-        f'async def __aexec(event): ' +
-        ''.join(f'\n {l}' for l in code.split('\n'))
-    )
-    return await locals()['__aexec'](event)
+    exec(f"async def __aexec(event): " + "".join(f"\n {l}" for l in code.split("\n")))
+    return await locals()["__aexec"](event)
+
 
 CMD_HELP.update(
     {

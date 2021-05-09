@@ -1,16 +1,13 @@
 import asyncio
-import os
-import requests
 import time
-from PIL import Image
-from io import BytesIO
-from datetime import datetime
-import random
-from telethon import events, version
-from DaisyX.utils import admin_cmd, sudo_cmd
-from DaisyX import ALIVE_NAME, StartTime as Lastupdate
+
+from telethon import version
+
+from DaisyX import ALIVE_NAME
+from DaisyX import StartTime as Lastupdate
 from DaisyX.helpers import functions as dcdef
-from telethon.tl.types import ChannelParticipantsAdmins
+from DaisyX.utils import admin_cmd, sudo_cmd
+
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else bot.me.first_name
 
 
@@ -27,9 +24,8 @@ file4 = "https://telegra.ph/file/22ab2fe44d05ed825c422.jpg"
 
 @borg.on(admin_cmd(pattern=r"awake"))
 @borg.on(sudo_cmd(pattern=r"awake", allow_sudo=True))
-
 async def hmm(yes):
-    chat = await yes.get_chat()
+    await yes.get_chat()
     global ghanti
     ghanti = borg.uid
     await yes.delete()
@@ -40,31 +36,30 @@ async def hmm(yes):
     pm_caption += f"➾ **ᴛᴇʟᴇᴛʜᴏɴ ᴠᴇʀꜱɪᴏɴ** ☞ {version.__version__}\n"
     pm_caption += "➾ **ꜱᴜᴘᴘᴏʀᴛ ᴄʜᴀɴɴᴇʟ** ☞ [ᴊᴏɪɴ](https://t.me/DaisySupport_Official)\n"
     pm_caption += "➾ **ʟɪᴄᴇɴꜱᴇ**  ☞ [𝚃𝙴𝙰𝙼 𝙳𝙰𝙸𝚂𝚈𝚇](https://github.com/TeamDaisyX)\n"
-    pm_caption += "➾ **ᴄᴏᴘʏʀɪɢʜᴛ ʙʏ** ☞ [𝙳𝙰𝙸𝚂𝚈-𝚇](https://github.com/TeamDaisyX/Daisy-X-UB)\n\n"
+    pm_caption += (
+        "➾ **ᴄᴏᴘʏʀɪɢʜᴛ ʙʏ** ☞ [𝙳𝙰𝙸𝚂𝚈-𝚇](https://github.com/TeamDaisyX/Daisy-X-UB)\n\n"
+    )
     pm_caption += f"➾ **ᴜᴘᴛɪᴍᴇ** ☞ {uptime}\n\n"
     pm_caption += f"➾ **ᴍʏ ᴍᴀsᴛᴇʀ** ☞ [{DEFAULTUSER}](tg://user?id={ghanti})\n"
-    on = await borg.send_file(yes.chat_id, file=file1,caption=pm_caption)
+    on = await borg.send_file(yes.chat_id, file=file1, caption=pm_caption)
 
     await asyncio.sleep(edit_time)
-    ok = await borg.edit_message(yes.chat_id, on, file=file2) 
+    ok = await borg.edit_message(yes.chat_id, on, file=file2)
 
     await asyncio.sleep(edit_time)
     ok2 = await borg.edit_message(yes.chat_id, ok, file=file3)
 
     await asyncio.sleep(edit_time)
     ok3 = await borg.edit_message(yes.chat_id, ok2, file=file1)
-    
+
     await asyncio.sleep(edit_time)
     ok4 = await borg.edit_message(yes.chat_id, ok3, file=file3)
-    
+
     await asyncio.sleep(edit_time)
     ok5 = await borg.edit_message(yes.chat_id, ok4, file=file2)
-    
+
     await asyncio.sleep(edit_time)
     ok6 = await borg.edit_message(yes.chat_id, ok5, file=file1)
-    
+
     await asyncio.sleep(edit_time)
     ok7 = await borg.edit_message(yes.chat_id, ok6, file=file4)
-
-    
-

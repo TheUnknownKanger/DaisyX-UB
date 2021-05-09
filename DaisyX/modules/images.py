@@ -2,9 +2,10 @@
 import os
 import shutil
 
+from DaisyX import CMD_HELP
 from DaisyX.google_image import googleimagesdownload
 from DaisyX.utils import admin_cmd, sudo_cmd
-from DaisyX import CMD_HELP
+
 
 @bot.on(admin_cmd(pattern=r"img(?: |$)(\d*)? ?(.*)"))
 @bot.on(sudo_cmd(pattern=r"img(?: |$)(\d*)? ?(.*)", allow_sudo=True))
@@ -12,9 +13,9 @@ async def img_sampler(event):
     if event.fwd_from:
         return
     if event.reply_to_msg_id:
-     reply_to_id=event.reply_to_msg_id
+        reply_to_id = event.reply_to_msg_id
     else:
-     reply_to_id=event.id
+        reply_to_id = event.id
     if event.is_reply and not event.pattern_match.group(2):
         query = await event.get_reply_message()
         query = str(query.message)

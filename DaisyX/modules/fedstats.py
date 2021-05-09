@@ -116,7 +116,9 @@ DEVIL = NAME
 async def _(event):
     if event.fwd_from:
         return
-    ok = await event.edit(f"**ᴄʜᴇᴄᴋɪɴɢ ғᴇᴅ sᴛᴀᴛ ɪɴ ᴅᴀɪsʏ x ʙᴏᴛ ᴏɴ ᴏʀᴅᴇʀ ᴏғ {DEVIL}**...")
+    ok = await event.edit(
+        f"**ᴄʜᴇᴄᴋɪɴɢ ғᴇᴅ sᴛᴀᴛ ɪɴ ᴅᴀɪsʏ x ʙᴏᴛ ᴏɴ ᴏʀᴅᴇʀ ᴏғ {DEVIL}**..."
+    )
     if event.reply_to_msg_id:
         previous_message = await event.get_reply_message()
         sysarg = str(previous_message.sender_id)
@@ -152,9 +154,7 @@ async def _(event):
                     await ok.edit(audio.text + "\n\n **Cʜᴇᴄᴋᴇᴅ ʙʏ ᴅᴀɪsʏ X...**")
 
             except YouBlockedUserError:
-                await ok.edit(
-                    "**Error**\n `Unblock` **@DaisyXBot** `and try again!`"
-                )
+                await ok.edit("**Error**\n `Unblock` **@DaisyXBot** `and try again!`")
 
 
 @borg.on(admin_cmd(pattern="dfedinfo ?(.*)"))

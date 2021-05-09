@@ -167,6 +167,7 @@ def remove_plugin(shortname):
     except BaseException:
         raise ValueError
 
+
 def admin_cmd(pattern=None, command=None, **args):
     args["func"] = lambda e: e.via_bot_id is None
     stack = inspect.stack()

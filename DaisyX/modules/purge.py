@@ -16,7 +16,6 @@ from DaisyX.utils import admin_cmd, errors_handler, sudo_cmd
 # @register(outgoing=True, pattern="^.purge$")
 @borg.on(admin_cmd(pattern=r"purge"))
 @borg.on(sudo_cmd(pattern=r"purge", allow_sudo=True))
-
 @errors_handler
 async def fastpurger(purg):
     """For .purge command, purge all messages starting from the reply."""
@@ -51,7 +50,6 @@ async def fastpurger(purg):
 # @register(outgoing=True, pattern="^.purgeme")
 @borg.on(admin_cmd(pattern=r"purgeme"))
 @borg.on(sudo_cmd(pattern=r"purgeme", allow_sudo=True))
-
 @errors_handler
 async def purgeme(delme):
     """For .purgeme, delete x count of your latest message."""
@@ -82,7 +80,6 @@ async def purgeme(delme):
 # @register(outgoing=True, pattern="^.del$")
 @borg.on(admin_cmd(pattern=r"del"))
 @borg.on(sudo_cmd(pattern=r"del", allow_sudo=True))
-
 @errors_handler
 async def delete_it(delme):
     """For .del command, delete the replied message."""
@@ -105,7 +102,6 @@ async def delete_it(delme):
 # @register(outgoing=True, pattern="^.edit")
 @borg.on(admin_cmd(pattern=r"edit"))
 @borg.on(sudo_cmd(pattern=r"edit", allow_sudo=True))
-
 @errors_handler
 async def editer(edit):
     """For .editme command, edit your last message."""
@@ -129,7 +125,6 @@ async def editer(edit):
 # @register(outgoing=True, pattern="^.sd")
 @borg.on(admin_cmd(pattern=r"sd"))
 @borg.on(sudo_cmd(pattern=r"sd", allow_sudo=True))
-
 @errors_handler
 async def selfdestruct(destroy):
     """For .sd command, make seflf-destructable messages."""

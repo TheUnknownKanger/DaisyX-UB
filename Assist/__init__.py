@@ -40,7 +40,6 @@ def wt(obj, file):
         return False
 
 
-
 API_ID = os.environ.get("APP_ID", None)
 API_HASH = os.environ.get("API_HASH", None)
 token = os.environ.get("TG_BOT_TOKEN_BF_HER", None)

@@ -1,4 +1,3 @@
-import asyncio
 import html
 import os
 import re
@@ -6,10 +5,9 @@ from math import ceil
 
 from telethon import Button, custom, events, functions
 from telethon.tl.functions.users import GetFullUserRequest
-from DaisyX.daisyconfig import Var
 
 from DaisyX import ALIVE_NAME, CMD_HELP, CMD_LIST, CUSTOM_PMPERMIT, bot
-
+from DaisyX.daisyconfig import Var
 
 PMPERMIT_PIC = os.environ.get("PMPERMIT_PIC", None)
 TELEPIC = (
@@ -124,7 +122,8 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
                     [custom.Button.url("Creator👨‍🦱", "https://t.me/TeamDaisyX")],
                     [
                         custom.Button.url(
-                            "👨‍💻Source Code‍💻", "https://github.com/TeamDaisyX/Daisy-X-UB"
+                            "👨‍💻Source Code‍💻",
+                            "https://github.com/TeamDaisyX/Daisy-X-UB",
                         ),
                         custom.Button.url(
                             "Deploy 🌀",
@@ -153,9 +152,7 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
             # https://t.me/TelethonChat/115200
             await event.edit(buttons=buttons)
         else:
-            reply_pop_up_alert = (
-                "Please get your own Userbot from @DaisySupport_Official , and don't use mine!"
-            )
+            reply_pop_up_alert = "Please get your own Userbot from @DaisySupport_Official , and don't use mine!"
             await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
     @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"pmclick")))

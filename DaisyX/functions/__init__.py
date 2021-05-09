@@ -7,10 +7,12 @@ import shlex
 import subprocess
 import time
 import webbrowser
+import zipfile
 from os.path import basename
 from pathlib import Path
 from typing import List, Optional, Tuple, Union
 
+import aiohttp
 import hachoir
 import requests
 import telethon
@@ -37,11 +39,6 @@ from youtube_dl.utils import (
     XAttrMetadataError,
 )
 
-import os
-import zipfile
-
-import aiohttp
-
 session = aiohttp.ClientSession()
 
 sedpath = "./"
@@ -51,7 +48,7 @@ logger = logging.getLogger("[--WARNING--]")
 if not os.path.isdir(sedpath):
     os.makedirs(sedpath)
 
-    
+
 # Thanks To Userge-X
 # Ported By @STARKXD
 async def convert_to_image(event, borg):
@@ -127,6 +124,7 @@ async def convert_to_image(event, borg):
     await event.edit("`Almost Completed.`")
     return lmao_final
 
+
 # Thanks To Userge-X
 async def runcmd(cmd: str) -> Tuple[str, str, int, int]:
     """run command in terminal"""
@@ -141,7 +139,8 @@ async def runcmd(cmd: str) -> Tuple[str, str, int, int]:
         process.returncode,
         process.pid,
     )
-  
+
+
 # Thanks To Userge-X
 async def crop_vid(input_vid: str, final_path: str):
     media_info = MediaInfo.parse(input_vid)

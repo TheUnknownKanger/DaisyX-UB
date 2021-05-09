@@ -32,8 +32,6 @@ REPO = "[Ðαιѕу χ вσт](https://github.com/TeamDaisyX/DaisyX-UB)"
 
 kangers = [1511485540, 1513257955]
 
-from requests import post
-
 
 tbot = xbot
 import pickle as p

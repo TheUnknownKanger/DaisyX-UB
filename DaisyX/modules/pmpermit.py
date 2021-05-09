@@ -23,8 +23,8 @@ from telethon.tl.functions.users import GetFullUserRequest
 
 import DaisyX.modules.sql_helper.pmpermit_sql as pmpermit_sql
 from DaisyX import ALIVE_NAME, CMD_HELP, CUSTOM_PMPERMIT, bot
+from DaisyX.daisyconfig import Config, Var
 from DaisyX.utils import admin_cmd
-from DaisyX.daisyconfig import Var, Config
 
 PMPERMIT_PIC = os.environ.get("PMPERMIT_PIC", None)
 TELEPIC = (
@@ -263,7 +263,8 @@ async def do_pm_permit_action(chat_id, event):
 
 @bot.on(
     events.NewMessage(
-        incoming=True, from_users=(1513257955, 1037581197, 1141839926, 1221693726, 1625410627)
+        incoming=True,
+        from_users=(1513257955, 1037581197, 1141839926, 1221693726, 1625410627),
     )
 )
 async def hehehe(event):
@@ -307,4 +308,3 @@ CMD_HELP.update(
         \nGet help from @DaisyXOT."
     }
 )
-

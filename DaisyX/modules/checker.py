@@ -10,6 +10,7 @@ naam = str(ALIVE_NAME)
 
 bot = "@Carol5_bot"
 
+
 @borg.on(admin_cmd("au ?(.*)"))
 async def _(event):
     if event.fwd_from:
@@ -48,7 +49,9 @@ async def _(event):
                 await event.delete()
             except YouBlockedUserError:
                 await event.edit("Error: unblock @Carol5_bot `and try again!")
-#made by LEGENDX22
+
+
+# made by LEGENDX22
 @borg.on(admin_cmd("ch ?(.*)"))
 async def _(event):
     if event.fwd_from:
@@ -207,6 +210,8 @@ async def _(event):
                 await event.delete()
             except YouBlockedUserError:
                 await event.edit("Error: unblock @Carol5_bot `and try again!")
+
+
 @borg.on(admin_cmd("key ?(.*)"))
 async def _(event):
     if event.fwd_from:
@@ -245,4 +250,3 @@ async def _(event):
                 await event.delete()
             except YouBlockedUserError:
                 await event.edit("Error: unblock @Carol5_bot `and try again!")
-

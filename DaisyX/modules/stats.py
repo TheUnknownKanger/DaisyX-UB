@@ -1,10 +1,11 @@
-
 import time
+
 from telethon.events import NewMessage
 from telethon.tl.custom import Dialog
 from telethon.tl.types import Channel, Chat, User
-from DaisyX.utils import admin_cmd, edit_or_reply, sudo_cmd
+
 from DaisyX import CMD_HELP
+from DaisyX.utils import admin_cmd, edit_or_reply, sudo_cmd
 
 
 @bot.on(admin_cmd(pattern="stats$"))
@@ -59,23 +60,23 @@ async def stats(
                 creator_in_groups += 1
         unread_mentions += dialog.unread_mentions_count
         unread += dialog.unread_count
-    stop_time = time.time() - start_time
+    time.time() - start_time
     full_name = inline_mention(await event.client.get_me())
-    response = f'**📌 Sᴛᴀᴛs ᴏғ {full_name} 📌**\n**┏━━━━━━━━━━━━━━━━━━━━━**\n'
-    response += f'**┣** ᪥ **Pʀɪᴠᴀᴛᴇ ᴄʜᴀᴛs:** `{private_chats}` ᪥\n'
-    response += f'**┣** ᪥ **Usᴇʀs:** `{private_chats - bots}` ᪥\n'
-    response += f'**┣** ᪥ **Bᴏᴛs:** `{bots}` ᪥\n**┗━━━━━━━━━━━━━━━━━━━━━**\n**┏━━━━━━━━━━━━━━━━━━━━━**\n'
-    response += f'**┣** ᪥ **Gʀᴏᴜᴘs:** `{groups}` ᪥\n'
-    response += f'**┣** ᪥ **Cʀᴇᴀᴛᴏʀ:** `{creator_in_groups}` ᪥\n'
-    response += f'**┣** ᪥ **Aᴅᴍɪɴ:** `{admin_in_groups}` ᪥ \n'
-    response += f'**┣** ᪥ **Aᴅᴍɪɴ ʀɪɢʜᴛs:** `{admin_in_groups - creator_in_groups}` ᪥\n**┗━━━━━━━━━━━━━━━━━━━━━**\n**┏━━━━━━━━━━━━━━━━━━━━━**\n'
-    response += f'**┣** ᪥ **Cʜᴀɴɴᴇʟs:** `{broadcast_channels}` ᪥ \n'
-    response += f'**┣** ᪥ **Cʀᴇᴀᴛᴏʀ:** `{creator_in_channels}` ᪥ \n'
-    response += f'**┣** ᪥ **Aᴅᴍɪɴ:** `{admin_in_broadcast_channels}` ᪥ \n'
-    response += f'**┣** ᪥ **Aᴅᴍɪɴ ʀɪɢʜᴛs:** `{admin_in_broadcast_channels - creator_in_channels}` ᪥\n**┗━━━━━━━━━━━━━━━━━━━━━**\n**┏━━━━━━━━━━━━━━━━━━━━━**\n'
-    response += f'**┣** ᪥ **Uɴʀᴇᴀᴅ ᴍᴇssᴀɢᴇs:** `{unread}` ᪥\n'
-    response += f'**┣** ᪥ **Uɴʀᴇᴀᴅ ᴍᴇɴᴛɪᴏɴs:** `{unread_mentions}` ᪥\n**┗━━━━━━━━━━━━━━━━━━━━━**\n'
-    response += f'📌 **Fʀᴏᴍ ᴛʜᴇ ᴅᴀᴛᴀ ʙᴀsᴇ ᴏғ [ᴅᴀɪsʏ X](http://github.com/TeamDaisyX/Daisy-X-UB)** 📌'
+    response = f"**📌 Sᴛᴀᴛs ᴏғ {full_name} 📌**\n**┏━━━━━━━━━━━━━━━━━━━━━**\n"
+    response += f"**┣** ᪥ **Pʀɪᴠᴀᴛᴇ ᴄʜᴀᴛs:** `{private_chats}` ᪥\n"
+    response += f"**┣** ᪥ **Usᴇʀs:** `{private_chats - bots}` ᪥\n"
+    response += f"**┣** ᪥ **Bᴏᴛs:** `{bots}` ᪥\n**┗━━━━━━━━━━━━━━━━━━━━━**\n**┏━━━━━━━━━━━━━━━━━━━━━**\n"
+    response += f"**┣** ᪥ **Gʀᴏᴜᴘs:** `{groups}` ᪥\n"
+    response += f"**┣** ᪥ **Cʀᴇᴀᴛᴏʀ:** `{creator_in_groups}` ᪥\n"
+    response += f"**┣** ᪥ **Aᴅᴍɪɴ:** `{admin_in_groups}` ᪥ \n"
+    response += f"**┣** ᪥ **Aᴅᴍɪɴ ʀɪɢʜᴛs:** `{admin_in_groups - creator_in_groups}` ᪥\n**┗━━━━━━━━━━━━━━━━━━━━━**\n**┏━━━━━━━━━━━━━━━━━━━━━**\n"
+    response += f"**┣** ᪥ **Cʜᴀɴɴᴇʟs:** `{broadcast_channels}` ᪥ \n"
+    response += f"**┣** ᪥ **Cʀᴇᴀᴛᴏʀ:** `{creator_in_channels}` ᪥ \n"
+    response += f"**┣** ᪥ **Aᴅᴍɪɴ:** `{admin_in_broadcast_channels}` ᪥ \n"
+    response += f"**┣** ᪥ **Aᴅᴍɪɴ ʀɪɢʜᴛs:** `{admin_in_broadcast_channels - creator_in_channels}` ᪥\n**┗━━━━━━━━━━━━━━━━━━━━━**\n**┏━━━━━━━━━━━━━━━━━━━━━**\n"
+    response += f"**┣** ᪥ **Uɴʀᴇᴀᴅ ᴍᴇssᴀɢᴇs:** `{unread}` ᪥\n"
+    response += f"**┣** ᪥ **Uɴʀᴇᴀᴅ ᴍᴇɴᴛɪᴏɴs:** `{unread_mentions}` ᪥\n**┗━━━━━━━━━━━━━━━━━━━━━**\n"
+    response += f"📌 **Fʀᴏᴍ ᴛʜᴇ ᴅᴀᴛᴀ ʙᴀsᴇ ᴏғ [ᴅᴀɪsʏ X](http://github.com/TeamDaisyX/Daisy-X-UB)** 📌"
     await alain.edit(response)
 
 

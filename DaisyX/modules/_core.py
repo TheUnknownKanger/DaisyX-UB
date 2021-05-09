@@ -3,8 +3,8 @@ import os
 from datetime import datetime
 from pathlib import Path
 
-from DaisyX import ALIVE_NAME, bot, CMD_HELP
-from DaisyX.utils import admin_cmd, sudo_cmd
+from DaisyX import ALIVE_NAME, CMD_HELP, bot
+from DaisyX.utils import admin_cmd
 from DaisyX.utils import edit_or_reply as eor
 from DaisyX.utils import load_module, remove_plugin, sudo_cmd
 
@@ -115,6 +115,7 @@ async def load(event):
         await qwe.edit(
             f"Daisy X could not load {shortname} because of the following error.\n{str(e)}"
         )
+
 
 @bot.on(admin_cmd(pattern=r"open", outgoing=True))
 @bot.on(sudo_cmd(pattern=r"open"))

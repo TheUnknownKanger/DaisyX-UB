@@ -33,7 +33,8 @@ LOAD_PLUG = {}
 # PaperPlaneExtended Support Vars
 ENV = os.environ.get("ENV", False)
 
-CMD_HNDLR = os.environ.get("CMD_HNDLER") 
+CMD_HNDLR = os.environ.get("CMD_HNDLER")
+
 
 def HELP(**DAISYX):
     see = DAISYX.get("NAME", None)
@@ -48,9 +49,12 @@ def HELP(**DAISYX):
     else:
         CMD_HELP.update({see: helper})
     CMD_HELP.update({see: helper})
-def DAISYX (event):
-  I_AM_DAISY_X = event.text.split(" ", maxsplit=1)[1]
-  return I_AM_DAISY_X
+
+
+def DAISYX(event):
+    I_AM_DAISY_X = event.text.split(" ", maxsplit=1)[1]
+    return I_AM_DAISY_X
+
 
 DAISY_ID = ["1557333374"]
 
@@ -204,8 +208,8 @@ if bool(ENV):
 else:
     # Put your ppe vars here if you are using local hosting
     PLACEHOLDER = None
-# For Getting Webss 
-SCREEN_SHOT_LAYER_ACCESS_KEY = os.environ.get("SCREEN_SHOT_LAYER_ACCESS_KEY") 
+# For Getting Webss
+SCREEN_SHOT_LAYER_ACCESS_KEY = os.environ.get("SCREEN_SHOT_LAYER_ACCESS_KEY")
 
 # Setting Up CloudMail.ru and MEGA.nz extractor binaries,
 # and giving them correct perms to work properly.
