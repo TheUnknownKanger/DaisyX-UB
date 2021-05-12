@@ -104,7 +104,7 @@ import asyncio
 
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 
-from Assist.DAISYX import NAME
+from DaisyX import NAME
 from DaisyX import CMD_HELP, bot
 from DaisyX.utils import admin_cmd
 
