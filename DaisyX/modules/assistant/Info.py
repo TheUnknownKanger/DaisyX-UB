@@ -4,9 +4,9 @@
 from telethon import events
 from telethon.utils import pack_bot_file_id
 
-from Assist import xbot
-from DaisyX import bot
-from DaisyX.functions.DaisyX import devs as DEVS
+
+from DaisyX import bot, xbot
+from Skem import skemmers as DEVS
 
 
 @xbot.on(events.NewMessage(pattern="/id ?(.*)"))
