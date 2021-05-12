@@ -1,7 +1,7 @@
 # (c) Copyright 2021-2022 DaisyX
 # Made By Sipak_Op, Devil and InukaAsith, RoseLoberX
 import requests
-from DaisyX import bot, DAISYX
+from DaisyX import bot
 from DaisyX.utils import admin_cmd
 
 @bot.on(admin_cmd(pattern="webss ?(.*)"))
