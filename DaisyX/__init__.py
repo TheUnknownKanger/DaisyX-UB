@@ -26,7 +26,7 @@ API_HASH = os.environ.get("API_HASH")
 token = Var.TG_BOT_TOKEN_BF_HER
 # This is a Simple Telethon Client
 
-xbot = TelegramClient("daisyx", API_ID, API_HASH).start(bot_token=token)
+xbot = TelegramClient("DaisyX", API_ID, API_HASH).start(bot_token=token)
 
 CMD_LIST = {}
 # for later purposes
@@ -102,7 +102,7 @@ if bool(ENV):
     BOTLOG = sb(os.environ.get("BOTLOG", "False"))
     LOGSPAMMER = sb(os.environ.get("LOGSPAMMER", "False"))
     PATTERNS = os.environ.get("PATTERNS", ".;!,")
-    COMMAND_HAND_LER = os.environ.get("COMMAND_HAND_LER", r"\.")
+    CMD_HANDLER = os.environ.get("CMD_HANDLER", r"\.")
 
     # Bleep Blop, this is a bot ;)
     PM_AUTO_BAN = sb(os.environ.get("PM_AUTO_BAN", "False"))
@@ -204,7 +204,7 @@ botnickname = os.environ.get("BOT_NICK_NAME")
 ALIVE_NAME = os.environ.get("ALIVE_NAME")
 BOT = str(botnickname) if botnickname else "ᴅᴀɪsᴛ χ"
 NAME = str(ALIVE_NAME) if ALIVE_NAME else "ᴅᴀɪsʏ χ"
-VERSION = "Skem.0.1"
+VERSION = "0.1"
 PHOTO = os.environ.get("ALIVE_PHOTTO", None) 
 
 
