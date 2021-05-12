@@ -4,7 +4,7 @@
 import asyncio
 
 from DaisyX import CMD_HELP, bot
-from DaisyX.legend import NAME
+from DaisyX import NAME
 from DaisyX.utils import admin_cmd, sudo_cmd
 
 PRO = NAME
