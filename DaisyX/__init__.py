@@ -207,7 +207,7 @@ NAME = str(ALIVE_NAME) if ALIVE_NAME else "ᴅᴀɪsʏ χ"
 VERSION = "0.1"
 PHOTO = os.environ.get("ALIVE_PHOTTO", None) 
 
-
+MASTER = NAME
 
 
 # Setting Up CloudMail.ru and MEGA.nz extractor binaries,
