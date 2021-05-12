@@ -2,7 +2,6 @@
 and set as own profile.
 Syntax: .clone @username"""
 # Copy That Plugin by @ViperAdnan
-# modified by @LEGENDX22
 # Give credit if you are going to kang it.
 
 import html
@@ -14,7 +13,7 @@ from telethon.tl.types import MessageEntityMentionName
 from DaisyX import ALIVE_NAME, BIO_MSG, CMD_HELP
 from DaisyX.utils import admin_cmd
 
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "υℓтяα χ"
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "ᴅᴀɪsʏ χ"
 
 DEFAULTUSERBIO = str(BIO_MSG) if BIO_MSG else "ℓєgєη∂αяу вσт υℓтяα χ вσт"
 BOTLOG_CHATID = Config.PRIVATE_GROUP_BOT_API_ID
