@@ -1,5 +1,5 @@
-# (c) Copyright 2021-2022 DaisyX
-# Made By Sipak_Op, Devil and InukaAsith, RoseLoberX
+# (c) Copyright 2021-2022 By DaisyX
+# Made By Sipak_Op, Devil and InukaAsith, RoseLoverX
 import requests
 from DaisyX import bot
 from DaisyX.utils import admin_cmd
