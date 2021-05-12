@@ -25,7 +25,7 @@ from Skem import devs
 from DaisyX import BOTLOG, BOTLOG_CHATID, CMD_HELP, bot
 from DaisyX.utils import register, errors_handler
 from DaisyX.utils import admin_cmd
-from Assist import NAME, MASTER, BOT
+from DaisyX import NAME, MASTER, BOT
 # =================== CONSTANT ===================
 PP_TOO_SMOL = "`The image is too small`"
 PP_ERROR = "`Failure while processing the image`"
