@@ -1,5 +1,5 @@
 # (c) Copyright 2021-2022 DaisyX
-# Made By LegendX22 and Proboy22
+# From Telebot
 
 import asyncio
 
