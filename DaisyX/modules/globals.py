@@ -380,8 +380,20 @@ async def _(event):
             except YouBlockedUserError:
                 await event.edit("Error: unblock  @tgscanrobot `and try again!")
 
+# Helped Functions For Globals
+def HELP(**DAISYX):
+	see = DAISYX.get("NAME", None)
+	helper = DAISYX.get("HELP", None)
+	if see is None:
+		DAISYX["NAME"] = __name__
+		CMD_HELP.update({see: helper})
+	elif helper is None:
+		DAISYX[
+		    "HELP"] = "sᴋᴇᴍ ʜᴇʟᴘ\nADDEᴅ ʜᴇʀᴇ\nIF ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ᴋɴᴏᴡ ᴀʙᴏᴜᴛ ᴛʜɪs ᴘʟᴜɢ-ɪɴ\nJOIɴ @DaisySupport_Official"
+	else:
+	  CMD_HELP.update({see: helper})
+	CMD_HELP.update({see: helper})
 
-from .. import HELP
 
 HELP(
     NAME="ginfo", HELP=".ginfo <tag or username>", FUCK=True, debug=False, amazing=None
