@@ -198,6 +198,18 @@ else:
 # For Getting Webss 
 SCREEN_SHOT_LAYER_ACCESS_KEY = os.environ.get("SCREEN_SHOT_LAYER_ACCESS_KEY") 
 
+
+# Assistant 
+botnickname = os.environ.get("BOT_NICK_NAME")
+ALIVE_NAME = os.environ.get("ALIVE_NAME")
+BOT = str(botnickname) if botnickname else "ᴅᴀɪsᴛ χ"
+NAME = str(ALIVE_NAME) if ALIVE_NAME else "ᴅᴀɪsʏ χ"
+VERSION = "Skem.0.1"
+PHOTO = os.environ.get("ALIVE_PHOTTO") 
+
+
+
+
 # Setting Up CloudMail.ru and MEGA.nz extractor binaries,
 # and giving them correct perms to work properly.
 if not os.path.exists("bin"):
