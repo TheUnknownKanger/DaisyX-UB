@@ -23,7 +23,7 @@ os.system("pip install Skem==0.3.3")
 
 API_ID = os.environ.get("APP_ID") 
 API_HASH = os.environ.get("API_HASH") 
-token = Var.
+token = Var.TG_BOT_TOKEN_BF_HER
 # This is a Simple Telethon Client
 
 xbot = TelegramClient("daisyx", API_ID, API_HASH).start(bot_token=token)
