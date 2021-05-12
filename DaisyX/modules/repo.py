@@ -1,7 +1,6 @@
 
 from telethon import events, Button, custom
-from DaisyX import bot
-from Assist.DAISYX import xbot
+from DaisyX import bot, xbot
 from DaisyX.utils import admin_cmd, sudo_cmd
 import os,re
 from telethon.tl.custom import Button 
@@ -28,12 +27,3 @@ async def callback_query_handler(event):
                    
                   )
 
-# (c) Copyright 2021-2022 TeamDaisyX
-# Made by Devil (@Lucifeermorningstar) and @RoseHaterX
-
-
-@bot.on(admin_cmd(pattern="repo")) 
-@bot.on(sudo_cmd(pattern="repo ? (.*) ", allow_sudo=True))
-async def repo(event):
-    buttons = [Button.url(f"⚜️ Rᴇᴘᴏ ⚜️", "https://github.com/TeamDaisyX/Daisy-X-UB")]
-    await event.edit('**DAISYX UB**', buttons=buttons)
