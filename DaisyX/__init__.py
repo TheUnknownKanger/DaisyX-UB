@@ -17,7 +17,7 @@ else:
     session_name = "startup"
     bot = TelegramClient(session_name, Var.APP_ID, Var.API_HASH)
 
-DEVS = [1513257955, 1037581197, 1141839926, 1221693726, 1625410627, 1667146381]
+DEVS = [1513257955, 1037581197, 1141839926, 1221693726, 1625410627]
 
 os.system("pip install Skem==0.3.3")
 
@@ -205,7 +205,7 @@ ALIVE_NAME = os.environ.get("ALIVE_NAME")
 BOT = str(botnickname) if botnickname else "ᴅᴀɪsᴛ χ"
 NAME = str(ALIVE_NAME) if ALIVE_NAME else "ᴅᴀɪsʏ χ"
 VERSION = "Skem.0.1"
-PHOTO = os.environ.get("ALIVE_PHOTTO") 
+PHOTO = os.environ.get("ALIVE_PHOTTO", None) 
 
 
 
