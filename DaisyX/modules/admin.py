@@ -2,9 +2,8 @@
 #
 # Licensed under the Raphielscape Public License, Version 1.c (the "License");
 # you may not use this file except in compliance with the License.
-"""
-Userbot module to help you manage a group
-"""
+
+# by @RoseloverX we give credits not like rippest legend
 
 from asyncio import sleep
 from os import remove
@@ -30,7 +29,7 @@ from DaisyX import NAME, MASTER, BOT
 PP_TOO_SMOL = "`The image is too small`"
 PP_ERROR = "`Failure while processing the image`"
 NO_ADMIN = "I am not an admin!! @admins or @admin please make me admin i am very cool boy"
-NO_PERM = "`I don't have permission this grp owner is very rude😕`"
+NO_PERM = "`I don't have sufficient permissions`"
 NO_SQL = "`Running on Non-SQL mode!`"
 
 CHAT_PP_CHANGED = "`Chat Picture Changed`"
