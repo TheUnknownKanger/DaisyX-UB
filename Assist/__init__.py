@@ -46,8 +46,7 @@ API_HASH = os.environ.get("API_HASH", None)
 token = os.environ.get("TG_BOT_TOKEN_BF_HER", None)
 STRING_SESSION = os.environ.get("STRING_SESSION")
 xbot = TelegramClient("legend", API_ID, API_HASH).start(bot_token=token)
-    print("Error connecting with bot & xbot. UB EXITTING..")
-    print(e)
+    
 
 
 botnickname = os.environ.get("BOT_NICK_NAME")
