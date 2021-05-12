@@ -1,5 +1,5 @@
 # (c) copyright 2021- 2022 DaisyX
-# Made by LegendX
+
 
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 
