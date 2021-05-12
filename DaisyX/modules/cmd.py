@@ -1,4 +1,4 @@
-# Made by @LEGENDX22 FOR ULTRA X
+# From Dark Cobra Userbot
 import asyncio
 import io
 
