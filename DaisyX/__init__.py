@@ -21,6 +21,13 @@ DEVS = [1513257955, 1037581197, 1141839926, 1221693726, 1625410627, 1667146381]
 
 os.system("pip install Skem==0.3.3")
 
+API_ID = os.environ.get("APP_ID") 
+API_HASH = os.environ.get("API_HASH") 
+token = Var.
+# This is a Simple Telethon Client
+
+xbot = TelegramClient("daisyx", API_ID, API_HASH).start(bot_token=token)
+
 CMD_LIST = {}
 # for later purposes
 CMD_HELP = {}
@@ -35,22 +42,6 @@ ENV = os.environ.get("ENV", False)
 
 CMD_HNDLR = os.environ.get("CMD_HNDLER") 
 
-def HELP(**DAISYX):
-    see = DAISYX.get("NAME", None)
-    helper = DAISYX.get("HELP", None)
-    if see is None:
-        DAISYX["NAME"] = __name__
-        CMD_HELP.update({see: helper})
-    elif helper is None:
-        DAISYX[
-            "HELP"
-        ] = "🥺🥺NOT COMMAND HELP🥺🥺\nADDED HERE\nIF YOU WANT TO KNOW ABOUT THIS PLUG-IN\nJOIN SUPPORT GROUP"
-    else:
-        CMD_HELP.update({see: helper})
-    CMD_HELP.update({see: helper})
-def DAISYX (event):
-  I_AM_DAISY_X = event.text.split(" ", maxsplit=1)[1]
-  return I_AM_DAISY_X
 
 DAISY_ID = ["1557333374"]
 
@@ -143,7 +134,7 @@ if bool(ENV):
     # FedBan Premium Module
     F_BAN_LOGGER_GROUP = os.environ.get("F_BAN_LOGGER_GROUP", None)
 
-    # make by LEGEND X
+    
     botnickname = os.environ.get("BOT_NICK_NAME", None)
 
     # Heroku Credentials for updater.
