@@ -10,10 +10,8 @@ import re
 from telethon import Button, custom, events
 from telethon.tl.functions.users import GetFullUserRequest
 
-from DaisyX import bot
-from DaisyX.functions.DaisyX import PHOTO
-from DaisyX.functions.DaisyX import devs as DEVS
-from DaisyX.functions.DaisyX import xbot
+from DaisyX import bot, xbot, PHOTO
+from Skem import skemmers as DEVS
 from DaisyX.modules.sql_helper.blacklist_ass import (
     add_nibba_in_db,
     is_he_added,
