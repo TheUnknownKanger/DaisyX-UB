@@ -7,7 +7,7 @@ import time
 
 from telethon import Button, custom, events
 
-from Assist import BOT, PHOTO, VERSION, xbot
+from DaisyX import BOT, PHOTO, VERSION, xbot
 from DaisyX import StartTime, bot
 
 
