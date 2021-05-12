@@ -1,8 +1,7 @@
 import os
 from sys import argv
 
-from Assist import xbot
-from DaisyX import bot
+from DaisyX import bot, xbot
 from DaisyX.functions.run import run_cmd
 os.system("pip install telethon==1.19.0")
 import os
