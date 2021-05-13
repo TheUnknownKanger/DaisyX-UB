@@ -16,6 +16,6 @@ heroku_api = "https://api.heroku.com"
 sudousers = os.environ.get("SUDO_USERS", None)
 
 @bot.on(admin_cmd(pattern="sudo")) 
-async def sudo(events):
+async def sudo(event):
      sudolelo = os.environ.get("SUDO_USERS", None) 
      await bot.send_message(event.chat_id, f"** sᴜᴅᴏʟɪsᴛ ᴏғ ** bot.me.username\n {sudolelo}")
