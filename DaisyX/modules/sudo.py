@@ -6,6 +6,7 @@ import asyncio
 import heroku3
 
 from telethon.tl.functions.users import GetFullUserRequest
+from telethon import events
 
 from DaisyX import bot
 from DaisyX.utils import admin_cmd
