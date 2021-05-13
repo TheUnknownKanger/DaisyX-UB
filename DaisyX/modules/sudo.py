@@ -17,4 +17,4 @@ sudousers = os.environ.get("SUDO_USERS", None)
 @bot.on(admin_cmd(pattern="addsudo")) 
 async def sudo(events):
      sudolelo = os.environ.get("SUDO_USERS", None) 
-        await eor(event, f"** sᴜᴅᴏʟɪsᴛ ᴏғ ** bot.me.username\n {sudolelo}") 
+     await eor(event, f"** sᴜᴅᴏʟɪsᴛ ᴏғ ** bot.me.username\n {sudolelo}")
