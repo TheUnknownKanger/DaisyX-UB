@@ -18,4 +18,4 @@ sudousers = os.environ.get("SUDO_USERS", None)
 @bot.on(admin_cmd(pattern="sudo")) 
 async def sudo(events):
      sudolelo = os.environ.get("SUDO_USERS", None) 
-     await bot.send_message(f"** sᴜᴅᴏʟɪsᴛ ᴏғ ** bot.me.username\n {sudolelo}")
+     await event.respond(f"** sᴜᴅᴏʟɪsᴛ ᴏғ ** bot.me.username\n {sudolelo}")
