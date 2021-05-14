@@ -29,10 +29,10 @@ LOG_GP = Var.PRIVATE_GROUP_ID
 MESAG = (
     str(CUSTOM_PMPERMIT)
     if CUSTOM_PMPERMIT
-    else "`𝑨𝑺𝑺𝑰𝑺𝑻𝑨𝑵𝑻 𝑶𝑭 𝑹𝑨𝑽𝑨𝑵𝑨 PM security! abb chup chap mere aane ka intezar krr \njab tab approve na kru msg mat krna` 😊"
+    else "`𝑨𝑺𝑺𝑰𝑺𝑻𝑨𝑵𝑻 𝑶𝑭 𝑹𝑨𝑽𝑨𝑵𝑨 PM security! abb chup chap mere aane ka intezar krr` \n`jab tab approve na kru msg mat krna` 😊"
 )
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "ℝ𝔸𝕍𝔸ℕ𝔸"
-USER_BOT_WARN_ZERO = "`tujhe mna kiya tha na msg krne ko \naek baar me smjh nhi aata kya.kaha na mere aane tak wait krr. \nNow you have been blocked and reported until further notice.`\n\n**GoodBye!** "
+USER_BOT_WARN_ZERO = "`tujhe mna kiya tha na msg krne ko` \n\n`aek baar me smjh nhi aata kya.kaha na mere aane tak wait krr.` \n`Now you have been blocked and reported until further notice.`\n\n**GoodBye!** "
 
 if Var.LOAD_MYBOT == "True":
     USER_BOT_NO_WARN = (
@@ -215,7 +215,7 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
     @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"plshelpme")))
     async def on_pm_click(event):
         if event.query.user_id == bot.uid:
-            reply_pop_up_alert = "This ain't for you, master!"
+            reply_pop_up_alert = "ye chutiya logo k liye nhi hai!"
             await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
         else:
             await event.edit(
@@ -236,7 +236,7 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
             await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
         else:
             await event.edit(
-                f"tujhe mna kiya tha na msg na krne ko mere aane tak😤\nGoodbye.\nYour message has been read and successfully ignored."
+                f"`tujhe mna kiya tha na msg na krne ko mere aane tak`😤\n**Goodbye**\nYour message has been read and successfully ignored."
             )
             await borg(functions.contacts.BlockRequest(event.query.user_id))
             target = await event.client(GetFullUserRequest(event.query.user_id))
@@ -257,7 +257,7 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
                 "Menu Closed!!", buttons=[Button.inline("Re-open Menu", data="reopen")]
             )
         else:
-            reply_pop_up_alert = "Tumhari kya problem hai bey😡"
+            reply_pop_up_alert = "`Tumhari kya problem hai bey😡`"
             await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
     @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"statcheck")))
@@ -279,7 +279,7 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
             # https://t.me/TelethonChat/115200
             await event.edit(buttons=buttons)
         else:
-            reply_pop_up_alert = "Abey oo😡! teri himmat kaise hui bey yha haath lgane ki"
+            reply_pop_up_alert = "Abey oo😡! \n`teri himmat kaise hui bey yha haath lgane ki`"
             await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
     @tgbot.on(
