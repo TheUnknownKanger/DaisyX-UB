@@ -13,7 +13,7 @@ from DaisyX.helpers import functions as dcdef
 from telethon.tl.types import ChannelParticipantsAdmins
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else bot.me.first_name
 
-
+from DaisyX import version
 global ghanti
 ghanti = borg.uid
 edit_time = 5
@@ -38,11 +38,12 @@ async def hmm(yes):
     pm_caption += "**Wʜᴀᴛ ᴅᴏ ʏᴏᴜ ᴡᴀɴɴᴀ ᴅᴏ ᴛᴏᴅᴀʏ? Bᴜᴛ ʙᴇғᴏʀᴇ ᴅᴏɪɴɢ sᴏᴍᴇᴛɪɴɢ ᴋɴᴏᴡ ᴀʙᴏᴜᴛ ᴍᴏɪ sʏsᴛᴇᴍ...**\n\n"
     pm_caption += "✘ About My System ✘\n\n"
     pm_caption += f"👉 **Tᴇʟᴇᴛʜᴏɴ ᴠᴇʀsɪᴏɴ:** `{version.__version__}`\n"
-    pm_caption += "👉 **Pʏᴛʜᴏɴ ᴠᴇʀsɪᴏɴ:** [ᴊᴏɪɴ](https://t.me/DaisySupport_Official)\n"
-    pm_caption += "➾ **ʟɪᴄᴇɴꜱᴇ**  ☞ [𝚃𝙴𝙰𝙼 𝙳𝙰𝙸𝚂𝚈𝚇](https://github.com/TeamDaisyX)\n"
-    pm_caption += "➾ **ᴄᴏᴘʏʀɪɢʜᴛ ʙʏ** ☞ [𝙳𝙰𝙸𝚂𝚈-𝚇](https://github.com/TeamDaisyX/Daisy-X-UB)\n\n"
-    pm_caption += f"➾ **ᴜᴘᴛɪᴍᴇ** ☞ {uptime}\n\n"
-    pm_caption += f"➾ **ᴍʏ ᴍᴀsᴛᴇʀ** ☞ [{DEFAULTUSER}](tg://user?id={ghanti})\n"
+    pm_caption += f"👉 **Pʏᴛʜᴏɴ ᴠᴇʀsɪᴏɴ:** `3.8.7`\n"
+    pm_caption += f"👉 **Lɪᴄᴇɴsᴇ:** **[Team Daisy](https://github.com/TeamDaisyX)**\n"
+    pm_caption += f"👉 **Dᴀɪsʏ ᴠᴇʀsɪᴏɴ:** `{version)`\n"
+    pm_caption += f"👉 **Uᴘᴛɪᴍᴇ:** `{uptime}`"
+    pm_caption += f"👉 **Bʀᴀɴᴄʜ:** `Main`"
+    pm_caption += f"👉 **Mᴀsᴛᴇʀ:** `{bot.me.first_name}`\n"
     on = await borg.send_file(yes.chat_id, file=file1,caption=pm_caption)
 
     await asyncio.sleep(edit_time)
