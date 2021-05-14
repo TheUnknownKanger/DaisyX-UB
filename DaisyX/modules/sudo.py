@@ -9,7 +9,19 @@ from telethon.tl.functions.users import GetFullUserRequest
 from telethon import events
 
 from DaisyX import bot
-from DaisyX.utils import admin_cmd, edit_or_reply
+from DaisyX.utils import admin_cmd
+
+
+# Function From TeleBoT
+
+async def edit_or_reply(event, text):
+    if event.sender_id in Config.SUDO_USERS:
+        reply_to = await event.get_reply_message()
+        if reply_to:
+            return await reply_to.reply(text)
+        return await event.reply(text)
+    return await event.edit(text)
+
 
 Heroku = heroku3.from_key(Var.HEROKU_API_KEY)
 heroku_api = "https://api.heroku.com"
