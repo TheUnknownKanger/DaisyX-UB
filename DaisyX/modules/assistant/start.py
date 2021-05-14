@@ -40,11 +40,11 @@ async def start(event):
     hmmwow = devlop.first_name
     event.chat_id
     mypic = PHOTO
-    starttext = f"Hello, **{firstname}**!!\nNice To Meet You 🤗 !!\nI guess, that you know me, Uhh you don't, np..\nWell I'm **{bot_id}**.\n\n**A Pᴏᴡᴇʀғᴜʟ Assɪᴛᴀɴᴛ Oғ** [{hmmwow}](tg://user?id={boy})\n\n                           **Pᴏᴡᴇʀᴇᴅ Bʏ** [ᴅᴀɪsʏX](t.me/DaisyXOT)\n\n**Yᴏᴜ Cᴀɴ Cʜᴀᴛ Wɪᴛʜ Mʏ Mᴀsᴛᴇʀ Tʜʀᴏᴜɢʜ Tʜɪs Bᴏᴛ.**\n**Iғ Yᴏᴜ Wᴀɴᴛ Yᴏᴜʀ Oᴡɴ Assɪᴛᴀɴᴛ Yᴏᴜ Cᴀɴ Dᴇᴘʟᴏʏ Fʀᴏᴍ Bᴜᴛᴛᴏɴ Bᴇʟᴏᴡ.**"
+    starttext = f"Hello, **{firstname}**!!\nNice To Meet You 🤗 !!\nI guess, that you know me, han to abb Dfa ho jaa..\nWell I'm **{bot_id}**.\n\n**A Pᴏᴡᴇʀғᴜʟ Assɪᴛᴀɴᴛ Oғ** [{hmmwow}](tg://user?id={boy})"
     if event.sender_id == boy:
         await xbot.send_message(
             event.chat_id,
-            message=f"Hi Master, It's Me {bot_id}, Your Assistant !! \nWhat You Wanna Do today ?",
+            message=f"Abey oo, It's Me {bot_id}, Your Assistant !! \nChl abb nikl jaa bey chomu",
             buttons=[
                 [custom.Button.inline("Bᴏᴛ Usᴇʀs 🔥", data="users")],
                 [custom.Button.inline("Hᴇʀᴏᴋᴜ Mᴇɴᴜ ⚙️", data="ass_back")],
@@ -69,10 +69,10 @@ async def start(event):
                 [
                     custom.Button.url(
                         "Dᴇᴘʟᴏʏ Yᴏᴜʀ Oᴡɴ ᴅᴀɪsʏX",
-                        "http://GitHub.com/TeamDaisyX/Daisy-X-UB",
+                        "http://GitHub.com/ravana777/Daisy-X-UB",
                     )
                 ],
-                [Button.url("Sᴜᴘᴘᴏʀᴛ", "t.me/DaisySupport_Official")],
+                [Button.url("Sᴜᴘᴘᴏʀᴛ", "t.me/gruphelp1234_bot")],
             ],
         )
         if os.path.exists(mypic):
