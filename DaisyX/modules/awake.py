@@ -31,15 +31,15 @@ async def hmm(yes):
     ghanti = borg.uid
     await yes.delete()
     uptime = await dcdef.get_readable_time((time.time() - Lastupdate))
-    pm_caption = "**𝙰𝚂𝚂𝙸𝚂𝚃𝙰𝙽𝚃 𝙾𝙵 𝚁𝙰𝚅𝙰𝙽𝙰 𝙾𝙽𝙻𝙸𝙽𝙴**\n\n"
+    pm_caption = "`**𝙰𝚂𝚂𝙸𝚂𝚃𝙰𝙽𝚃 𝙾𝙵 𝚁𝙰𝚅𝙰𝙽𝙰 𝙾𝙽𝙻𝙸𝙽𝙴**`\n\n"
     pm_caption += "**Yes Master, Am Alive And Systems Are Working Perfectly As It Should Be...**\n\n"
     pm_caption += "✘ About My System ✘\n\n"
-    pm_caption += f"➾ **ᴛᴇʟᴇᴛʜᴏɴ ᴠᴇʀꜱɪᴏɴ** ☞ {version.__version__}\n"
-    pm_caption += f"➾ **ᴜᴘᴛɪᴍᴇ** ☞ {uptime}\n\n"
-    𝚙𝚖_𝚌𝚊𝚙𝚝𝚒𝚘𝚗 += "➾ **𝙼𝚎𝚛𝚎 𝚖𝚊𝚜𝚝𝚎𝚛 𝚜𝚎 𝚝𝚑𝚘𝚍𝚊 𝙺𝚊𝚢𝚍𝚎 𝚖𝚎 𝚑𝚒 𝚋𝚊𝚊𝚝 𝚔𝚛𝚎 𝚝𝚘 𝚊𝚊𝚙𝚔𝚎 𝚑𝚎𝚊𝚕𝚝𝚑 𝚔 𝚕𝚒𝚢𝚎 𝚜𝚊𝚑𝚒 𝚑𝚘𝚐𝚊**\n"
-    pm_caption += "➾ **𝙼𝚢 𝚖𝚊𝚜𝚝𝚎𝚛 𝚍𝚘𝚎𝚜𝚗'𝚝 𝚔𝚗𝚘𝚠 𝚊𝚗𝚐𝚛𝚎𝚣𝚒. 𝚃𝚘 𝚓𝚢𝚊𝚍𝚊 2050 𝚔 𝚖𝚘𝚍𝚎𝚛𝚗 𝚒𝚝𝚎𝚖 𝚖𝚊𝚝 𝚋𝚗𝚗𝚊 𝚖𝚎𝚛𝚎 𝚖𝚊𝚜𝚝𝚎𝚛 𝚔 𝚜𝚊𝚊𝚖𝚗𝚎**\n"
-    pm_caption += "➾ **𝙱𝚎 𝚊 𝚂𝚊𝚋𝚑𝚢𝚊 𝚜𝚝𝚞𝚍𝚎𝚗𝚝**\n\n"
-    pm_caption += "➾ **ᴍʏ ᴍᴀsᴛᴇʀ** ☞ [{DEFAULTUSER}](tg://user?id={ghanti})\n"
+    pm_caption += f"`➾ **ᴛᴇʟᴇᴛʜᴏɴ ᴠᴇʀꜱɪᴏɴ** ☞ {version.__version__}`\n"
+    pm_caption += f"`➾ **ᴜᴘᴛɪᴍᴇ** ☞ {uptime}`\n\n"
+    𝚙𝚖_𝚌𝚊𝚙𝚝𝚒𝚘𝚗 += "➾ **`𝙼𝚎𝚛𝚎 𝚖𝚊𝚜𝚝𝚎𝚛 𝚜𝚎 𝚝𝚑𝚘𝚍𝚊 𝙺𝚊𝚢𝚍𝚎 𝚖𝚎 𝚑𝚒 𝚋𝚊𝚊𝚝 𝚔𝚛𝚎 𝚝𝚘 𝚊𝚊𝚙𝚔𝚎 𝚑𝚎𝚊𝚕𝚝𝚑 𝚔 𝚕𝚒𝚢𝚎 𝚜𝚊𝚑𝚒 𝚑𝚘𝚐𝚊`**\n\n"
+    pm_caption += "➾ **`𝙼𝚢 𝚖𝚊𝚜𝚝𝚎𝚛 𝚍𝚘𝚎𝚜𝚗'𝚝 𝚔𝚗𝚘𝚠 𝚊𝚗𝚐𝚛𝚎𝚣𝚒. 𝚃𝚘 𝚓𝚢𝚊𝚍𝚊 2050 𝚔 𝚖𝚘𝚍𝚎𝚛𝚗 𝚒𝚝𝚎𝚖 𝚖𝚊𝚝 𝚋𝚗𝚗𝚊 𝚖𝚎𝚛𝚎 𝚖𝚊𝚜𝚝𝚎𝚛 𝚔 𝚜𝚊𝚊𝚖𝚗𝚎`**\n\n"
+    pm_caption += "➾ **`𝙱𝚎 𝚊 𝚂𝚊𝚋𝚑𝚢𝚊 𝚜𝚝𝚞𝚍𝚎𝚗𝚝`**\n\n\n"
+    pm_caption += f"➾ **ᴍʏ ᴍᴀsᴛᴇʀ** ☞ [{DEFAULTUSER}](tg://user?id={ghanti})\n"
     on = await borg.send_file(yes.chat_id, file=file1,caption=pm_caption)
 
     await asyncio.sleep(edit_time)
