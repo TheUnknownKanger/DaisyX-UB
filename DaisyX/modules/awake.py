@@ -13,7 +13,7 @@ from DaisyX.helpers import functions as dcdef
 from telethon.tl.types import ChannelParticipantsAdmins
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else bot.me.first_name
 
-from DaisyX import version
+from DaisyX import VERSION as version
 global ghanti
 ghanti = borg.uid
 edit_time = 5
