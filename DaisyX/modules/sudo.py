@@ -8,14 +8,15 @@ import heroku3
 from telethon.tl.functions.users import GetFullUserRequest
 from telethon import events
 
-from DaisyX import bot
+from DaisyX import bot, SUDO_USERS
 from DaisyX.utils import admin_cmd
 
 
 # Function From TeleBoT
 
 async def edit_or_reply(event, text):
-    if event.sender_id in Config.SUDO_USERS:
+    Try
+        if event.user_id == SUDO_USERS:
         reply_to = await event.get_reply_message()
         if reply_to:
             return await reply_to.reply(text)
