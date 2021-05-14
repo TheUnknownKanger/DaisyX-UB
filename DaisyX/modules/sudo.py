@@ -16,7 +16,7 @@ from DaisyX.utils import admin_cmd
 
 async def edit_or_reply(event, text):
     Try
-        if event.user_id == SUDO_USERS:
+     if event.user_id == SUDO_USERS:
             reply_to = await event.get_reply_message()
         if reply_to:
             return await reply_to.reply(text)
