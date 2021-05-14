@@ -14,14 +14,14 @@ from DaisyX.utils import admin_cmd
 
 # Function From TeleBoT
 
-async def edit_or_reply(event, text):
+''' async def edit_or_reply(event, text):
     Try
      if event.user_id == SUDO_USERS:
             reply_to = await event.get_reply_message()
         if reply_to:
             return await reply_to.reply(text)
         return await event.reply(text)
-    return await event.edit(text)
+    return await event.edit(text) '''
 
 
 Heroku = heroku3.from_key(Var.HEROKU_API_KEY)
