@@ -17,5 +17,7 @@ sudousers = os.environ.get("SUDO_USERS", None)
 
 @bot.on(admin_cmd(pattern="sudo")) 
 async def sudo(event):
+     sender = await event.get_input_sender()
      sudolelo = os.environ.get("SUDO_USERS", None) 
      await edit_or_reply(event.chat_id, f"** sᴜᴅᴏʟɪsᴛ ᴏғ ** bot.me.username\n {sudolelo}")
+
