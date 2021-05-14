@@ -74,7 +74,7 @@ else:
     print("fuck off kanger chala Ka madarchod")
 import os
 
-print("DaisyX is Up and Awake! ©️ TeamDaisyX 2021")
+print("Assistant of RAVANA is Up and Awake! \n©️ ℝ𝔸𝕍𝔸ℕ𝔸")
 
 
 async def legend():
@@ -102,8 +102,6 @@ async def legend():
 
 **➥ Mᴀsᴛᴇʀ** `➪` **@{legend.username}**
 **➥ Assɪsᴛᴀɴᴛ** `➪` **@{pro.username}**
-**➥ Sᴜᴘᴘᴏʀᴛ** `➪` **@DaisySupport_Official**
-**➥ Cʜᴀɴɴᴇʟ** `➪` **@DaisyXUpdates**
 
 **Cʜᴇᴄᴋ ᴍᴏɪ Pɪɴɢ ᴛɪᴍᴇ ʙʏ** `.ping` **[Fᴏʀ UsᴇʀBᴏᴛ] or** `/ping` **[Fᴏʀ Assɪsᴛᴀɴᴛ]**
 """
