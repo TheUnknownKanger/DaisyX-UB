@@ -44,7 +44,7 @@ async def hmm(yes):
     pm_caption += f"👉 **Uᴘᴛɪᴍᴇ:** `{uptime}`"
     pm_caption += f"👉 **Bʀᴀɴᴄʜ:** `Main`"
     pm_caption += f"👉 **Mᴀsᴛᴇʀ:** `{bot.me.first_name}`\n"
-    on = await borg.send_file(yes.chat_id, file=file1,caption=pm_caption)
+   ''' on = await borg.send_file(yes.chat_id, file=file1,caption=pm_caption)
 
     await asyncio.sleep(edit_time)
     ok = await borg.edit_message(yes.chat_id, on, file=file2) 
@@ -65,7 +65,7 @@ async def hmm(yes):
     ok6 = await borg.edit_message(yes.chat_id, ok5, file=file1)
     
     await asyncio.sleep(edit_time)
-    ok7 = await borg.edit_message(yes.chat_id, ok6, file=file4)
+    ok7 = await borg.edit_message(yes.chat_id, ok6, file=file4)'''
 
     
 
