@@ -23,7 +23,7 @@ async def awake(event):
     BUTTON = [
         [
             Button.url("Mᴀsᴛᴇʀ", f"https://t.me/{bot.me.username}"),
-            Button.url(f"{BOT} Rᴇᴘᴏ", "https://github.com/TeamDaisyX/Daisy-X-UB"),
+            Button.url(f"{BOT} Rᴇᴘᴏ", "https://github.com/ravana777/Daisy-X-UB"),
         ]
     ]
     BUTTON += [[custom.Button.inline("Rᴇᴘᴏsɪᴛᴏʀɪᴇs »»", data="DaisyX")]]
@@ -93,10 +93,10 @@ async def repo(event):
         "**Hᴇʀᴇ Is Tʜᴇ Rᴇᴘᴏ Fᴏʀ ᴅαιѕу χ Usᴇʀʙᴏᴛ** \n\nFᴏʀ Aɴʏ Hᴇʟᴘ :- @DaisyXOT",
         buttons=[
             [
-                Button.url("⚜️ Rᴇᴘᴏ ⚜️", "https://github.com/TeamDaisyX/Daisy-X-UB"),
+                Button.url("⚜️ Rᴇᴘᴏ ⚜️", "https://github.com/Ravana777/Daisy-X-UB"),
                 Button.url(
                     "🔰 Dᴇᴘʟᴏʏ 🔰",
-                    "https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2FTeamDaisyX%2FDaisy-X-UB&template=https%3A%2F%2Fgithub.com%2FTeamDaisyX%2FDaisy-X-UB",
+                    "https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2Fravana777%2FDaisy-X-UB&template=https%3A%2F%2Fgithub.com%2Fravana777%2FDaisy-X-UB.git-X-UB",
                 ),
             ]
         ],
