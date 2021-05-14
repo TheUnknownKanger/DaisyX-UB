@@ -13,7 +13,7 @@ from DaisyX.helpers import functions as dcdef
 from telethon.tl.types import ChannelParticipantsAdmins
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else bot.me.first_name
 
-from DaisyX import VERSION as version
+from DaisyX import VERSION
 global ghanti
 ghanti = borg.uid
 edit_time = 5
@@ -40,7 +40,7 @@ async def hmm(yes):
     pm_caption += f"👉 **Tᴇʟᴇᴛʜᴏɴ ᴠᴇʀsɪᴏɴ:** `{version.__version__}`\n"
     pm_caption += f"👉 **Pʏᴛʜᴏɴ ᴠᴇʀsɪᴏɴ:** `3.8.7`\n"
     pm_caption += f"👉 **Lɪᴄᴇɴsᴇ:** **[Team Daisy](https://github.com/TeamDaisyX)**\n"
-    pm_caption += f"👉 **Dᴀɪsʏ ᴠᴇʀsɪᴏɴ:** `{version}`\n"
+    pm_caption += f"👉 **Dᴀɪsʏ ᴠᴇʀsɪᴏɴ:** `{VERSION}`\n"
     pm_caption += f"👉 **Uᴘᴛɪᴍᴇ:** `{uptime}`"
     pm_caption += f"👉 **Bʀᴀɴᴄʜ:** `Main`"
     pm_caption += f"👉 **Mᴀsᴛᴇʀ:** `{bot.me.first_name}`\n"
