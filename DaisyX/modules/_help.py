@@ -4,7 +4,7 @@ from DaisyX import ALIVE_NAME, CMD_HELP, CMD_HNDLR, CMD_LIST
 
 from var import Var
 
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "ᴅᴀɪsʏ x"
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "ℝ𝔸𝕍𝔸ℕ𝔸"
 CMD_HNDLR = os.environ.get("CMD_HNDLR") 
 CUSTOM_HELP_EMOJI = os.environ.get("CUSTOM_HELP_EMOJI", "⚡")
 
@@ -45,18 +45,18 @@ async def cmd_list(event):
                 if input_str in CMD_HELP:
                     for i in CMD_HELP[input_str]:
                         string += i
-                    string += "\n\n**© @DaisyXOT**"
+                    string += "\n\n**© 🆁🅰🆅🅰🅽🅰**"
                     await event.edit(string)
                 else:
                     for i in CMD_LIST[input_str]:
                         string += "    " + i
                         string += "\n"
-                    string += "\n**© @DaisyXOT**"
+                    string += "\n**© 🆁🅰🆅🅰🅽🅰**"
                     await event.edit(string)
             else:
                 await event.edit(input_str + " is not a valid plugin!")
         else:
-            help_string = f"""`Userbot Helper for {DEFAULTUSER} to reveal all the commands of `**[DaisyX Support](t.me/DaisySupport_Official)**\n\n"""
+            help_string = f"""`Userbot Helper for {DEFAULTUSER}.`"""
             try:
                 results = await bot.inline_query(  # pylint:disable=E0602
                     tgbotusername, help_string
