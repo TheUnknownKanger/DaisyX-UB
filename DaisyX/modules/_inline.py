@@ -29,10 +29,10 @@ LOG_GP = Var.PRIVATE_GROUP_ID
 MESAG = (
     str(CUSTOM_PMPERMIT)
     if CUSTOM_PMPERMIT
-    else "`DaisyX Bot PM security! Please wait for me to approve you.` 😊"
+    else "`𝑨𝑺𝑺𝑰𝑺𝑻𝑨𝑵𝑻 𝑶𝑭 𝑹𝑨𝑽𝑨𝑵𝑨 PM security! abb chup chap mere aane ka intezar krr \njab tab approve na kru msg mat krna` 😊"
 )
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "ᴅᴀɪsʏ x"
-USER_BOT_WARN_ZERO = "`I had warned you not to spam. Now you have been blocked and reported until further notice.`\n\n**GoodBye!** "
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "ℝ𝔸𝕍𝔸ℕ𝔸"
+USER_BOT_WARN_ZERO = "`tujhe mna kiya tha na msg krne ko \naek baar me smjh nhi aata kya.kaha na mere aane tak wait krr. \nNow you have been blocked and reported until further notice.`\n\n**GoodBye!** "
 
 if Var.LOAD_MYBOT == "True":
     USER_BOT_NO_WARN = (
@@ -67,7 +67,7 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
             rev_text = query[::-1]
             buttons = paginate_help(0, CMD_LIST, "helpme")
             result = builder.article(
-                "© @DaisyXOT",
+                "© ℝ𝔸𝕍𝔸ℕ𝔸",
                 text="{}\nCurrently Loaded Plugins: {}".format(query, len(CMD_LIST)),
                 buttons=buttons,
                 link_preview=False,
@@ -75,14 +75,14 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
         elif event.query.user_id == bot.uid and query == "stats":
             result = builder.article(
                 title="Stats",
-                text=f"**DaisyX Bot Stats For [{DEFAULTUSER}](tg://user?id={myid})**\n\n__Bot is functioning normally, master!__\n\n(c) @DaisyXOT",
+                text=f"**Assistant Bot Stats For [{DEFAULTUSER}](tg://user?id={myid})**\n\n__Bot is functioning normally, master!__\n\n(c) @DaisyXOT",
                 buttons=[
                     [custom.Button.inline("Stats", data="statcheck")],
-                    [Button.url("Repo", "https://github.com/TeamDaisyX/Daisy-X-UB")],
+                    [Button.url("Repo", "https://github.com/ravana777/Daisy-X-UB")],
                     [
                         Button.url(
                             "Deploy Now!",
-                            "https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2FTeamDaisyX%2FDaisy-X-UB&template=https%3A%2F%2Fgithub.com%2FTeamDaisyX%2FDaisy-X-UB",
+                            "https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2Fravana777%2FDaisy-X-UB&template=https%3A%2F%2Fgithub.com%2Fravana777%2FDaisy-X-UB.git",
                         )
                     ],
                 ],
@@ -119,21 +119,21 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
         else:
             result = builder.article(
                 "Source Code",
-                text="**Welcome to DaisyX Bot**\n\n`Click below buttons for more`",
+                text="**Welcome to ASSISTANT OF RAVANA BOT**\n\n`Click below buttons for more`",
                 buttons=[
-                    [custom.Button.url("Creator👨‍🦱", "https://t.me/TeamDaisyX")],
+                    [custom.Button.url("Creator👨‍🦱", "https://t.me/ravana777")],
                     [
                         custom.Button.url(
-                            "👨‍💻Source Code‍💻", "https://github.com/TeamDaisyX/Daisy-X-UB"
+                            "👨‍💻Source Code‍💻", "https://github.com/ravana777/Daisy-X-UB"
                         ),
                         custom.Button.url(
                             "Deploy 🌀",
-                            "https://dashboard.heroku.com/new?template=https%3A%2F%2Fgithub.com%2FTeamDaisyX%2FDaisy-X-UB",
+                            "https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2Fravana777%2FDaisy-X-UB&template=https%3A%2F%2Fgithub.com%2Fravana777%2FDaisy-X-UB.git",
                         ),
                     ],
                     [
                         custom.Button.url(
-                            "Updates and Support Group↗️", "https://t.me/DaisyXOT"
+                            "Updates and Support↗️", "https://t.me/ravanaROBOT"
                         )
                     ],
                 ],
@@ -154,18 +154,18 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
             await event.edit(buttons=buttons)
         else:
             reply_pop_up_alert = (
-                "Please get your own Userbot from @DaisySupport_Official , and don't use mine!"
+                "Abey oo😡! teri himmat kaise hui bey yha haath lgane ki"
             )
             await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
     @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"pmclick")))
     async def on_pm_click(event):
         if event.query.user_id == bot.uid:
-            reply_pop_up_alert = "This ain't for you, master!"
+            reply_pop_up_alert = "ye chutiya logo k liye nhi hai!"
             await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
         else:
             await event.edit(
-                f"This is the PM Security for {DEFAULTUSER} to keep away spammers and retards.\n\nProtected by [ᴅᴀɪsʏ x](t.me/DaisySupport_Official)"
+                f"This is the PM Security for {DEFAULTUSER} to keep away spammers and retards.\n\nProtected by 𝘈𝘚𝘚𝘐𝘚𝘛𝘈𝘕𝘛 𝘖𝘍 𝘙𝘈𝘝𝘈𝘕𝘈"
             )
 
     @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"reopen")))
@@ -180,11 +180,11 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
     @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"req")))
     async def on_pm_click(event):
         if event.query.user_id == bot.uid:
-            reply_pop_up_alert = "This ain't for you, master!"
+            reply_pop_up_alert = "𝘺𝘦 𝘤𝘩𝘶𝘵𝘪𝘺𝘢 𝘭𝘰𝘨𝘰 𝘬 𝘭𝘪𝘺𝘦 𝘯𝘩𝘪 𝘩𝘢𝘪!"
             await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
         else:
             await event.edit(
-                f"Okay, `{DEFAULTUSER}` would get back to you soon!\nTill then please **wait patienly and don't spam here.**"
+                f"Okay,\n`Mere online aane tak intezar krr\nTill then please **wait patienly and don't spam here.**"
             )
             target = await event.client(GetFullUserRequest(event.query.user_id))
             first_name = html.escape(target.user.first_name)
@@ -198,7 +198,7 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
     async def on_pm_click(event):
         event.query.user_id
         if event.query.user_id == bot.uid:
-            reply_pop_up_alert = "This ain't for you, master!"
+            reply_pop_up_alert = "ye chutiya logo k liye nhi hai!"
             await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
         else:
             await event.edit(
@@ -232,11 +232,11 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
     @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"heheboi")))
     async def on_pm_click(event):
         if event.query.user_id == bot.uid:
-            reply_pop_up_alert = "This ain't for you, master!"
+            reply_pop_up_alert = "ye chutiya logo k liye nhi hai!"
             await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
         else:
             await event.edit(
-                f"Oh, so you are here to spam 😤\nGoodbye.\nYour message has been read and successfully ignored."
+                f"tujhe mna kiya tha na msg na krne ko mere aane tak😤\nGoodbye.\nYour message has been read and successfully ignored."
             )
             await borg(functions.contacts.BlockRequest(event.query.user_id))
             target = await event.client(GetFullUserRequest(event.query.user_id))
@@ -257,7 +257,7 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
                 "Menu Closed!!", buttons=[Button.inline("Re-open Menu", data="reopen")]
             )
         else:
-            reply_pop_up_alert = "Please get your own userbot from @DaisyXOT "
+            reply_pop_up_alert = "Tumhari kya problem hai bey😡"
             await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
     @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"statcheck")))
@@ -279,7 +279,7 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
             # https://t.me/TelethonChat/115200
             await event.edit(buttons=buttons)
         else:
-            reply_pop_up_alert = "Please get your own Userbot, and don't use mine!"
+            reply_pop_up_alert = "Abey oo😡! teri himmat kaise hui bey yha haath lgane ki"
             await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
     @tgbot.on(
@@ -309,7 +309,7 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
                 )
             else:
                 reply_pop_up_alert = help_string
-            reply_pop_up_alert += "\n © @DaisyXOT"
+            reply_pop_up_alert += "\n © ℝ𝔸𝕍𝔸ℕ𝔸"
             if len(help_string) >= 140:
                 await event.edit(
                     message=reply_pop_up_alert,
@@ -318,7 +318,7 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
             else:
                 await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
         else:
-            reply_pop_up_alert = "Please get your own Userbot, and don't use mine!"
+            reply_pop_up_alert = "Abey oo😡! teri himmat kaise hui bey yha haath lgane ki"
             await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
 
