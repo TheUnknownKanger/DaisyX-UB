@@ -29,7 +29,7 @@ LOG_GP = Var.PRIVATE_GROUP_ID
 MESAG = (
     str(CUSTOM_PMPERMIT)
     if CUSTOM_PMPERMIT
-    else "`𝑨𝑺𝑺𝑰𝑺𝑻𝑨𝑵𝑻 𝑶𝑭 𝑹𝑨𝑽𝑨𝑵𝑨 PM security! abb chup chap mere aane ka intezar krr` \n`jab tab approve na kru msg mat krna` 😊"
+    else "`𝑨𝑺𝑺𝑰𝑺𝑻𝑨𝑵𝑻 𝑶𝑭 𝑹𝑨𝑽𝑨𝑵𝑨 PM security! abb chup chap mere aane ka intezar krr` \n`⇨jab tab approve na kru msg mat krna` 😊"
 )
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "ℝ𝔸𝕍𝔸ℕ𝔸"
 USER_BOT_WARN_ZERO = "`tujhe mna kiya tha na msg krne ko` \n\n`aek baar me smjh nhi aata kya.kaha na mere aane tak wait krr.` \n`Now you have been blocked and reported until further notice.`\n\n**GoodBye!** "
@@ -154,7 +154,7 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
             await event.edit(buttons=buttons)
         else:
             reply_pop_up_alert = (
-                "Abey oo😡! teri himmat kaise hui bey yha haath lgane ki"
+                "Abey oo😡! \nteri himmat kaise hui bey yha haath lgane ki"
             )
             await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
@@ -165,7 +165,7 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
             await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
         else:
             await event.edit(
-                f"This is the PM Security for {DEFAULTUSER} to keep away spammers and retards.\n\nProtected by 𝘈𝘚𝘚𝘐𝘚𝘛𝘈𝘕𝘛 𝘖𝘍 𝘙𝘈𝘝𝘈𝘕𝘈"
+                f"This is the PM Security for {DEFAULTUSER} to keep away spammers and retards.\n\n➢Protected by 𝘈𝘚𝘚𝘐𝘚𝘛𝘈𝘕𝘛 𝘖𝘍 𝘙𝘈𝘝𝘈𝘕𝘈"
             )
 
     @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"reopen")))
@@ -174,7 +174,7 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
             buttons = paginate_help(0, CMD_LIST, "helpme")
             await event.edit("Menu Re-opened", buttons=buttons)
         else:
-            reply_pop_up_alert = "This bot ain't for u!!"
+            reply_pop_up_alert = "ye chutiya logo k liye nhi hai!"
             await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
     @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"req")))
@@ -184,7 +184,7 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
             await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
         else:
             await event.edit(
-                f"Okay,\n`Mere online aane tak intezar krr\nTill then please **wait patienly and don't spam here.**"
+                f"Okay,\n`Mere online aane tak intezar krr`\n\nTill then please **wait patienly and don't spam here.**"
             )
             target = await event.client(GetFullUserRequest(event.query.user_id))
             first_name = html.escape(target.user.first_name)
