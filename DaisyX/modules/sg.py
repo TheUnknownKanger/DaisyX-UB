@@ -42,7 +42,7 @@ async def _(event):
             await event.reply("Please unblock ( @Sangmatainfo_bot ) ")
             return
         if response1.text.startswith("No records found"):
-            await event.edit("User never changed his Username...")
+            await event.edit("chutiye ne kabhi username change hi nhi kiya… ")
         else:
             await event.delete()
             await event.client.send_message(event.chat_id, response2.message)
