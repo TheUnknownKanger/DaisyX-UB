@@ -40,7 +40,7 @@ async def hmm(yes):
     pm_caption += f"👉 **Tᴇʟᴇᴛʜᴏɴ ᴠᴇʀsɪᴏɴ:** `{version.__version__}`\n"
     pm_caption += f"👉 **Pʏᴛʜᴏɴ ᴠᴇʀsɪᴏɴ:** `3.8.7`\n"
     pm_caption += f"👉 **Lɪᴄᴇɴsᴇ:** **[Team Daisy](https://github.com/TeamDaisyX)**\n"
-    pm_caption += f"👉 **Dᴀɪsʏ ᴠᴇʀsɪᴏɴ:** `{version)`\n"
+    pm_caption += f"👉 **Dᴀɪsʏ ᴠᴇʀsɪᴏɴ:** `{version}`\n"
     pm_caption += f"👉 **Uᴘᴛɪᴍᴇ:** `{uptime}`"
     pm_caption += f"👉 **Bʀᴀɴᴄʜ:** `Main`"
     pm_caption += f"👉 **Mᴀsᴛᴇʀ:** `{bot.me.first_name}`\n"
