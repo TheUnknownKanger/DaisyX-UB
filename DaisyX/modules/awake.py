@@ -34,11 +34,11 @@ async def hmm(yes):
     ghanti = borg.uid
     await yes.delete()
     uptime = await dcdef.get_readable_time((time.time() - Lastupdate))
-    pm_caption = "** 𝙳𝙰𝙸𝚂𝚈 𝚇 𝙸𝚂 𝙾𝙽𝙻𝙸𝙽𝙴**\n\n"
-    pm_caption += "**Yes Master, Am Alive And Systems Are Working Perfectly As It Should Be...**\n\n"
+    pm_caption = "** Hᴇʏᴀ ᴍᴀsᴛᴇʀ, I'ᴍ ᴏɴʟɪɴᴇ**\n\n"
+    pm_caption += "**Wʜᴀᴛ ᴅᴏ ʏᴏᴜ ᴡᴀɴɴᴀ ᴅᴏ ᴛᴏᴅᴀʏ? Bᴜᴛ ʙᴇғᴏʀᴇ ᴅᴏɪɴɢ sᴏᴍᴇᴛɪɴɢ ᴋɴᴏᴡ ᴀʙᴏᴜᴛ ᴍᴏɪ sʏsᴛᴇᴍ...**\n\n"
     pm_caption += "✘ About My System ✘\n\n"
-    pm_caption += f"➾ **ᴛᴇʟᴇᴛʜᴏɴ ᴠᴇʀꜱɪᴏɴ** ☞ {version.__version__}\n"
-    pm_caption += "➾ **ꜱᴜᴘᴘᴏʀᴛ ᴄʜᴀɴɴᴇʟ** ☞ [ᴊᴏɪɴ](https://t.me/DaisySupport_Official)\n"
+    pm_caption += f"👉 **Tᴇʟᴇᴛʜᴏɴ ᴠᴇʀsɪᴏɴ:** `{version.__version__}`\n"
+    pm_caption += "👉 **Pʏᴛʜᴏɴ ᴠᴇʀsɪᴏɴ:** [ᴊᴏɪɴ](https://t.me/DaisySupport_Official)\n"
     pm_caption += "➾ **ʟɪᴄᴇɴꜱᴇ**  ☞ [𝚃𝙴𝙰𝙼 𝙳𝙰𝙸𝚂𝚈𝚇](https://github.com/TeamDaisyX)\n"
     pm_caption += "➾ **ᴄᴏᴘʏʀɪɢʜᴛ ʙʏ** ☞ [𝙳𝙰𝙸𝚂𝚈-𝚇](https://github.com/TeamDaisyX/Daisy-X-UB)\n\n"
     pm_caption += f"➾ **ᴜᴘᴛɪᴍᴇ** ☞ {uptime}\n\n"
