@@ -9,7 +9,7 @@ from telethon.tl.functions.users import GetFullUserRequest
 from telethon import events
 
 from DaisyX import bot
-from DaisyX.utils import admin_cmd
+from DaisyX.utils import admin_cmd, edit_or_reply
 
 Heroku = heroku3.from_key(Var.HEROKU_API_KEY)
 heroku_api = "https://api.heroku.com"
@@ -18,4 +18,4 @@ sudousers = os.environ.get("SUDO_USERS", None)
 @bot.on(admin_cmd(pattern="sudo")) 
 async def sudo(event):
      sudolelo = os.environ.get("SUDO_USERS", None) 
-     await bot.event.respond(event.chat_id, f"** sᴜᴅᴏʟɪsᴛ ᴏғ ** bot.me.username\n {sudolelo}")
+     await edit_or_reply(event.chat_id, f"** sᴜᴅᴏʟɪsᴛ ᴏғ ** bot.me.username\n {sudolelo}")
