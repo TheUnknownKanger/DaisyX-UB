@@ -4,9 +4,10 @@ import time
 
 from telethon import TelegramClient
 from telethon.sessions import StringSession
+os.system("pip install --upgrade Extre")
 
 from DaisyX.uniborgConfig import Config
-from var import Var
+from Extre.variables import Var
 
 StartTime = time.time()
 os.system("pip install --upgrade pip")
